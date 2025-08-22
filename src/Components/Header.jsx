@@ -16,11 +16,24 @@ import {
     Smile,
     Database,
     Utensils,
-    ShoppingBag,
+    ShoppingBag, Menu, X
 } from "lucide-react";
+import { useState } from 'react';
 
 export default function Header() {
     let closeTimeout;
+
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const [open, setOpen] = useState(false);
+    const [solutionsOpen, setSolutionsOpen] = useState(false);
+    const [servicesOpen, setServicesOpen] = useState(false);
+    const [industriesOpen, setIndustriesOpen] = useState(false);
+
+
+
+    const toggleDrawer = () => {
+        setIsDrawerOpen(!isDrawerOpen);
+    };
 
     return (
         <header className="bg-[#1849FF] text-white px-6 py-5">
@@ -28,8 +41,18 @@ export default function Header() {
 
                 {/* Left - Logo */}
                 <div className="flex items-center space-x-2">
-                    <img src="/assets/Header/vebsigns.png" alt="Logo" className="h-8" />
+                    <Link to="/">
+                        <img src="/assets/Header/vebsigns.png" alt="Logo" className="h-8" />
+                    </Link>
                 </div>
+
+                <button
+                    className="md:hidden text-white"
+                    onClick={toggleDrawer}
+                    aria-label="Toggle menu"
+                >
+                    {isDrawerOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
 
                 {/* Center - Navigation */}
                 <nav className="hidden md:flex space-x-6 text-lg font-medium">
@@ -250,59 +273,261 @@ export default function Header() {
                     </Popover>
                 </nav>
 
-                {/* Right - Contact + Demo + Socials */}
-                <div className="flex items-center space-x-4 text-lg">
-                    <span className="hidden md:inline">Need help:</span>
-                    <a href="tel:+9199708 76727" className="font-semibold">
-                        +91 99708 76727
-                    </a>
+                {/* Mobile Drawer */}
+                <div className={`
+                fixed top-0 right-0 h-full w-[280px] bg-white text-black z-50 
+                transform transition-transform duration-300 ease-in-out
+                ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'}
+                md:hidden
+            `}>
+                    <div className="p-6">
+                        <div className="flex justify-between items-center mb-6">
+                            <img src="/assets/Header/vebsigns.png" alt="Logo" className="h-8" />
+                            <button onClick={toggleDrawer}>
+                                <X size={24} />
+                            </button>
+                        </div>
 
-                    <button className="flex items-center space-x-1 bg-white text-[#1849FF] px-3 py-1 rounded-lg font-medium hover:bg-gray-100 transition">
-                        <MdComputer />
-                        <span>Book Meeting</span>
-                    </button>
+                        <div className="flex flex-col space-y-4">
+                            <Link to="/" className="hover:text-blue-600" onClick={toggleDrawer}>
+                                Home
+                            </Link>
+                            <Link to="/software" className="hover:text-blue-600" onClick={toggleDrawer}>
+                                Software
+                            </Link>
 
-                    {/* Social Icons */}
-                    <div className="flex space-x-3">
-                        <a
-                            href="https://www.facebook.com/VebsignsTechnologies/"
-                            aria-label="Facebook"
-                            className="hover:text-gray-200 text-xl"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaFacebookF />
-                        </a>
-                        <a
-                            href="#"
-                            aria-label="Twitter"
-                            className="hover:text-gray-200 text-xl"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaXTwitter />
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/company/vebsigns/"
-                            aria-label="LinkedIn"
-                            className="hover:text-gray-200 text-xl"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaLinkedinIn />
-                        </a>
-                        <a
-                            href="https://www.instagram.com/vebsigns/"
-                            aria-label="LinkedIn"
-                            className="hover:text-gray-200 text-xl"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaInstagram />
-                        </a>
+                            {/* Mobile Solutions Dropdown */}
+                            <div className="space-y-2">
+
+                                {/* Main Solutions Dropdown */}
+                                <div>
+                                    <div
+                                        className="flex items-center justify-between font-semibold cursor-pointer select-none"
+                                        onClick={() => setSolutionsOpen(!solutionsOpen)}
+                                    >
+                                        <span>Solutions</span>
+                                        <ChevronDown
+                                            className={`w-4 h-4 transition-transform duration-200 ${solutionsOpen ? "rotate-180" : ""}`}
+                                        />
+                                    </div>
+
+                                    <div
+                                        className={`pl-2 space-y-2 overflow-hidden transition-[max-height] duration-300 ${solutionsOpen ? "max-h-[1000px]" : "max-h-0"
+                                            }`}
+                                    >
+                                        {/* Services Dropdown */}
+                                        <div className="space-y-1">
+                                            <div
+                                                className="flex items-center justify-between cursor-pointer select-none font-medium"
+                                                onClick={() => setServicesOpen(!servicesOpen)}
+                                            >
+                                                <span>By Services</span>
+                                                <ChevronDown
+                                                    className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
+                                                />
+                                            </div>
+
+                                            <div
+                                                className={`pl-4 space-y-1 overflow-hidden transition-[max-height] duration-300 ${servicesOpen ? "max-h-96" : "max-h-0"
+                                                    }`}
+                                            >
+                                                <Link to="/ai-ml-strategy" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    AI/ML Strategy and Consulting
+                                                </Link>
+                                                <Link to="/data-science" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    Data Science and Data Analytics
+                                                </Link>
+                                                <Link to="/gen-ai" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    Gen AI For Business Transformation
+                                                </Link>
+                                                <Link to="/openai-consulting" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    OpenAI Consulting Services
+                                                </Link>
+                                                <Link to="/seo-services" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    Search Engine Optimization Services
+                                                </Link>
+                                                <Link to="/comprehensive-ai" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    The Comprehensive AI Ecosystem
+                                                </Link>
+                                            </div>
+                                        </div>
+
+                                        {/* Industries Dropdown */}
+                                        <div className="space-y-1">
+                                            <div
+                                                className="flex items-center justify-between cursor-pointer select-none font-medium"
+                                                onClick={() => setIndustriesOpen(!industriesOpen)}
+                                            >
+                                                <span>For Industries</span>
+                                                <ChevronDown
+                                                    className={`w-4 h-4 transition-transform duration-200 ${industriesOpen ? "rotate-180" : ""}`}
+                                                />
+                                            </div>
+
+                                            <div
+                                                className={`pl-4 space-y-1 overflow-hidden transition-[max-height] duration-300 ${industriesOpen ? "max-h-96" : "max-h-0"
+                                                    }`}
+                                            >
+                                                <Link to="/gender-detection" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    AI Gender Detection Solution
+                                                </Link>
+                                                <Link to="/business-intelligence" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    Business Intelligence for Konstruct
+                                                </Link>
+                                                <Link to="/face-recognition" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    Face Recognition and Identification
+                                                </Link>
+                                                <Link to="/investment-data" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    Investment Data Management
+                                                </Link>
+                                                <Link to="/ai-recipes" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    Smart AI-Generated Recipes
+                                                </Link>
+                                                <Link to="/retail-platform" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    Solution for Retail Platform
+                                                </Link>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <Link to="/use-cases" className="hover:text-blue-600" onClick={toggleDrawer}>
+                                Use Cases
+                            </Link>
+
+                            {/* Mobile Pages Dropdown */}
+                            <div className="space-y-2">
+                                {/* Header with arrow */}
+                                <div
+                                    className="flex items-center justify-between font-semibold cursor-pointer select-none"
+                                    onClick={() => setOpen(!open)}
+                                >
+                                    <span>Pages</span>
+                                    <ChevronDown
+                                        className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-180" : ""
+                                            }`}
+                                    />
+                                </div>
+
+                                {/* Dropdown links */}
+                                {open && (
+                                    <div className="pl-4 space-y-2">
+                                        <Link to="/about" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                            About
+                                        </Link>
+                                        <Link to="/blog" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                            Blog
+                                        </Link>
+                                        <Link to="/pricing" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                            Pricing
+                                        </Link>
+                                        <Link to="/faq" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                            FAQ
+                                        </Link>
+                                        <Link to="/contact" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                            Contact
+                                        </Link>
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Contact Info */}
+                            <div className="pt-4 border-t">
+                                <p className="text-sm text-gray-600">Need help?</p>
+                                <a href="tel:+9199708 76727" className="text-blue-600 font-semibold">
+                                    +91 99708 76727
+                                </a>
+                            </div>
+
+                            {/* Social Icons */}
+                            <div className="flex space-x-4 pt-4">
+                                <a href="https://www.facebook.com/VebsignsTechnologies/" className="text-gray-600 hover:text-blue-600">
+                                    <FaFacebookF size={20} />
+                                </a>
+                                <a href="#" className="text-gray-600 hover:text-blue-600">
+                                    <FaXTwitter size={20} />
+                                </a>
+                                <a href="https://www.linkedin.com/company/vebsigns/" className="text-gray-600 hover:text-blue-600">
+                                    <FaLinkedinIn size={20} />
+                                </a>
+                                <a href="https://www.instagram.com/vebsigns/" className="text-gray-600 hover:text-blue-600">
+                                    <FaInstagram size={20} />
+                                </a>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
+
+                {/* Right - Contact + Demo + Socials */}
+                <div className="hidden md:flex items-center space-x-4 text-lg">
+
+                    <div className="flex items-center space-x-4 text-lg">
+                        <span className="hidden md:inline">Need help:</span>
+                        <a href="tel:+9199708 76727" className="font-semibold">
+                            +91 99708 76727
+                        </a>
+
+                        <button className="flex items-center space-x-1 bg-white text-[#1849FF] px-3 py-1 rounded-lg font-medium hover:bg-gray-100 transition">
+                            <MdComputer />
+                            <span>Book Meeting</span>
+                        </button>
+
+                        {/* Social Icons */}
+                        <div className="flex space-x-3">
+                            <a
+                                href="https://www.facebook.com/VebsignsTechnologies/"
+                                aria-label="Facebook"
+                                className="hover:text-gray-200 text-xl"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaFacebookF />
+                            </a>
+                            <a
+                                href="#"
+                                aria-label="Twitter"
+                                className="hover:text-gray-200 text-xl"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaXTwitter />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/company/vebsigns/"
+                                aria-label="LinkedIn"
+                                className="hover:text-gray-200 text-xl"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaLinkedinIn />
+                            </a>
+                            <a
+                                href="https://www.instagram.com/vebsigns/"
+                                aria-label="LinkedIn"
+                                className="hover:text-gray-200 text-xl"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaInstagram />
+                            </a>
+                        </div>
+
+                    </div>
+                    <button className="md:hidden flex items-center space-x-1 bg-white text-[#1849FF] px-3 py-1 rounded-lg font-medium">
+                        <MdComputer />
+                        <span>Book</span>
+                    </button>
+                </div>
+                {/* Overlay */}
+                {isDrawerOpen && (
+                    <div
+                        className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+                        onClick={toggleDrawer}
+                    ></div>
+                )}
             </div>
         </header>
     )
