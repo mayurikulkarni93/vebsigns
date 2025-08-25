@@ -11,15 +11,17 @@ import BlogSection from './BlogSection'
 import Integration from './Integration'
 import Faq from '../Faq/Faq'
 import DigitalTransformation from './DigitalTransformation'
+import QuickLinks from './QuickLinks'
 
 const Home = () => {
   return (
     <div >
       <Header/>
       <HeroSection/>
-      {/* <DigitalTransformation/>
-      <Testimonial/>
-      <Team/>
+      <QuickLinks/>
+      <DigitalTransformation/>
+       {/* <Testimonial/> */}
+      {/*<Team/>
       <Stats/>
       <Logos/>
       <Steps/>
