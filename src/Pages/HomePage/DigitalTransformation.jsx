@@ -9,7 +9,7 @@ const DigitalTransformation = () => {
                     We’re Vebsigns
                 </p>
                 <h2 className="mt-4 text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl">
-                    Digital Transformation
+                    DIGITAL TRANSFORMATION
                 </h2>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
                     At Hanotek, we specialize in helping companies integrate generative AI
