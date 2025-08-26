@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const successStories = [
     {
@@ -46,7 +47,7 @@ const SuccessStories = () => {
                 </div>
 
                 {/* Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     {successStories.map((story, index) => (
                         <div
                             key={index}
@@ -63,7 +64,45 @@ const SuccessStories = () => {
                             </div>
                         </div>
                     ))}
+                    <div className="p-4 bg-yellow-400 sm:p-6 border-t border-gray-200 text-blue-600 font-semibold hover:underline cursor-pointer">
+                        Hello
+                    </div>
+                </div> */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    {successStories.map((story, index) => (
+                        <div
+                            key={index}
+                            className="group bg-white text-gray-900 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative"
+                        >
+                            <img
+                                src={story.image}
+                                alt={story.title}
+                                className="w-full h-48 sm:h-56 object-cover"
+                            />
+                            <div className="p-4 sm:p-6">
+                                <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                                    {story.title}
+                                </h3>
+                                <p className="text-gray-600 text-sm sm:text-base">
+                                    {story.description}
+                                </p>
+                            </div>
+
+                            {/* Yellow bar - hidden until hover */}
+
+                            <Link
+                                to="/case-study"
+                                className="absolute bottom-0 left-0 w-full bg-yellow-400 text-blue-600 font-semibold 
+             text-center py-3 translate-y-full group-hover:translate-y-0 
+             transition-transform duration-300 hover:underline"
+                            >
+                                Read Case Study
+                            </Link>
+
+                        </div>
+                    ))}
                 </div>
+
 
                 {/* Testimonial */}
                 <div className="mt-12 md:mt-16 text-center">
