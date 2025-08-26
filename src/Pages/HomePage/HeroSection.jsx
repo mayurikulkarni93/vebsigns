@@ -136,7 +136,7 @@ const HeroSection = () => {
                         <img
                             src="/assets/HomePage/image-12.png"
                             alt="Man with Lappy"
-                            className="absolute left-1/4 transform -translate-x-1/2 w-[731px] z-10"
+                            className="absolute left-1/4 transform -translate-x-1/2 w-[831px] z-10"
                         />
                         {/* Recorder image floating on top of man */}
                         <motion.img
@@ -180,7 +180,7 @@ const HeroSection = () => {
                         <motion.img
                             src="/assets/HomePage/Rectangle.svg"
                             alt="Laptop Shadow"
-                            className="absolute left-26/100 transform -translate-x-3/7 -translate-y-2/9 w-[630px] top-18 z-20"
+                            className="absolute left-26/100 transform -translate-x-3/7 -translate-y-2/9 w-[730px] top-18 z-20"
                             animate={{ opacity: [0, 0.8, 0] }} // fade in, then out
                             transition={{
                                 duration: 2,   // total time for one cycle
