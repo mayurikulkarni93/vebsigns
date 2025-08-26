@@ -1,236 +1,124 @@
 import React from 'react'
+import { motion } from "framer-motion";
+
 
 const HeroSection = () => {
+    const containerVariants = {
+        hidden: {},
+        visible: {
+            transition: {
+                staggerChildren: 0.3, // delay between each child animation
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, x: -50 }, // start left and invisible
+        visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }, // slide in from left
+    };
+
     return (
         <div>
-            {/* Hero Section 1 */}
-            <div>
-                <div className="bg-white">
-                    <section className="bg-[#FCF8F1] bg-opacity-30 py-10 sm:py-16 lg:py-24">
-                        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                            <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
-                                <div>
-                                    <p className="text-base font-semibold tracking-wider text-blue-600 uppercase">A social media for learners</p>
-                                    <h1 className="mt-4 text-4xl font-bold text-black lg:mt-8 sm:text-6xl xl:text-8xl">Connect & learn from the experts</h1>
-                                    <p className="mt-4 text-base text-black lg:mt-8 sm:text-xl">Grow your career fast with right mentor.</p>
+            <div className="bg-gradient-to-r from-[#3DB6D9] via-[#3FBEB9] to-[#42C897] h-[100vh]  flex items-center justify-center relative">
+                {/* Background white shape */}
+                <img
+                    src="/assets/HomePage/Subtract.svg"
+                    alt="Bg white"
+                    className="max-w-full h-auto z-0"
+                />
 
-                                    <a href="#" title="" className="inline-flex items-center px-6 py-4 mt-8 font-semibold text-black transition-all duration-200 bg-yellow-300 rounded-full lg:mt-16 hover:bg-yellow-400 focus:bg-yellow-400" role="button">
-                                        Join for free
-                                        <svg className="w-6 h-6 ml-8 -mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                    </a>
+                {/* Man with laptop (middle layer) */}
+                <img
+                    src="/assets/HomePage/image-12.png"
+                    alt="Man with Lappy"
+                    className="absolute left-1/4 transform -translate-x-1/2 w-[731px] z-10"
+                />
+                {/* Recorder image floating on top of man */}
+                <motion.img
+                    src="/assets/HomePage/image-13.png"
+                    alt="RecorderImage"
+                    className="absolute left-[35%] top-[10%] w-[100px] z-30"
+                    animate={{ y: [0, -15, 0] }}   // move up 15px
+                    transition={{
+                        duration: 2.5,                // slightly slower
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                    }}
+                />
 
-                                    <p className="mt-5 text-gray-600">Already joined us? <a href="#" title="" className="text-black transition-all duration-200 hover:underline">Log in</a></p>
-                                </div>
+                <motion.img
+                    src="/assets/HomePage/image-16.png"
+                    alt="RecorderImage"
+                    className="absolute left-[42%] top-[45%] w-[90px] z-0"
+                    animate={{ y: [0, -20, 0] }}   // move up 20px
+                    transition={{
+                        duration: 3,                  // slower, different timing
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 0.5,                   // start slightly later
+                    }}
+                />
 
-                                <div>
-                                    <img className="w-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/1/hero-img.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+                <motion.img
+                    src="/assets/HomePage/image-14.png"
+                    alt="RecorderImage"
+                    className="absolute left-[2%] top-[35%] w-[60px] z-0"
+                    animate={{ y: [0, -10, 0] }}   // move up 10px
+                    transition={{
+                        duration: 2,                  // faster
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 1,                     // start later
+                    }}
+                />
+                {/* Laptop shadow with Framer Motion */}
+                <motion.img
+                    src="/assets/HomePage/Rectangle.svg"
+                    alt="Laptop Shadow"
+                    className="absolute left-26/100 transform -translate-x-3/7 -translate-y-2/9 w-[630px] top-18 z-20"
+                    animate={{ opacity: [0, 0.8, 0] }} // fade in, then out
+                    transition={{
+                        duration: 2,   // total time for one cycle
+                        repeat: Infinity, // loop forever
+                        ease: "easeInOut"
+                    }}
+                />
+                {/* Hello text on the right side */}
+                <motion.div
+                    className="absolute uppercase top-[22%] right-[15%] z-40 flex flex-col items-start space-y-1 max-w-[450px]"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                >
+                    <motion.h2
+                        className="text-[32px] font-semibold text-[#1b4bf0]"
+                        variants={itemVariants}
+                    >
+                        Where Data and AI
+                    </motion.h2>
+
+                    <motion.span
+                        className="text-[64px] font-bold text-[#15042e]"
+                        variants={itemVariants}
+                    >
+                        Come to life
+                    </motion.span>
+
+                    <motion.span
+                        className="text-base text-[#7c728a]"
+                        variants={itemVariants}
+                    >
+                        Everybody's ready for AI except your data
+                    </motion.span>
+
+                    <motion.button
+                        className="mt-4 px-6 py-3 h-[63px] w-full bg-[#1b4bf0] text-white font-light rounded-full hover:bg-[#ecf00c] hover:text-black transition flex items-center justify-center gap-2"
+                        variants={itemVariants}
+                    >
+                        Building wealth, creating futures.
+                    </motion.button>
+                </motion.div>
             </div>
-            {/* Hero Section 2 */}
-            {/* <div className="">
-                <section className="py-12 bg-black sm:pb-16 lg:pb-20 xl:pb-24">
-                    <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                        <div className="relative">
-                            <div className="lg:w-2/3">
-                                <p className="text-sm font-normal tracking-widest text-gray-300 uppercase">A Hub for Designers, Developers & Marketers</p>
-                                <h1 className="mt-6 text-4xl font-normal text-white sm:mt-10 sm:text-5xl lg:text-6xl xl:text-8xl"><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">Unlimited Design</span> Inspiration</h1>
-                                <p className="max-w-lg mt-4 text-xl font-normal text-gray-400 sm:mt-8">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.</p>
-                                <div className="relative inline-flex items-center justify-center mt-8 sm:mt-12 group">
-                                    <div className="absolute transition-all duration-200 rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:shadow-lg group-hover:shadow-cyan-500/50"></div>
-                                    <a href="#" title="" className="relative inline-flex items-center justify-center px-8 py-3 text-base font-normal text-white bg-black border border-transparent rounded-full" role="button"> Start Exploring Inspiration </a>
-                                </div>
-
-                                <div>
-                                    <div className="inline-flex items-center pt-6 mt-8 border-t border-gray-800 sm:pt-10 sm:mt-14">
-                                        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" strokeWidth="1.5" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M13 7.00003H21M21 7.00003V15M21 7.00003L13 15L9 11L3 17" stroke="url(#a)" strokeLinecap="round" strokeLinejoin="round" />
-                                            <defs>
-                                                <linearGradient id="a" x1="3" y1="7.00003" x2="22.2956" y2="12.0274" gradientUnits="userSpaceOnUse">
-                                                    <stop offset="0%" stopColor="var(--color-cyan-500)" />
-                                                    <stop offset="100%" stopColor="var(--color-purple-500)" />
-
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-
-                                        <span className="ml-2 text-base font-normal text-white"> 42 new design inspiration was added last week </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="mt-8 md:absolute md:mt-0 md:top-32 lg:top-0 md:right-0">
-                                <img className="w-full max-w-xs mx-auto lg:max-w-lg xl:max-w-xl" src="https://landingfoliocom.imgix.net/store/collection/dusk/images/hero/1/3d-illustration.png" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div> */}
-            {/* Hero Section 3 */}
-            {/* <div className="bg-gradient-to-b from-green-50 to-green-100">
-
-
-                <section className="py-10 sm:py-16 lg:py-24">
-                    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                        <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
-                            <div>
-                                <h1 className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl">
-                                    Collaborate remotely, with
-                                    <div className="relative inline-flex">
-                                        <span className="absolute inset-x-0 bottom-0 border-b-[30px] border-[#4ADE80]"></span>
-                                        <h1 className="relative text-4xl font-bold text-black sm:text-6xl lg:text-7xl">Postcrafts.</h1>
-                                    </div>
-                                </h1>
-
-                                <p className="mt-8 text-base text-black sm:text-xl">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.</p>
-
-                                <div className="mt-10 sm:flex sm:items-center sm:space-x-8">
-                                    <a href="#" title="" className="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200 bg-orange-500 hover:bg-orange-600 focus:bg-orange-600" role="button"> Start exploring </a>
-
-                                    <a href="#" title="" className="inline-flex items-center mt-6 text-base font-semibold transition-all duration-200 sm:mt-0 hover:opacity-80">
-                                        <svg className="w-10 h-10 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path fill="#F97316" stroke="#F97316" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                        Watch video
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div>
-                                <img className="w-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/2/hero-img.png" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div> */}
-
-            {/* Hero section 4 */}
-            {/* <section className="relative bg-gray-50">
-                <div className="relative z-10 px-4 py-12 sm:py-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:py-20 xl:py-28 lg:grid lg:grid-cols-2">
-                    <div className="lg:pr-8">
-                        <div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
-                            <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">Community of designers <span className="inline"><img className="inline w-auto h-8 sm:h-10 lg:h-12" src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/4/shape-1.svg" alt="shape-1" /></span> made by designers <span className="inline"><img className="inline w-auto h-8 sm:h-10 lg:h-11" src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/4/shape-2.svg" alt="shape-2" /></span></h1>
-                            <p className="mt-6 text-base font-normal leading-7 text-gray-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula massa in enim luctus. Rutrum arcu.</p><svg className="w-auto h-4 mt-8 text-gray-300" viewbox="0 0 172 16" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 11 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 46 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 81 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 116 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 151 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 18 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 53 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 88 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 123 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 158 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 25 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 60 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 95 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 130 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 165 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 32 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 67 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 102 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 137 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 172 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 39 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 74 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 109 1)"></line>
-                                <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 144 1)"></line></svg>
-                            <p className="mt-8 text-base font-bold text-gray-900">Join to get free updates every week</p>
-                            <form action="#" method="post" className="relative mt-4">
-                                <div className="absolute transitiona-all duration-1000 opacity-30 inset-0 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
-                                <div className="relative space-y-4 sm:flex sm:space-y-0 sm:items-end">
-                                    <div className="flex-1">
-                                        <label for="" className="sr-only">Email address</label>
-                                        <div>
-                                            <input type="email" name="" id="" className="block w-full px-4 py-3 sm:py-3.5 text-base font-medium text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg sm:rounded-l-lg sm:rounded-r-none sm:text-sm focus:ring-gray-900 focus:border-gray-900" placeholder="Enter email address" />
-                                        </div>
-                                    </div><button type="button" className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-gray-900 border border-transparent rounded-lg sm:rounded-r-lg sm:rounded-l-none hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">Join Now</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div className="pb-8 lg:absolute lg:inset-0 lg:pb-0">
-                    <div className="flex flex-col items-center justify-center overflow-hidden lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                        <div className="flex justify-start w-full gap-6 pb-8 overflow-x-auto snap-x">
-                            <div className="relative snap-start scroll-ml-6 shrink-0 first:pl-6 last:pr-6">
-                                <div className="relative flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow w-60 md:w-80 group rounded-xl hover:shadow-lg hover:-translate-y-1">
-                                    <a href="#" title="" className="flex shrink-0 aspect-w-4 aspect-h-3"><img className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110" src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/4/thumbnail-1.png" alt="thumbnail-1" /></a>
-                                    <div className="flex-1 px-4 py-5 sm:p-6">
-                                        <a href="#" title="" className="">
-                                            <p className="text-lg font-bold text-gray-900">How to write content about your photographs</p>
-                                            <p className="mt-3 text-sm font-normal leading-6 text-gray-500 line-clamp-3">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Sit quis auctor odio arcu et dolor.</p></a>
-                                    </div>
-                                    <div className="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
-                                        <div className="flex items-center justify-between">
-                                            <div className="flex items-center space-x-2">
-                                                <p className="text-sm font-medium text-gray-900"><a href="#" title="" className="">Growth</a></p><span className="text-sm font-medium text-gray-900">•</span>
-                                                <p className="text-sm font-medium text-gray-900">7 Mins Read</p>
-                                            </div><a href="#" title="" className="" role="button"><svg className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                <line x1="17" y1="7" x2="7" y2="17"></line>
-                                                <polyline points="8 7 17 7 17 16"></polyline></svg></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="relative snap-start scroll-ml-6 shrink-0 first:pl-6 last:pr-6">
-                                <div className="relative flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow w-60 md:w-80 group rounded-xl hover:shadow-lg hover:-translate-y-1">
-                                    <a href="#" title="" className="flex shrink-0 aspect-w-4 aspect-h-3"><img className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110" src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/4/thumbnail-2.png" alt="thumbnail-2" /></a>
-                                    <div className="flex-1 px-4 py-5 sm:p-6">
-                                        <a href="#" title="" className="">
-                                            <p className="text-lg font-bold text-gray-900">How to write content about your photographs</p>
-                                            <p className="mt-3 text-sm font-normal leading-6 text-gray-500 line-clamp-3">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Sit quis auctor odio arcu et dolor.</p></a>
-                                    </div>
-                                    <div className="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
-                                        <div className="flex items-center justify-between">
-                                            <div className="flex items-center space-x-2">
-                                                <p className="text-sm font-medium text-gray-900"><a href="#" title="" className="">Growth</a></p><span className="text-sm font-medium text-gray-900">•</span>
-                                                <p className="text-sm font-medium text-gray-900">7 Mins Read</p>
-                                            </div><a href="#" title="" className="" role="button"><svg className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                <line x1="17" y1="7" x2="7" y2="17"></line>
-                                                <polyline points="8 7 17 7 17 16"></polyline></svg></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="relative snap-start scroll-ml-6 shrink-0 first:pl-6 last:pr-6">
-                                <div className="relative flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow w-60 md:w-80 group rounded-xl hover:shadow-lg hover:-translate-y-1">
-                                    <a href="#" title="" className="flex shrink-0 aspect-w-4 aspect-h-3"><img className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110" src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/4/thumbnail-3.png" alt="thumbnail-3" /></a>
-                                    <div className="flex-1 px-4 py-5 sm:p-6">
-                                        <a href="#" title="" className="">
-                                            <p className="text-lg font-bold text-gray-900">How to write content about your photographs</p>
-                                            <p className="mt-3 text-sm font-normal leading-6 text-gray-500 line-clamp-3">Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Sit quis auctor odio arcu et dolor.</p></a>
-                                    </div>
-                                    <div className="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
-                                        <div className="flex items-center justify-between">
-                                            <div className="flex items-center space-x-2">
-                                                <p className="text-sm font-medium text-gray-900"><a href="#" title="" className="">Growth</a></p><span className="text-sm font-medium text-gray-900">•</span>
-                                                <p className="text-sm font-medium text-gray-900">7 Mins Read</p>
-                                            </div><a href="#" title="" className="" role="button"><svg className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                <line x1="17" y1="7" x2="7" y2="17"></line>
-                                                <polyline points="8 7 17 7 17 16"></polyline></svg></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex items-center justify-end mt-2 space-x-5">
-                            <div className="w-16 h-[3px] rounded-full bg-gray-900"></div>
-                            <div className="w-16 h-[3px] rounded-full bg-gray-300"></div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
-
         </div>
 
     )
