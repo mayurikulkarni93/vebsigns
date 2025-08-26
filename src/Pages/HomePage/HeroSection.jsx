@@ -217,7 +217,7 @@ const HeroSection = () => {
                             </motion.span>
 
                             <motion.button
-                                className="mt-4 px-6 py-3 h-[63px] w-full bg-[#1b4bf0] text-white font-light rounded-full hover:bg-[#ecf00c] hover:text-black transition flex items-center justify-center gap-2"
+                                className="mt-4 px-6 py-3 h-[63px] w-[350px] bg-[#1b4bf0] text-white font-light rounded-full hover:bg-[#ecf00c] hover:text-black transition flex items-center justify-center gap-2"
                                 variants={itemVariants}
                             >
                                 Building wealth, creating futures.
