@@ -92,14 +92,14 @@ const HeroSection = () => {
                             animate="visible"
                         >
                             <motion.h2
-                                className="text-[11px] uppercase font-semibold text-[#1b4bf0]"
+                                className="text-[10px] uppercase font-semibold text-[#1b4bf0]"
                                 variants={itemVariants}
                             >
                                 Where Data and AI
                             </motion.h2>
 
                             <motion.span
-                                className="text-[11px] uppercase font-bold text-[#15042e]"
+                                className="text-[16px] uppercase font-bold text-[#15042e]"
                                 variants={itemVariants}
                             >
                                 Come to life
