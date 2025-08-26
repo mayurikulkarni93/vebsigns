@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const successStories = [
@@ -26,6 +26,8 @@ const successStories = [
 ];
 
 const SuccessStories = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <section className="relative bg-gradient-to-b from-[#0a0225] to-[#110a3c] py-16 md:py-20 text-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
@@ -73,6 +75,7 @@ const SuccessStories = () => {
                         <div
                             key={index}
                             className="group bg-white text-gray-900 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 relative"
+                            onClick={() => setIsOpen(!isOpen)} // toggle on mobile/tablet
                         >
                             <img
                                 src={story.image}
@@ -88,17 +91,16 @@ const SuccessStories = () => {
                                 </p>
                             </div>
 
-                            {/* Yellow bar - hidden until hover */}
-
+                            {/* Yellow bar */}
                             <Link
                                 to="/case-study"
-                                className="absolute bottom-0 left-0 w-full bg-yellow-400 text-blue-600 font-semibold 
-             text-center py-3 translate-y-full group-hover:translate-y-0 
-             transition-transform duration-300 hover:underline"
+                                className={`absolute bottom-0 left-0 w-full bg-yellow-400 text-blue-600 font-semibold 
+        text-center py-3 transition-transform duration-300 hover:underline
+        ${isOpen ? "translate-y-0" : "translate-y-full"} 
+        lg:translate-y-full lg:group-hover:translate-y-0`}
                             >
                                 Read Case Study
                             </Link>
-
                         </div>
                     ))}
                 </div>
