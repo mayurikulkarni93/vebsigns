@@ -1,11 +1,40 @@
 import React from "react";
 
 const DigitalTransformation = () => {
+    const cardData = [
+        {
+            id: 1,
+            image: "/assets/HomePage/open-ai-1.png",
+            number: "1.",
+            description: "AI Solution provider & Big Data Experts Company",
+            buttonText: "Explore Vebsigns",
+            bgColor: "#15042E",
+            hoverTextColor: "white",
+        },
+        {
+            id: 2,
+            image: "/assets/HomePage/ai2.png",
+            number: "2.",
+            description: "Transform businesses into AI-first organizations",
+            buttonText: "See What We Do",
+            bgColor: "#15042E",
+            hoverTextColor: "white",
+        },
+        {
+            id: 3,
+            image: "/assets/HomePage/i3.png",
+            number: "3.",
+            description: "Has experience working with different industries",
+            buttonText: "Industries We Serve",
+            bgColor: "#15042E",
+            hoverTextColor: "white",
+        },
+    ];
     return (
         <section className="relative py-16 bg-gradient-to-br from-purple-50 via-white to-orange-50">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
                 {/* Heading */}
-                <p className="text-sm font-semibold text-blue-600 tracking-widest uppercase">
+                <p className="text-[21px] font-semibold text-blue-600 tracking-widest uppercase">
                     We’re Vebsigns
                 </p>
                 <h2 className="mt-4 text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl">
@@ -18,92 +47,45 @@ const DigitalTransformation = () => {
                 </p>
                 <br />
                 {/* Cards */}
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
 
-                    <a href="#"
-                        className="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow-md md:flex-row md:max-w-xl hover:shadow-lg hover:bg-gray-50 transition">
+                <div className="flex gap-12">
+                    {cardData.map((card) => (
+                        <div key={card.id} className="relative w-[269px] group">
+                            {/* Main Card */}
+                            <div
+                                className={`relative bg-white hover:bg-[${card.bgColor}] text-[#15042E] hover:text-white 
+                        text-[16px] leading-[25.6px] p-[30px] w-[269px] h-[370.203px] z-10 
+                        box-border rounded-lg shadow-lg cursor-pointer 
+                        transition-transform duration-300 ease-in-out hover:rotate-[2deg] 
+                        group-hover:translate-y-[-15px] overflow-visible 
+                        flex flex-col`}
+                            >
+                                <img
+                                    src={card.image}
+                                    alt="Card Image"
+                                    className="w-[215px] absolute top-6 left-[-25px] h-auto"
+                                />
+                                <h4 className="absolute top-48/100 left-6 text-7xl text-[#1B4BF0] font-normal">
+                                    {card.number}
+                                </h4>
+                                <p className="mt-auto text-left">{card.description}</p>
+                            </div>
 
-                        <img
-                            className="object-cover w-full rounded-t-xl h-64 md:h-auto md:w-48 md:rounded-none md:rounded-s-xl"
-                            src="https://img.freepik.com/premium-photo/3d-robot-holding-virtual-futuristic-digital-brain-glowing-cityscape-blue-background-vertical-style-ai-technology-machine-learning-artificial-intelligence-with-business-development-concepts_36367-8145.jpg"
-                            alt="AI Solution"
-                        />
-
-                        <div className="flex flex-col justify-between p-5 leading-normal">
-                            <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900">
-                                AI Solution Provider & Big Data Experts Company
-                            </h5>
-                            <p className="mb-3 text-sm text-gray-600">
-                                Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                            </p>
-
+                            {/* Button */}
+                            <div
+                                className="text-[16px] leading-[16px] text-center text-[#15042E] 
+                       bg-[#F3F945] w-[230px] h-[70px] p-[40px_10px_15px_10px] 
+                       block cursor-pointer transition-transform duration-300 
+                       ease-in-out box-border rounded-b-[8px] relative z-0 
+                       mx-auto -mt-[75px] group-hover:translate-y-[35px]"
+                            >
+                                <a>{card.buttonText}</a>
+                            </div>
                         </div>
-                    </a>
-                    <a href="#"
-                        className="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow-md md:flex-row md:max-w-xl hover:shadow-lg hover:bg-gray-50 transition">
-
-                        <img
-                            className="object-cover w-full rounded-t-xl h-64 md:h-auto md:w-48 md:rounded-none md:rounded-s-xl"
-                            src="https://img.freepik.com/premium-photo/3d-robot-holding-virtual-futuristic-digital-brain-glowing-cityscape-blue-background-vertical-style-ai-technology-machine-learning-artificial-intelligence-with-business-development-concepts_36367-8145.jpg"
-                            alt="AI Solution"
-                        />
-
-                        <div className="flex flex-col justify-between p-5 leading-normal">
-                            <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900">
-                                Transform businesses into AI-first organizations
-                            </h5>
-                            <p className="mb-3 text-sm text-gray-600">
-                                Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                            </p>
-
-                        </div>
-                    </a>
-                    <a href="#"
-                        className="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow-md md:flex-row md:max-w-xl hover:shadow-lg hover:bg-gray-50 transition">
-
-                        <img
-                            className="object-cover w-full rounded-t-xl h-64 md:h-auto md:w-48 md:rounded-none md:rounded-s-xl"
-                            src="https://img.freepik.com/premium-photo/3d-robot-holding-virtual-futuristic-digital-brain-glowing-cityscape-blue-background-vertical-style-ai-technology-machine-learning-artificial-intelligence-with-business-development-concepts_36367-8145.jpg"
-                            alt="AI Solution"
-                        />
-
-                        <div className="flex flex-col justify-between p-5 leading-normal">
-                            <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900">
-                                Has experience working with different industries
-                            </h5>
-                            <p className="mb-3 text-sm text-gray-600">
-                                Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                            </p>
-
-                        </div>
-                    </a>
-                    <a href="#"
-                        className="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow-md md:flex-row md:max-w-xl hover:shadow-lg hover:bg-gray-50 transition">
-
-                        <img
-                            className="object-cover w-full rounded-t-xl h-64 md:h-auto md:w-48 md:rounded-none md:rounded-s-xl"
-                            src="https://img.freepik.com/premium-photo/3d-robot-holding-virtual-futuristic-digital-brain-glowing-cityscape-blue-background-vertical-style-ai-technology-machine-learning-artificial-intelligence-with-business-development-concepts_36367-8145.jpg"
-                            alt="AI Solution"
-                        />
-
-                        <div className="flex flex-col justify-between p-5 leading-normal">
-                            <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900">
-                                Has experience working with different industries
-                            </h5>
-                            <p className="mb-3 text-sm text-gray-600">
-                                Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                            </p>
-
-                        </div>
-                    </a>
+                    ))}
                 </div>
-
-
-
-
-
                 {/* Bottom Text */}
-                <p className="mt-12 text-sm text-gray-600">
+                <p className="mt-12 text-base text-gray-600">
                     Drive Your Business Strategy with{" "}
                     <span className="text-indigo-600 font-semibold">AI</span>.{" "}
                     <a href="#" className="text-blue-600 hover:underline">
