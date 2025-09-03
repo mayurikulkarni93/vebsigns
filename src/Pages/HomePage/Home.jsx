@@ -33,10 +33,10 @@ const Home = () => {
       <OurSoftware />
       <UseCases />
       <DrivenByData />
-      <WorkingDiffIndustry />
-      <SuccessStories />
+      <WhyChooseUs />
+      {/* <WorkingDiffIndustry /> */}
+      {/* <SuccessStories /> */}
       <Team />
-      {/* <WhyChooseUs /> */}
       <BeneficialResults />
       <Logos />
       <InsightsSection />
