@@ -61,9 +61,65 @@ export default function Header() {
                     <Link to="/" className="hover:underline">
                         Home
                     </Link>
-                    <Link to="/software" className="hover:underline">
-                        Software
-                    </Link>
+                    <Popover className="relative">
+                        {({ open }) => (
+                            <div
+                                onMouseEnter={() => {
+                                    clearTimeout(closeTimeout);
+                                    if (!open) {
+                                        document.querySelector("#pages-btn")?.click();
+                                    }
+                                }}
+                                onMouseLeave={() => {
+                                    closeTimeout = setTimeout(() => {
+                                        if (open) {
+                                            document.querySelector("#pages-btn")?.click();
+                                        }
+                                    }, 100); // waits 100ms before closing
+                                }}
+                            >
+                                {/* Trigger */}
+                                <PopoverButton
+                                    id="pages-btn"
+                                    className="hover:underline focus:outline-none flex items-center gap-1"
+                                >
+                                    Company
+                                    <ChevronDown
+                                        className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-180" : ""
+                                            }`}
+                                    />
+                                </PopoverButton>
+
+                                {/* Dropdown Panel */}
+                                <PopoverPanel className="absolute z-50 mt-2 w-48 rounded-lg bg-white text-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                    <div className="p-3 divide-y divide-gray-200">
+                                        <Link to="/about" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
+                                            <Info className="w-4 h-4" />
+                                            About Us
+                                        </Link>
+                                        <Link to="/our-team" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
+                                            <FileText className="w-4 h-4" />
+                                            Our Team
+                                        </Link>
+                                        <Link to="/blog" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
+                                            <DollarSign className="w-4 h-4" />
+                                            Blogs
+                                        </Link>
+                                        {/* <Link to="/faq" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
+                                            <HelpCircle className="w-4 h-4" />
+                                            FAQ
+                                        </Link> */}
+                                        <Link to="/contact" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
+                                            <Mail className="w-4 h-4" />
+                                            Contact
+                                        </Link>
+                                    </div>
+                                </PopoverPanel>
+
+
+                            </div>
+                        )}
+                    </Popover>
 
                     {/* Headless UI Popover for Solutions */}
                     <Popover className="relative">
@@ -206,65 +262,10 @@ export default function Header() {
                     <Link to="/use-cases" className="hover:underline">
                         Use Cases
                     </Link>
-                    <Popover className="relative">
-                        {({ open }) => (
-                            <div
-                                onMouseEnter={() => {
-                                    clearTimeout(closeTimeout);
-                                    if (!open) {
-                                        document.querySelector("#pages-btn")?.click();
-                                    }
-                                }}
-                                onMouseLeave={() => {
-                                    closeTimeout = setTimeout(() => {
-                                        if (open) {
-                                            document.querySelector("#pages-btn")?.click();
-                                        }
-                                    }, 100); // waits 100ms before closing
-                                }}
-                            >
-                                {/* Trigger */}
-                                <PopoverButton
-                                    id="pages-btn"
-                                    className="hover:underline focus:outline-none flex items-center gap-1"
-                                >
-                                    Pages
-                                    <ChevronDown
-                                        className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-180" : ""
-                                            }`}
-                                    />
-                                </PopoverButton>
-
-                                {/* Dropdown Panel */}
-                                <PopoverPanel className="absolute z-50 mt-2 w-48 rounded-lg bg-white text-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                    <div className="p-3 divide-y divide-gray-200">
-                                        <Link to="/about" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
-                                            <Info className="w-4 h-4" />
-                                            About
-                                        </Link>
-                                        <Link to="/blog" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
-                                            <FileText className="w-4 h-4" />
-                                            Blog
-                                        </Link>
-                                        <Link to="/pricing" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
-                                            <DollarSign className="w-4 h-4" />
-                                            Pricing
-                                        </Link>
-                                        <Link to="/faq" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
-                                            <HelpCircle className="w-4 h-4" />
-                                            FAQ
-                                        </Link>
-                                        <Link to="/contact" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
-                                            <Mail className="w-4 h-4" />
-                                            Contact
-                                        </Link>
-                                    </div>
-                                </PopoverPanel>
-
-
-                            </div>
-                        )}
-                    </Popover>
+                    <Link to="/careers" className="hover:underline">
+                    Careers
+                    </Link>
+                    
                 </nav>
 
                 {/* Mobile Drawer */}
@@ -286,9 +287,41 @@ export default function Header() {
                             <Link to="/" className="hover:text-blue-600" onClick={toggleDrawer}>
                                 Home
                             </Link>
-                            <Link to="/software" className="hover:text-blue-600" onClick={toggleDrawer}>
-                                Software
-                            </Link>
+                            {/* Mobile Pages Dropdown */}
+                            <div className="space-y-2">
+                                {/* Header with arrow */}
+                                <div
+                                    className="flex items-center justify-between font-semibold cursor-pointer select-none"
+                                    onClick={() => setOpen(!open)}
+                                >
+                                    <span>Company</span>
+                                    <ChevronDown
+                                        className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-180" : ""
+                                            }`}
+                                    />
+                                </div>
+
+                                {/* Dropdown links */}
+                                {open && (
+                                    <div className="pl-4 space-y-2">
+                                        <Link to="/about" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                            About Us
+                                        </Link>
+                                        <Link to="/our-team" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                            Our Team
+                                        </Link>
+                                        <Link to="/blog" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                            Blogs
+                                        </Link>
+                                        {/* <Link to="/faq" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                            FAQ
+                                        </Link> */}
+                                        <Link to="/contact" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                            Contact
+                                        </Link>
+                                    </div>
+                                )}
+                            </div>
 
                             {/* Mobile Solutions Dropdown */}
                             <div className="space-y-2">
@@ -391,42 +424,12 @@ export default function Header() {
                             <Link to="/use-cases" className="hover:text-blue-600" onClick={toggleDrawer}>
                                 Use Cases
                             </Link>
+                            <Link to="/careers" className="hover:text-blue-600" onClick={toggleDrawer}>
+                                Careers
+                            </Link>
 
                             {/* Mobile Pages Dropdown */}
-                            <div className="space-y-2">
-                                {/* Header with arrow */}
-                                <div
-                                    className="flex items-center justify-between font-semibold cursor-pointer select-none"
-                                    onClick={() => setOpen(!open)}
-                                >
-                                    <span>Pages</span>
-                                    <ChevronDown
-                                        className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-180" : ""
-                                            }`}
-                                    />
-                                </div>
-
-                                {/* Dropdown links */}
-                                {open && (
-                                    <div className="pl-4 space-y-2">
-                                        <Link to="/about" className="block hover:text-blue-600" onClick={toggleDrawer}>
-                                            About
-                                        </Link>
-                                        <Link to="/blog" className="block hover:text-blue-600" onClick={toggleDrawer}>
-                                            Blog
-                                        </Link>
-                                        <Link to="/pricing" className="block hover:text-blue-600" onClick={toggleDrawer}>
-                                            Pricing
-                                        </Link>
-                                        <Link to="/faq" className="block hover:text-blue-600" onClick={toggleDrawer}>
-                                            FAQ
-                                        </Link>
-                                        <Link to="/contact" className="block hover:text-blue-600" onClick={toggleDrawer}>
-                                            Contact
-                                        </Link>
-                                    </div>
-                                )}
-                            </div>
+                            
                             <button
                                 className="flex items-center space-x-1 bg-[#1849FF] text-white px-3 py-1 rounded-lg font-medium hover:bg-gray-100 transition"
                                 onClick={() => window.open("https://calendly.com/vebsigns/30min", "_blank")}

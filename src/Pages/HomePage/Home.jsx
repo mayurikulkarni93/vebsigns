@@ -21,6 +21,8 @@ import InsightsSection from './InsightsSection'
 import OurSoftware from './Solutions/OurSoftware'
 import UseCases from './UseCases'
 import DrivenByData from '../AboutPage/DrivenByData'
+import TestimonialNew from './TestimonialNew'
+import HomeCTA from './HomeCTA'
 
 const Home = () => {
   return (
@@ -29,28 +31,29 @@ const Home = () => {
       <HeroSection />
       <QuickLinks />
       <DigitalTransformation />
-      {/* <Accordion /> */}
       <OurSoftware />
       <UseCases />
       <DrivenByData />
       <WhyChooseUs />
+      <TestimonialNew />
+      <InsightsSection />
+      <Faq/>
+      <HomeCTA/>
+      <Footer />
+
+      {/* <Team /> */}
+      {/* <BeneficialResults /> */}
+      {/* <Logos /> */}
+      {/* <Accordion /> */}
       {/* <WorkingDiffIndustry /> */}
       {/* <SuccessStories /> */}
-      <Team />
-      <BeneficialResults />
-      <Logos />
-      <InsightsSection />
-
       {/* <BlogSection /> */}
-
       {/* <Testimonial/> */}
-      {/*<Team/>
+      {/*
       <Stats/>
       <Logos/>
       <Steps/>
       <Integration/> */}
-      {/* <Faq/> */}
-      <Footer />
     </div>
   )
 }

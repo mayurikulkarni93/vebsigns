@@ -4,6 +4,7 @@ import Footer from '../../Components/Footer';
 import TimelineStepper from './TimelineStepper';
 import LeadingCompanies from './LeadingCompanies';
 import DrivenByData from './DrivenByData';
+import Locations from './Locations';
 
 const About = () => {
     return (
@@ -13,7 +14,7 @@ const About = () => {
                 <div className="max-w-6xl mx-auto text-center">
                     {/* Company name */}
                     <p className="text-blue-400 uppercase tracking-wide font-semibold mb-4 text-sm sm:text-base">
-                        Vebsigns Technologies – AI Company
+                        Vebsigns – AI Company
                     </p>
 
                     {/* Main Heading */}
@@ -68,6 +69,7 @@ const About = () => {
             <TimelineStepper />
             <LeadingCompanies />
             <DrivenByData />
+            <Locations />
             <Footer />
         </div>
     );

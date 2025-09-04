@@ -1,0 +1,12 @@
+<svg width="350" height="180" viewBox="0 0 350 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="imgPattern" patternUnits="userSpaceOnUse" width="350" height="180">
+      <!-- Replace with your own image -->
+      <image href="your-image.jpg" x="0" y="0" width="350" height="180" preserveAspectRatio="xMidYMid slice" />
+    </pattern>
+  </defs>
+
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M350 15C350 6.71573 343.284 0 335 0H15C6.71573 0 0 6.71573 0 15V165C0 173.284 6.71573 180 15 180H275C283.284 180 290 173.284 290 165V135C290 126.716 296.716 120 305 120H335C343.284 120 350 113.284 350 105V15Z"
+    fill="url(#imgPattern)" />
+</svg>

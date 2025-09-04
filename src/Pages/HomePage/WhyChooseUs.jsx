@@ -73,52 +73,62 @@ const features = [
 
 
 const WhyChooseUs = () => {
+
     return (
         <section className="relative bg-[#0b0225] py-16 md:py-20 text-white overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                {/* Left Arrow */}
-                <div className="flex justify-center items-center relative">
-                    <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 flex justify-center items-center">
-                        <img
-                            className="w-full h-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
-                            loading="lazy"
-                            decoding="async"
-                            src="https://live.21lab.co/hanotek/wp-content/uploads/2024/11/arrow3.svg"
-                            alt="Arrow"
-                        />
-                    </div>
-                </div>
-
-                {/* Right Content */}
-                <div className="text-center lg:text-left">
-                    <p className="text-blue-300 uppercase tracking-widest font-semibold text-sm sm:text-base md:text-lg">
+                {/* Top Heading (Centered) */}
+                <div className="text-center mb-12 md:mb-16">
+                    <p className="text-blue-300 uppercase tracking-widest font-semibold text-sm sm:text-base md:text-3xl">
                         Why You Should
                     </p>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 md:mb-12">
+                    <h2 className="text-3xl uppercase sm:text-4xl md:text-7xl font-bold">
                         Choose Vebsigns
                     </h2>
-
-                    <div className="space-y-8 sm:space-y-10">
-                        {features.map((feature, index) => (
-                            <div key={index} className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-5">
-                                <div className="flex-shrink-0">{feature.icon}</div>
-                                <div className="text-center sm:text-left">
-                                    <h3 className="text-lg sm:text-xl font-semibold mb-2">
-                                        {feature.title}
-                                    </h3>
-                                    <p className="text-gray-300 text-sm sm:text-base">
-                                        {feature.description}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
                 </div>
 
+                {/* Grid Layout */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    {/* Left Arrow */}
+                    <div className="flex justify-center items-center relative">
+                        <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 flex justify-center items-center">
+                            <img
+                                className="w-full h-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+                                loading="lazy"
+                                decoding="async"
+                                src="https://live.21lab.co/hanotek/wp-content/uploads/2024/11/arrow3.svg"
+                                alt="Arrow"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Right Content */}
+                    <div className="text-center lg:text-left">
+                        <div className="space-y-8 sm:space-y-10">
+                            {features.map((feature, index) => (
+                                <div
+                                    key={index}
+                                    className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-5"
+                                >
+                                    <div className="flex-shrink-0">{feature.icon}</div>
+                                    <div className="text-center sm:text-left">
+                                        <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                                            {feature.title}
+                                        </h3>
+                                        <p className="text-gray-300 text-sm sm:text-base">
+                                            {feature.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );
+
 
 };
 
