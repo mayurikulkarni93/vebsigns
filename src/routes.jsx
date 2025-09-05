@@ -6,15 +6,17 @@ import { Routes, Route } from "react-router-dom";
 const Home = lazy(() => import("./Pages/HomePage/Home"));
 const About = lazy(() => import("./Pages/AboutPage/About"));
 const Blog = lazy(() => import("./Pages/Blog/Blog"));
+const BlogSingle = lazy(() => import("./Pages/Blog/BlogSingle"));
 // const Contact = lazy(() => import("./Pages/Contact"));
 
 const AppRoutes = () => (
-//   <Suspense fallback={<Loader />}>
+  //   <Suspense fallback={<Loader />}>
   <Suspense>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogSingle />} />
       {/* <Route path="/contact" element={<Contact />} /> */}
       {/* Add more routes here */}
     </Routes>

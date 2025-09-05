@@ -1,59 +1,8 @@
 import { Plus } from "lucide-react";
 import React from "react";
 import { FaPlus } from "react-icons/fa";
-
-const blogPosts = [
-    {
-        id: 1,
-        category: "Data and AI, Data Science",
-        title: "Build trustworthy graph neural networks",
-        excerpt:
-            "Artificial intelligence (AI) is rapidly transforming our world, from recommendations to business decisions...",
-        image: "/assets/HomePage/b6.jpg",
-        author: "Linethemes",
-        date: "November 19, 2024",
-    },
-    {
-        id: 2,
-        category: "Data and AI, Generative AI",
-        title: "How can we ensure responsible AI in marketing?",
-        excerpt:
-            "Organizations are increasingly investing in AI systems and tools to enhance business processes...",
-        image: "/assets/HomePage/b5.jpg",
-        author: "Linethemes",
-        date: "November 19, 2024",
-    },
-    {
-        id: 3,
-        category: "AI Theory, Data and AI",
-        title: "The role of LLM monitoring in today’s landscape",
-        excerpt:
-            "In the current technological landscape LLMs have emerged as powerful tools...",
-        image: "/assets/HomePage/b4.jpg",
-        author: "Linethemes",
-        date: "November 19, 2024",
-    },
-    {
-        id: 4,
-        category: "Data and AI",
-        title: "Insights and opportunities in an AI world",
-        excerpt:
-            "Explore AI's growing influence on industries, from automation to strategic growth opportunities...",
-        image: "/assets/HomePage/b3.jpg",
-        author: "Linethemes",
-        date: "November 19, 2024",
-    },
-    {
-        id: 5,
-        category: "Digital Experience",
-        title: "Making content AI-Friendly: A Practical Guide",
-        excerpt:
-            "Discover practical strategies to make your content easily understandable for AI algorithms...",
-        image: "/assets/HomePage/b2.jpg",
-        author: "Linethemes",
-        date: "November 19, 2024",
-    },
-];
+import { Link } from "react-router-dom";
+import { blogPosts } from "./blogPost";
 
 const BlogGrid = () => {
     return (
@@ -62,77 +11,81 @@ const BlogGrid = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     {blogPosts.map((post, index) => (
-                        <div
-                            key={post.id}
-                            className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-4 relative"
-                        >
-                            {/* Blog Image */}
-                            <div className="relative w-full">
-                                <svg
-                                    key={index}
-                                    viewBox="0 0 350 180"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="w-full h-auto" // 👈 responsive SVG scaling
-                                    preserveAspectRatio="xMidYMid slice"
-                                >
-                                    <defs>
-                                        <pattern
-                                            id={`imgPattern-${index}`}
-                                            patternUnits="objectBoundingBox"
-                                            width="1"
-                                            height="1"
-                                        >
-                                            <image
-                                                href={post.image}
-                                                x="0"
-                                                y="0"
-                                                width="350"
-                                                height="180"
-                                                preserveAspectRatio="xMidYMid slice"
-                                            />
-                                        </pattern>
-                                    </defs>
+                        <Link to={`/blog/${post.slug}`} key={post.id}>
 
-                                    <path
-                                        fillRule="evenodd"
-                                        clipRule="evenodd"
-                                        d="M350 15C350 6.71573 343.284 0 335 0H15C6.71573 0 0 6.71573 0 15V165C0 173.284 6.71573 180 15 180H275C283.284 180 290 173.284 290 165V135C290 126.716 296.716 120 305 120H335C343.284 120 350 113.284 350 105V15Z"
-                                        fill={`url(#imgPattern-${index})`}
-                                    />
-                                </svg>
+                            <div
+                                key={post.id}
+                                className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-4 relative"
+                            >
+                                {/* Blog Image */}
+                                <div className="relative w-full">
+                                    <svg
+                                        key={index}
+                                        viewBox="0 0 350 180"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-full h-auto" // 👈 responsive SVG scaling
+                                        preserveAspectRatio="xMidYMid slice"
+                                    >
+                                        <defs>
+                                            <pattern
+                                                id={`imgPattern-${index}`}
+                                                patternUnits="objectBoundingBox"
+                                                width="1"
+                                                height="1"
+                                            >
+                                                <image
+                                                    href={post.image}
+                                                    x="0"
+                                                    y="0"
+                                                    width="350"
+                                                    height="180"
+                                                    preserveAspectRatio="xMidYMid slice"
+                                                />
+                                            </pattern>
+                                        </defs>
 
-                                <button
-                                    className="absolute bottom-0 right-1 bg-yellow-300 rounded-full p-3 shadow-md 
+                                        <path
+                                            fillRule="evenodd"
+                                            clipRule="evenodd"
+                                            d="M350 15C350 6.71573 343.284 0 335 0H15C6.71573 0 0 6.71573 0 15V165C0 173.284 6.71573 180 15 180H275C283.284 180 290 173.284 290 165V135C290 126.716 296.716 120 305 120H335C343.284 120 350 113.284 350 105V15Z"
+                                            fill={`url(#imgPattern-${index})`}
+                                        />
+                                    </svg>
+
+                                    <button
+                                        className="absolute bottom-0 right-1 bg-yellow-300 rounded-full p-3 shadow-md 
                 hover:bg-[#1B4BF0] hover:text-white transition-colors duration-300 
                 group"
-                                >
-                                    <Plus
-                                        className="w-5 h-5 transform transition-transform duration-300 group-hover:rotate-180"
-                                        strokeWidth={1.5}
-                                    />
-                                </button>
-                            </div>
+                                    >
+                                        <Plus
+                                            className="w-5 h-5 transform transition-transform duration-300 group-hover:rotate-180"
+                                            strokeWidth={1.5}
+                                        />
+                                    </button>
+                                </div>
 
-                            {/* Blog Content */}
-                            <div className="mt-4">
-                                <p className="text-sm text-blue-600 uppercase font-semibold">
-                                    {post.category}
-                                </p>
-                                <h3 className="text-lg font-semibold mt-1">{post.title}</h3>
-                                <p className="text-gray-600 mt-2 text-sm">{post.excerpt}</p>
 
-                                {/* Author Info */}
-                                <div className="flex items-center mt-4 text-sm text-gray-500">
-                                    <img
-                                        src="/assets/HomePage/Author.png"
-                                        alt="author"
-                                        className="w-6 h-6 rounded-full mr-2"
-                                    />
-                                    <span>by {post.author}</span>
-                                    <span className="ml-2">on {post.date}</span>
+                                {/* Blog Content */}
+                                <div className="mt-4">
+                                    <p className="text-sm text-blue-600 uppercase font-semibold">
+                                        {post.category.join(", ")}
+                                    </p>
+                                    <h3 className="text-lg font-semibold mt-1">{post.title}</h3>
+                                    <p className="text-gray-600 mt-2 text-sm">{post.excerpt}</p>
+
+                                    {/* Author Info */}
+                                    <div className="flex items-center mt-4 text-sm text-gray-500">
+                                        <img
+                                            src="/assets/HomePage/Author.png"
+                                            alt="author"
+                                            className="w-6 h-6 rounded-full mr-2"
+                                        />
+                                        <span>by {post.author}</span>
+                                        <span className="ml-2">on {post.date}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

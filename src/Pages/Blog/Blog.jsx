@@ -30,7 +30,7 @@ const Blog = () => {
       </div>
     </section>
 
-    {/* <BlogGrid/> */}
+    <BlogGrid/>
     <Footer/>
     </div>
   );
