@@ -7,7 +7,7 @@ const Home = lazy(() => import("./Pages/HomePage/Home"));
 const About = lazy(() => import("./Pages/AboutPage/About"));
 const Blog = lazy(() => import("./Pages/Blog/Blog"));
 const BlogSingle = lazy(() => import("./Pages/Blog/BlogSingle"));
-// const Contact = lazy(() => import("./Pages/Contact"));
+const ContactSection = lazy(() => import("./Pages/ContactUs/ContactUs"));
 
 const AppRoutes = () => (
   //   <Suspense fallback={<Loader />}>
@@ -17,7 +17,7 @@ const AppRoutes = () => (
       <Route path="/about" element={<About />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogSingle />} />
-      {/* <Route path="/contact" element={<Contact />} /> */}
+      <Route path="/contact" element={<ContactSection />} />
       {/* Add more routes here */}
     </Routes>
   </Suspense>
