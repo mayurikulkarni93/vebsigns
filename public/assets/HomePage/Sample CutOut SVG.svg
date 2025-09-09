@@ -1,0 +1,16 @@
+<svg width="1170" height="535" viewBox="0 0 1170 535" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <mask id="cutout">
+                                <!-- Full area visible -->
+                                <rect width="1170" height="535" fill="white" />
+                                <!-- Cutout shape: scaled down & centered -->
+                                <g transform="translate(85,35) scale(0.85)">
+                                    <path fill="black" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M40 0C17.9086 0 0 17.9086 0 40V495C0 517.091 17.9086 535 40 535H560C582.091 535 600 517.091 600 495V465C600 442.909 617.909 425 640 425H1130C1152.09 425 1170 407.091 1170 385V40C1170 17.9086 1152.09 0 1130 0H40Z" />
+                                </g>
+                            </mask>
+                        </defs>
+
+                        <!-- Background with hollow center -->
+                        <rect width="1170" height="535" fill="#15042E" mask="url(#cutout)" />
+                    </svg>

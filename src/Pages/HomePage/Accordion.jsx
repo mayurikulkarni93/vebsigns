@@ -84,7 +84,7 @@
 
 
 import React, { useState } from "react";
-import AIMLConsulting from "./Solutions/OurSoftware"; // Import your component
+import AIMLConsulting from "./OurSoftware"; // Import your component
 
 // Define components for each section
 const components = [

@@ -8,6 +8,7 @@ const About = lazy(() => import("./Pages/AboutPage/About"));
 const Blog = lazy(() => import("./Pages/Blog/Blog"));
 const BlogSingle = lazy(() => import("./Pages/Blog/BlogSingle"));
 const ContactSection = lazy(() => import("./Pages/ContactUs/ContactUs"));
+const AIMLHome = lazy(() => import("./Pages/Solutions/IT Services/AIML Strategy/AIMLHome"));
 
 const AppRoutes = () => (
   //   <Suspense fallback={<Loader />}>
@@ -18,6 +19,7 @@ const AppRoutes = () => (
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogSingle />} />
       <Route path="/contact" element={<ContactSection />} />
+      <Route path="/ai-ml-strategy" element={<AIMLHome />} />
       {/* Add more routes here */}
     </Routes>
   </Suspense>

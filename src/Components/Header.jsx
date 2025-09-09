@@ -155,9 +155,9 @@ export default function Header() {
                                 {/* Dropdown Panel */}
                                 <PopoverPanel className="absolute z-50 mt-2 w-[650px] rounded-lg bg-white text-black shadow-lg ring-1 ring-black ring-opacity-5">
                                     <div className="flex px-6 py-5 gap-8">
-                                        {/* By Services Section */}
+                                        {/* IT Services Section */}
                                         <div className="flex-1">
-                                            <div className="font-semibold mb-3">By Services</div>
+                                            <div className="font-semibold mb-3">IT Services</div>
                                             <div className="space-y-3">
                                                 <Link
                                                     to="/ai-ml-strategy"
@@ -204,9 +204,9 @@ export default function Header() {
                                             </div>
                                         </div>
 
-                                        {/* For Industries Section */}
+                                        {/* IoT Services Section */}
                                         <div className="flex-1">
-                                            <div className="font-semibold mb-3">For Industries</div>
+                                            <div className="font-semibold mb-3">IoT Services</div>
                                             <div className="space-y-3">
                                                 <Link
                                                     to="/gender-detection"
@@ -348,7 +348,7 @@ export default function Header() {
                                                 className="flex items-center justify-between cursor-pointer select-none font-medium"
                                                 onClick={() => setServicesOpen(!servicesOpen)}
                                             >
-                                                <span>By Services</span>
+                                                <span>IT Services</span>
                                                 <ChevronDown
                                                     className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
                                                 />
@@ -385,7 +385,7 @@ export default function Header() {
                                                 className="flex items-center justify-between cursor-pointer select-none font-medium"
                                                 onClick={() => setIndustriesOpen(!industriesOpen)}
                                             >
-                                                <span>For Industries</span>
+                                                <span>IoT Services</span>
                                                 <ChevronDown
                                                     className={`w-4 h-4 transition-transform duration-200 ${industriesOpen ? "rotate-180" : ""}`}
                                                 />
