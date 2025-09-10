@@ -14,6 +14,7 @@ const GENAIHome = lazy(() => import("./Pages/Solutions/IT Services/Gen AI/GENAIH
 const OPENAIHome = lazy(() => import("./Pages/Solutions/IT Services/OpenAI/OPENAIHome"));
 const SEOHome = lazy(() => import("./Pages/Solutions/IT Services/SEO/SEOHome"));
 const CAIHome = lazy(() => import("./Pages/Solutions/IT Services/Comprehensive AI/CAIHome"));
+const AIGHome = lazy(() => import("./Pages/Solutions/IoT Services/AI Gender/AIGHome"));
 
 const AppRoutes = () => (
   //   <Suspense fallback={<Loader />}>
@@ -30,6 +31,7 @@ const AppRoutes = () => (
       <Route path="/openai-consulting" element={<OPENAIHome />} />
       <Route path="/seo-services" element={<SEOHome />} />
       <Route path="/comprehensive-ai" element={<CAIHome />} />
+      <Route path="/gender-detection" element={<AIGHome />} />
       {/* Add more routes here */}
     </Routes>
   </Suspense>
