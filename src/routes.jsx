@@ -17,6 +17,7 @@ const CAIHome = lazy(() => import("./Pages/Solutions/IT Services/Comprehensive A
 const AIGHome = lazy(() => import("./Pages/Solutions/IoT Services/AI Gender/AIGHome"));
 const BMDMHome = lazy(() => import("./Pages/Solutions/IoT Services/Bulk Manufacturing/BMDMHome"));
 const ISIHome = lazy(() => import("./Pages/Solutions/IoT Services/Implementation System/ISIHome"));
+const SASHome = lazy(() => import("./Pages/Solutions/IoT Services/Strategic & Advisory Services/SASHome"));
 
 const AppRoutes = () => (
   //   <Suspense fallback={<Loader />}>
@@ -36,6 +37,7 @@ const AppRoutes = () => (
       <Route path="/iot-product-development" element={<AIGHome />} />
       <Route path="/bulk-manufacturing" element={<BMDMHome />} />
       <Route path="/implementation-system-integration" element={<ISIHome />} />
+      <Route path="/strategic-advisory-services" element={<SASHome />} />
       {/* Add more routes here */}
     </Routes>
   </Suspense>

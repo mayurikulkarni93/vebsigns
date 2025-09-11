@@ -5,6 +5,7 @@ import TimelineStepper from './TimelineStepper';
 import LeadingCompanies from './LeadingCompanies';
 import DrivenByData from './DrivenByData';
 import Locations from './Locations';
+import Team from '../HomePage/Team';
 
 const About = () => {
     return (
@@ -69,6 +70,7 @@ const About = () => {
             <TimelineStepper />
             <LeadingCompanies />
             <DrivenByData />
+            <Team />
             <Locations />
             <Footer />
         </div>

@@ -41,7 +41,6 @@ const Home = () => {
       <HomeCTA/>
       <Footer />
 
-      {/* <Team /> */}
       {/* <BeneficialResults /> */}
       {/* <Logos /> */}
       {/* <Accordion /> */}
