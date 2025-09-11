@@ -18,6 +18,7 @@ const AIGHome = lazy(() => import("./Pages/Solutions/IoT Services/AI Gender/AIGH
 const BMDMHome = lazy(() => import("./Pages/Solutions/IoT Services/Bulk Manufacturing/BMDMHome"));
 const ISIHome = lazy(() => import("./Pages/Solutions/IoT Services/Implementation System/ISIHome"));
 const SASHome = lazy(() => import("./Pages/Solutions/IoT Services/Strategic & Advisory Services/SASHome"));
+const PMAHome = lazy(() => import("./Pages/Solutions/IoT Services/Predictive Maintenance & Analytics/PMAHome"));
 
 const AppRoutes = () => (
   //   <Suspense fallback={<Loader />}>
@@ -38,6 +39,7 @@ const AppRoutes = () => (
       <Route path="/bulk-manufacturing" element={<BMDMHome />} />
       <Route path="/implementation-system-integration" element={<ISIHome />} />
       <Route path="/strategic-advisory-services" element={<SASHome />} />
+      <Route path="/predictive-maintenance" element={<PMAHome />} />
       {/* Add more routes here */}
     </Routes>
   </Suspense>
