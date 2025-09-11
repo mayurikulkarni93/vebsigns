@@ -201,6 +201,20 @@ export default function Header() {
                                                     <Layers size={24} />
                                                     <span>The Comprehensive AI Ecosystem</span>
                                                 </Link>
+                                                <Link
+                                                    to="/website-design"
+                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                >
+                                                    <Layers size={24} />
+                                                    <span>Website Design & Development</span>
+                                                </Link>
+                                                <Link
+                                                    to="/app-design"
+                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                >
+                                                    <Layers size={24} />
+                                                    <span>App Design & Development</span>
+                                                </Link>
                                             </div>
                                         </div>
 
@@ -209,47 +223,41 @@ export default function Header() {
                                             <div className="font-semibold mb-3">IoT Services</div>
                                             <div className="space-y-3">
                                                 <Link
-                                                    to="/gender-detection"
+                                                    to="/iot-product-development"
                                                     className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
                                                 >
                                                     <UserCheck size={24} />
-                                                    <span>AI Gender Detection Solution</span>
+                                                    <span>IoT Product Development</span>
                                                 </Link>
                                                 <Link
-                                                    to="/business-intelligence"
+                                                    to="/bulk-manufacturing"
                                                     className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
                                                 >
                                                     <LineChart size={24} />
-                                                    <span>Business Intelligence for Konstruct</span>
+                                                    <span>Bulk Manufacturing & Device Management</span>
                                                 </Link>
                                                 <Link
-                                                    to="/face-recognition"
+                                                    to="/implementation-system-integration"
                                                     className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
                                                 >
                                                     <Smile size={24} />
-                                                    <span>Face Recognition and Identification</span>
+                                                    <span>Implementation & System Integration</span>
                                                 </Link>
                                                 <Link
-                                                    to="/investment-data"
+                                                    to="/strategic-advisory-services"
                                                     className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
                                                 >
                                                     <Database size={24} />
-                                                    <span>Investment Data Management</span>
+                                                    <span>Strategic & Advisory Services</span>
                                                 </Link>
                                                 <Link
-                                                    to="/ai-recipes"
+                                                    to="/predictive-maintenance"
                                                     className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
                                                 >
                                                     <Utensils size={24} />
-                                                    <span>Smart AI-Generated Recipes</span>
+                                                    <span> Predictive Maintenance & Analytics</span>
                                                 </Link>
-                                                <Link
-                                                    to="/retail-platform"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
-                                                >
-                                                    <ShoppingBag size={24} />
-                                                    <span>Solution for Retail Platform</span>
-                                                </Link>
+
                                             </div>
                                         </div>
                                     </div>
@@ -263,9 +271,9 @@ export default function Header() {
                         Use Cases
                     </Link>
                     <Link to="/careers" className="hover:underline">
-                    Careers
+                        Careers
                     </Link>
-                    
+
                 </nav>
 
                 {/* Mobile Drawer */}
@@ -376,6 +384,12 @@ export default function Header() {
                                                 <Link to="/comprehensive-ai" className="block hover:text-blue-600" onClick={toggleDrawer}>
                                                     The Comprehensive AI Ecosystem
                                                 </Link>
+                                                <Link to="/website-design" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    Website Design & Development
+                                                </Link>
+                                                <Link to="/app-design" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    App Design & Development
+                                                </Link>
                                             </div>
                                         </div>
 
@@ -395,24 +409,22 @@ export default function Header() {
                                                 className={`pl-4 space-y-1 overflow-hidden transition-[max-height] duration-300 ${industriesOpen ? "max-h-96" : "max-h-0"
                                                     }`}
                                             >
-                                                <Link to="/gender-detection" className="block hover:text-blue-600" onClick={toggleDrawer}>
-                                                    AI Gender Detection Solution
+                                                <Link to="/iot-product-development" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    IoT Product Development
                                                 </Link>
-                                                <Link to="/business-intelligence" className="block hover:text-blue-600" onClick={toggleDrawer}>
-                                                    Business Intelligence for Konstruct
+                                                <Link to="/bulk-manufacturing" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    Bulk Manufacturing & Device Management
                                                 </Link>
-                                                <Link to="/face-recognition" className="block hover:text-blue-600" onClick={toggleDrawer}>
-                                                    Face Recognition and Identification
+                                                <Link to="/implementation-system-integration" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    Implementation & System Integration
                                                 </Link>
-                                                <Link to="/investment-data" className="block hover:text-blue-600" onClick={toggleDrawer}>
-                                                    Investment Data Management
+                                                <Link to="/strategic-advisory-services" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    Strategic & Advisory Services
                                                 </Link>
-                                                <Link to="/ai-recipes" className="block hover:text-blue-600" onClick={toggleDrawer}>
-                                                    Smart AI-Generated Recipes
+                                                <Link to="/predictive-maintenance" className="block hover:text-blue-600" onClick={toggleDrawer}>
+                                                    Predictive Maintenance & Analytics
                                                 </Link>
-                                                <Link to="/retail-platform" className="block hover:text-blue-600" onClick={toggleDrawer}>
-                                                    Solution for Retail Platform
-                                                </Link>
+
                                             </div>
                                         </div>
 
@@ -429,7 +441,7 @@ export default function Header() {
                             </Link>
 
                             {/* Mobile Pages Dropdown */}
-                            
+
                             <button
                                 className="flex items-center space-x-1 bg-[#1849FF] text-white px-3 py-1 rounded-lg font-medium hover:bg-gray-100 transition"
                                 onClick={() => window.open("https://calendly.com/vebsigns/30min", "_blank")}

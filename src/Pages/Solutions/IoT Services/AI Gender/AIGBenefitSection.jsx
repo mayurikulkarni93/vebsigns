@@ -127,7 +127,7 @@ const AIGBenefitsSection = () => {
               Key Benefits
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mt-2 uppercase">
-              6 Benefits of AI Gender Detection Solution.
+              6 Benefits of IoT Product Development.
             </h2>
             <p className="text-gray-300 mt-4 max-w-xl md:max-w-2xl mx-auto text-sm sm:text-base">
               A well-executed AI strategy offers businesses numerous advantages,

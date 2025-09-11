@@ -31,7 +31,7 @@ const AppRoutes = () => (
       <Route path="/openai-consulting" element={<OPENAIHome />} />
       <Route path="/seo-services" element={<SEOHome />} />
       <Route path="/comprehensive-ai" element={<CAIHome />} />
-      <Route path="/gender-detection" element={<AIGHome />} />
+      <Route path="/iot-product-development" element={<AIGHome />} />
       {/* Add more routes here */}
     </Routes>
   </Suspense>

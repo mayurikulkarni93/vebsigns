@@ -15,7 +15,7 @@ const AIGConsultingOverview = () => {
 
                     {/* Title */}
                     <h2 className="text-4xl sm:text-5xl uppercase font-bold text-gray-900 mt-2 mb-6">
-                        What is AI Gender Detection Solution?
+                        What is IoT Product Development?
                     </h2>
 
                     {/* Paragraph */}

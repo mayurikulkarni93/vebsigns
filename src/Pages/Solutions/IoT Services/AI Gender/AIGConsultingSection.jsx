@@ -24,7 +24,7 @@ const AIGConsultingSection = () => {
       {/* Right Side */}
       <div className="flex flex-col justify-center p-8 sm:p-12 text-center md:text-left">
         <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-          Why is AI Gender Detection Solution important?
+          Why is IoT Product Development important?
         </h3>
         <p className="text-gray-800 leading-relaxed text-base sm:text-lg">
           AI strategy consulting is vital for integrating artificial intelligence into business operations effectively. It ensures that AI initiatives align with business goals, enhancing operational efficiency and competitive edge. This consulting process includes.{" "}
