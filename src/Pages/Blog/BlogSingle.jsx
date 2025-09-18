@@ -1,69 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
-
+import RelatedPost from "./RelatedPost"
 import { useParams } from "react-router-dom";
-import { blogPosts } from "./blogPost"; // Import posts or use centralized store
 import Footer from "../../Components/Footer";
 import Header from "../../Components/Header";
 import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaLink } from "react-icons/fa6";
-import RelatedPost from "./RelatedPost";
+import { getBlogBySlug } from "../../api/api"; // Adjust the import path as necessary
 
 
 
 const BlogSingle = () => {
     const { slug } = useParams();
-    const post = blogPosts.find((p) => p.slug === slug);
+    const [post, setPost] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState("");
+
+    const { scrollY } = useViewportScroll();
+    const y = useTransform(scrollY, [0, 300], [0, 300]); // scroll animation for socials
     const socials = [
         { icon: <FaFacebookF />, color: "bg-blue-600" },
         { icon: <FaXTwitter />, color: "bg-black" },
         { icon: <FaLinkedinIn />, color: "bg-blue-700" },
         { icon: <FaLink />, color: "bg-gray-500" },
     ];
-    const { scrollY } = useViewportScroll();
-    const y = useTransform(scrollY, [0, 300], [0, 300]); // adjust scroll range
-    const renderContentBlock = (block, index) => {
-        switch (block.type) {
-            case "heading":
-                return (
-                    <h2
-                        key={index}
-                        className="text-2xl font-bold text-gray-900 my-4"
-                        dangerouslySetInnerHTML={{ __html: block.content }}
-                    />
-                );
 
-            case "paragraph":
-                return (
-                    <p
-                        key={index}
-                        className="text-lg leading-relaxed my-2"
-                        dangerouslySetInnerHTML={{ __html: block.content }}
-                    />
-                );
+    useEffect(() => {
+        const fetchBlog = async () => {
+            setLoading(true);
+            try {
+                // Assuming the backend can accept slug instead of ID
+                const response = await getBlogBySlug(slug);
+                setPost(response.data.blog);
+            } catch (err) {
+                console.error(err);
+                setError("Failed to fetch blog post.");
+            } finally {
+                setLoading(false);
+            }
+        };
 
-            case "list":
-                return (
-                    <ul
-                        key={index}
-                        className="mt-6 space-y-3 text-lg"
-                        dangerouslySetInnerHTML={{ __html: block.content }}
-                    />
-                );
+        fetchBlog();
+    }, [slug]);
 
-            case "dropcap":
-                return (
-                    <p
-                        key={index}
-                        className="mt-8 text-lg leading-relaxed"
-                        dangerouslySetInnerHTML={{ __html: block.content }}
-                    />
-                );
-
-            default:
-                return null;
-        }
-    };
-
+    if (loading) return <p className="text-center mt-10">Loading blog...</p>;
+    if (error) return <p className="text-center mt-10 text-red-600">{error}</p>;
+    if (!post) return <p className="text-center mt-10">Blog post not found.</p>;
 
     if (!post) return <div>Blog post not found.</div>;
     return (
@@ -77,7 +58,7 @@ const BlogSingle = () => {
                     <div className="bg-blue-600 text-white rounded-2xl p-8 flex flex-col justify-between md:w-1/2">
                         {/* Categories */}
                         <div className="flex gap-3 mb-4">
-                            {post.category.map((cat, index) => (
+                            {post.categories.map((cat, index) => (
                                 <span
                                     key={index}
                                     className="bg-white text-blue-600 text-xs font-semibold px-3 py-1 rounded-full mr-1"
@@ -107,8 +88,7 @@ const BlogSingle = () => {
                             />
                             <p>
                                 Posted by <span className="font-semibold">{post.author}</span> on{" "}
-                                <span className="opacity-80">{post.date}</span>
-                            </p>
+                                <span className="opacity-80">{new Date(post.date).toLocaleDateString()}</span>                            </p>
                         </div>
                     </div>
 
@@ -175,11 +155,12 @@ const BlogSingle = () => {
                 </motion.div>
 
                 {/* Blog Content */}
-                <div className="blog-content max-w-4xl mx-auto px-6 py-10 text-gray-800 space-y-6">
-                    {post.content && post.content.map((block, index) => renderContentBlock(block, index))}
-                </div>
+                <div
+                    className="blog-content max-w-4xl mx-auto px-6 py-10 text-gray-800 space-y-6"
+                    dangerouslySetInnerHTML={{ __html: post.content }}
+                />
             </section>
-            <RelatedPost currentCategories={post.category} currentSlug={post.slug} />
+            <RelatedPost currentCategories={post.categories} currentSlug={post.slug} />
             <Footer />
         </div>
     );

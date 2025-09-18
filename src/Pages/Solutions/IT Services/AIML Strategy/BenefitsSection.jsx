@@ -11,6 +11,8 @@ import { CheckIcon, ChevronDownIcon } from "@heroicons/react/20/solid"
 import clsx from "clsx"
 import { motion, AnimatePresence } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
+import { sendContactLeads } from "../../../../api/api"; // Make sure your API method is correctly imported
+import toast from "react-hot-toast";
 
 
 const benefits = [
@@ -98,6 +100,13 @@ const BenefitsSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const [query, setQuery] = useState("")
   const [selected, setSelected] = useState(inquiries[0])
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [company, setCompany] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
 
   const faqs = [
     "How does Vebsigns support my deal lifecycle?",
@@ -116,6 +125,44 @@ const BenefitsSection = () => {
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess("");
+
+    try {
+      const payload = {
+        name: `${firstName} ${lastName}`,
+        email,
+        company_name: company,
+        enquiry_for: selected?.name || "",
+        message,
+      };
+
+      const response = await sendContactLeads(payload);
+      console.log(response.data);
+      // Show success toast
+      toast.success(response.data.message);
+
+      setSuccess(response.data.message);
+      // Clear form after success
+      setEmail("");
+      setFirstName("");
+      setLastName("");
+      setCompany("");
+      setMessage("");
+      setSelected(null);
+    } catch (err) {
+      console.error(err);
+      // Show error toast
+      toast.error("Failed to submit. Please try again.");
+      alert("Failed to submit. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div>
       {/* Benefits section */}
@@ -195,7 +242,7 @@ const BenefitsSection = () => {
           <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
             {/* Left: Form */}
             <div className="p-6 sm:p-8">
-              <form className="space-y-6 w-full max-w-xl mx-auto">
+              <form className="space-y-6 w-full max-w-xl mx-auto" onSubmit={handleSubmit}>
                 <Field className="w-full">
                   <Label className="block text-sm sm:text-base font-medium text-gray-700">
                     Business Email
@@ -205,6 +252,8 @@ const BenefitsSection = () => {
                   </p>
                   <Input
                     type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your work email"
                     className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                   />
@@ -216,6 +265,8 @@ const BenefitsSection = () => {
                       First Name
                     </Label>
                     <Input
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
                       type="text"
                       placeholder="Eg: John"
                       className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
@@ -227,6 +278,8 @@ const BenefitsSection = () => {
                       Last Name
                     </Label>
                     <Input
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
                       type="text"
                       placeholder="Eg: Doe"
                       className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
@@ -239,6 +292,8 @@ const BenefitsSection = () => {
                     Company
                   </Label>
                   <Input
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
                     type="text"
                     placeholder="Eg: Envato"
                     className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
@@ -277,16 +332,39 @@ const BenefitsSection = () => {
                         "transition duration-100 ease-in data-leave:data-closed:opacity-0 empty:invisible"
                       )}
                     >
+                      {/* {filtered.map((item) => (
+                                                          <ComboboxOption
+                                                              key={item.id}
+                                                              value={item}
+                                                              className="group flex cursor-default items-center gap-2 rounded-md px-3 py-2 select-none data-focus:bg-blue-100"
+                                                          >
+                                                              <CheckIcon className="invisible h-4 w-4 text-blue-600 group-data-selected:visible" />
+                                                              <span className="text-sm sm:text-base text-gray-900">
+                                                                  {item.name}
+                                                              </span>
+                                                          </ComboboxOption>
+                                                      ))} */}
                       {filtered.map((item) => (
                         <ComboboxOption
                           key={item.id}
                           value={item}
-                          className="group flex cursor-default items-center gap-2 rounded-md px-3 py-2 select-none data-focus:bg-blue-100"
+                          className={({ active }) =>
+                            `cursor-pointer select-none relative py-2 pl-10 pr-4 ${active ? "bg-blue-100 text-blue-900" : "text-gray-900"
+                            }`
+                          }
                         >
-                          <CheckIcon className="invisible h-4 w-4 text-blue-600 group-data-selected:visible" />
-                          <span className="text-sm sm:text-base text-gray-900">
-                            {item.name}
-                          </span>
+                          {({ selected }) => (
+                            <>
+                              <span className={`block truncate ${selected ? "font-medium" : "font-normal"}`}>
+                                {item.name}
+                              </span>
+                              {selected && (
+                                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-blue-600">
+                                  <CheckIcon className="h-5 w-5" />
+                                </span>
+                              )}
+                            </>
+                          )}
                         </ComboboxOption>
                       ))}
                     </ComboboxOptions>
@@ -299,6 +377,8 @@ const BenefitsSection = () => {
                   </Label>
                   <Textarea
                     rows={4}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     placeholder="Write your message here..."
                     className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                   />
@@ -306,10 +386,12 @@ const BenefitsSection = () => {
 
                 <button
                   type="submit"
+                  disabled={loading}
                   className="w-full bg-blue-600 text-white font-semibold py-2 sm:py-3 rounded-lg shadow-md hover:bg-blue-700 transition transform hover:scale-[1.01] text-sm sm:text-base"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
+                {success && <p className="text-green-600 mt-2 text-center">{success}</p>}
               </form>
             </div>
 

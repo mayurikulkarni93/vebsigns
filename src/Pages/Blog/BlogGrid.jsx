@@ -1,20 +1,54 @@
 import { Plus } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { blogPosts } from "./blogPost";
+import { fetchBlogs } from "../../api/api"; // Import your API method
 
 const BlogGrid = () => {
+    const [blogPosts, setBlogPosts] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
+
+    useEffect(() => {
+        const getBlogs = async () => {
+            setLoading(true);
+            setError("");
+            try {
+                const response = await fetchBlogs({ page: 1, limit: 10 });
+                console.log(response.data);
+                setBlogPosts(response.data.blogs || []);
+            } catch (err) {
+                console.error(err);
+                setError("Failed to load blogs.");
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        getBlogs();
+    }, []);
+
+    if (loading) {
+        return <p className="text-center mt-10">Loading blogs...</p>;
+    }
+
+    if (error) {
+        return <p className="text-center mt-10 text-red-600">{error}</p>;
+    }
+
+    if (blogPosts.length === 0) {
+        return <p className="text-center mt-10">No blogs found.</p>;
+    }
+
     return (
 
         <section className="bg-gradient-to-br from-purple-50 to-orange-50 py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     {blogPosts.map((post, index) => (
-                        <Link to={`/blog/${post.slug}`} key={post.id}>
+                        <Link to={`/blog/${post.slug}`} key={post.slug}>
 
                             <div
-                                key={post.id}
                                 className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-4 relative"
                             >
                                 {/* Blog Image */}
@@ -68,7 +102,7 @@ const BlogGrid = () => {
                                 {/* Blog Content */}
                                 <div className="mt-4">
                                     <p className="text-sm text-blue-600 uppercase font-semibold">
-                                        {post.category.join(", ")}
+                                        {post.categories.join(", ")}
                                     </p>
                                     <h3 className="text-lg font-semibold mt-1">{post.title}</h3>
                                     <p className="text-gray-600 mt-2 text-sm">{post.excerpt}</p>
@@ -81,7 +115,7 @@ const BlogGrid = () => {
                                             className="w-6 h-6 rounded-full mr-2"
                                         />
                                         <span>by {post.author}</span>
-                                        <span className="ml-2">on {post.date}</span>
+                                        <span className="ml-2">on {new Date(post.date).toLocaleDateString()}</span>
                                     </div>
                                 </div>
                             </div>
