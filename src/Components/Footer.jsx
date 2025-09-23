@@ -256,7 +256,7 @@ const Footer = () => {
 
             {/* Divider */}
             <div className="border-t border-gray-700 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-400 relative z-10">
-                <p>Copyright © 2024.</p>
+                <p>Copyright © 2020 - 2025 Vebsigns Technologies. All Rights Reserved..</p>
 
                 {/* Social Icons */}
                 <div className="flex space-x-4 mt-4 md:mt-0">

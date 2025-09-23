@@ -11,16 +11,21 @@ const About = () => {
     return (
         <div>
             <Header />
-            <section className="relative bg-gradient-to-b from-[#0a0220] to-[#120536] text-white py-20 px-6 md:px-12 lg:px-20">
-                <div className="max-w-6xl mx-auto text-center">
+            <section className="relative bg-gradient-to-b from-[#0a0220] to-[#120536] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
+                {/* Background Image (above gradient but below content) */}
+                <div
+                    className="absolute inset-0 bg-[url('/assets/HomePage/bg-ab.png')] bg-cover bg-center bg-no-repeat opacity-40"
+                ></div>
+
+                {/* Content */}
+                <div className="relative z-10 max-w-6xl mx-auto text-center">
                     {/* Company name */}
                     <p className="text-blue-400 uppercase tracking-wide font-semibold mb-4 text-sm sm:text-base">
                         Vebsigns – IT & IoT Innovators
-
                     </p>
 
                     {/* Main Heading */}
-                    <h1 className=" uppercase text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-snug">
+                    <h1 className="uppercase text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-snug">
                         Empowering businesses <br /> with AI and IoT <br />for smarter growth
                     </h1>
 
@@ -41,30 +46,9 @@ const About = () => {
                             <p className="text-gray-300 text-xs sm:text-sm mt-1">Employees on board</p>
                         </div>
                     </div>
-
-                    {/* Bottom Navigation */}
-                    {/* <div className="mt-16 flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium text-gray-300 border-t border-gray-700 pt-6">
-                        <a href="#" className="hover:text-white transition">
-                            Overview
-                        </a>
-                        <a href="#" className="hover:text-white transition">
-                            Story
-                        </a>
-                        <a href="#" className="hover:text-white transition">
-                            Mission and Value
-                        </a>
-                        <a href="#" className="hover:text-white transition">
-                            Meet the Team
-                        </a>
-                        <a href="#" className="hover:text-white transition">
-                            Capabilities
-                        </a>
-                        <a href="#" className="hover:text-white transition">
-                            Other
-                        </a>
-                    </div> */}
                 </div>
             </section>
+
 
             {/* Timeline Stepper Component */}
             <TimelineStepper />
