@@ -15,35 +15,35 @@ const About = () => {
                 <div className="max-w-6xl mx-auto text-center">
                     {/* Company name */}
                     <p className="text-blue-400 uppercase tracking-wide font-semibold mb-4 text-sm sm:text-base">
-                        Vebsigns – AI Company
+                        Vebsigns – IT & IoT Innovators
+
                     </p>
 
                     {/* Main Heading */}
-                    <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-snug">
-                        BRINGS AI TO YOUR <br className="hidden md:block" />
-                        DATA TO HELP YOU BRING AI TO THE WORLD.
+                    <h1 className=" uppercase text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-snug">
+                        Empowering businesses <br /> with AI and IoT <br />for smarter growth
                     </h1>
 
                     {/* Stats */}
                     <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
                         <div>
-                            <p className="text-2xl sm:text-3xl md:text-4xl font-bold">37Y</p>
+                            <p className="text-2xl sm:text-3xl md:text-4xl font-bold">6Y</p>
                             <p className="text-gray-300 text-xs sm:text-sm mt-1">Years on the market</p>
                         </div>
                         <div>
-                            <p className="text-2xl sm:text-3xl md:text-4xl font-bold">3</p>
+                            <p className="text-2xl sm:text-3xl md:text-4xl font-bold">2</p>
                             <p className="text-gray-300 text-xs sm:text-sm mt-1">
-                                Offices in Canada, Australia, USA
+                                Offices in India, Canada
                             </p>
                         </div>
                         <div>
-                            <p className="text-2xl sm:text-3xl md:text-4xl font-bold">150+</p>
+                            <p className="text-2xl sm:text-3xl md:text-4xl font-bold">50+</p>
                             <p className="text-gray-300 text-xs sm:text-sm mt-1">Employees on board</p>
                         </div>
                     </div>
 
                     {/* Bottom Navigation */}
-                    <div className="mt-16 flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium text-gray-300 border-t border-gray-700 pt-6">
+                    {/* <div className="mt-16 flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium text-gray-300 border-t border-gray-700 pt-6">
                         <a href="#" className="hover:text-white transition">
                             Overview
                         </a>
@@ -62,7 +62,7 @@ const About = () => {
                         <a href="#" className="hover:text-white transition">
                             Other
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
