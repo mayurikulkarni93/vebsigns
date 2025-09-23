@@ -3,38 +3,31 @@ import { useEffect, useState } from "react";
 const testimonials = [
     {
         quote:
-            "Being a Managed Services Client Has Improved Our Uptime, Increased Our Productivity And Systematized Our Software Updates",
-        author: "Chris Ellison",
+            "Vebsigns is the place to go, high quality website with excellent Ul development.. shall give 5/5. Very qualified people and excellent service. Highly recommend.",
+        author: "Abhishek Agarwal",
         role: "Founder & CEO, Linethemes.com",
-        avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+        avatar: "/assets/HomePage/Profile.jpg",
     },
     {
         quote:
-            "The support team is extremely responsive and proactive. We feel more secure and efficient with their services.",
-        author: "Sarah Mitchell",
+            "Excellent website design and development work delivered for our company, Finkompas (finkompas.com). Vebsigns Technologies is one of the best software technology firms based out of Pune and must recommend for all high quality website development work. Their team understood our firm's brief properly, ensured all our requirements are well understood & summarised, followed by a superb product, delivered on time. 100% Seamless Experience. Great work, team Vebsigns!",
+        author: "FINKOMPAS",
         role: "CTO, InnovateTech",
-        avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+        avatar: "/assets/HomePage/Profile.jpg",
     },
     {
         quote:
-            "Our collaboration with them has transformed our workflows, reduced downtime, and streamlined updates.",
-        author: "David Johnson",
+            "Brilliant service by Vebsigns Team for developing my website (manavsevamadhavseva.org). Vebsigns was referred by one of my colleagues for their high quality work service. After reviewing their website, I opted web designing service of Vebsigns. I am happy to say that they listened to my desires and offered professional advice and expertise. The team very quickly got the look and feel that I was after for my website, they listened to everything that I said and wanted and delivered perfectly before time. We find them very professional and technically sound. Thank you so much once again to Vebsigns Team We would highly recommend this company. Would definitely use them again!",
+        author: "MANAV SEVA MADHAV SEVA",
         role: "COO, NextGen Solutions",
-        avatar: "https://randomuser.me/api/portraits/men/45.jpg",
+        avatar: "/assets/HomePage/Profile.jpg",
     },
     {
         quote:
-            "They helped us scale faster while keeping our systems reliable. Truly a partner we can count on.",
-        author: "Emma Williams",
+            "Thanks a ton for ensuring a splendid product development..Would like to recommend Vebsigns for web development.. Great effort team. excellent interface and web functionality with the latest immersive website technologies for better consumer interaction.. Shall give 9/10. Keep it up!",
+        author: "SHIVARAMA KRISHNAN",
         role: "Head of IT, FutureCorp",
-        avatar: "https://randomuser.me/api/portraits/women/77.jpg",
-    },
-    {
-        quote:
-            "Best decision we ever made for our business continuity and technology growth.",
-        author: "Michael Brown",
-        role: "Founder, BrightPath",
-        avatar: "https://randomuser.me/api/portraits/men/12.jpg",
+        avatar: "/assets/HomePage/Profile.jpg",
     },
 ];
 

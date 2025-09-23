@@ -5,7 +5,7 @@ const features = [
     {
         title: "Business Processes Automation",
         description:
-            "Advanced AI models of automation streamline repetitive tasks, allowing your team to focus on high-value activities. AI technologies can handle routine processes with speed and accuracy: data entry, virtual assistant, customer service, etc.",
+            "At Vebsigns, we simplify complex workflows through automation, AI, IoT, and IT solutions. Our tailored strategies optimize efficiency, reduce costs, and accelerate digital transformation, empowering businesses to scale seamlessly and achieve lasting growth.",
         icon: (
             <svg
                 xmlns="http://www.w3.org/2000/svg"

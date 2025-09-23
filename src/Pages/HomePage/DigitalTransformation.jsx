@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const DigitalTransformation = () => {
@@ -10,44 +10,44 @@ const DigitalTransformation = () => {
             id: 1,
             image: "/assets/HomePage/open-ai-1.png",
             number: "1.",
-            description: "AI Solution provider & Big Data Experts Company",
-            buttonText: "Explore Vebsigns",
+            description: " IT Services & End-to-End Technology Solutions",
+            buttonText: "Go to About Page",
             bgColor: "#15042E",
             hoverTextColor: "white",
-            link: "/vebsigns", // 👈 add your route here
+            link: "/about", // 👈 add your route here
 
         },
         {
             id: 2,
             image: "/assets/HomePage/ai2.png",
             number: "2.",
-            description: "Transform businesses into AI-first organizations",
-            buttonText: "See What We Do",
+            description: "Innovative IoT Solutions for Smarter Businesses",
+            buttonText: "Go to About Page",
             bgColor: "#15042E",
             hoverTextColor: "white",
-            link: "/vebsigns", // 👈 add your route here
+            link: "/about", // 👈 add your route here
 
         },
         {
             id: 3,
             image: "/assets/HomePage/i3.png",
             number: "3.",
-            description: "Has experience working with different industries",
-            buttonText: "Industries We Serve",
+            description: "AI-Powered Products & Intelligent Business Transformation",
+            buttonText: "Go to About Page",
             bgColor: "#15042E",
             hoverTextColor: "white",
-            link: "/vebsigns", // 👈 add your route here
+            link: "/about", // 👈 add your route here
 
         },
         {
             id: 4,
             image: "/assets/HomePage/veb final.png",
             number: "4.",
-            description: "Cloud Solutions & Scalable Infrastructure for Businesses",
-            buttonText: "Explore Cloud Services",
+            description: "Digital Marketing & Scalable Growth Strategies",
+            buttonText: "Go to About Page",
             bgColor: "#15042E",
             hoverTextColor: "white",
-            link: "/vebsigns", // 👈 add your route here
+            link: "/about", // 👈 add your route here
 
         },
     ];
@@ -62,9 +62,7 @@ const DigitalTransformation = () => {
                     DIGITAL TRANSFORMATION
                 </h2>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
-                    At Vebsigns, we specialize in helping companies integrate generative AI
-                    tools into business routines to use its benefits for successful
-                    business strategy
+                    We are a software consulting and development company, transforming products and enterprises with tailored, tech-agnostic solutions in software, hardware, IT, and IoT that drive growth, innovation, and lasting business value.
                 </p>
                 <br />
 
@@ -127,16 +125,15 @@ const DigitalTransformation = () => {
                 {/* Bottom Text */}
                 <p className="mt-12 text-base sm:text-lg text-gray-600">
                     Drive Your Business Strategy with{" "}
-                    <span className="text-indigo-600 font-semibold">AI</span>.{" "}
-                    <a href="#" className="text-blue-600 hover:underline">
+                    <span className="text-indigo-600 font-semibold uppercase">Vebsigns</span>.{" "}
+                    <Link to="/contact" className="text-blue-600 hover:underline">
                         Get free consultation →
-                    </a>
+                    </Link>
                 </p>
             </div>
-            <div className="relative w-[1169px] max-w-full mx-auto mt-12 px-4 sm:px-6"
+            {/* <div className="relative w-[1169px] max-w-full mx-auto mt-12 px-4 sm:px-6"
                 style={{ fontSize: "16px", padding: "20px 30px 20px 30px" }}>
 
-                {/* Label + Arrow */}
                 <div className="flex items-center mb-2">
                     <label htmlFor="" className="text-[#15042E] font-bold text-base">
                         Quick request a demo
@@ -148,7 +145,6 @@ const DigitalTransformation = () => {
                     />
                 </div>
 
-                {/* Input + Button Wrapper */}
                 <div className="relative flex flex-col sm:flex-row gap-3 sm:gap-0">
                     <input
                         type="email"
@@ -162,7 +158,7 @@ const DigitalTransformation = () => {
                         Next Steps
                     </button>
                 </div>
-            </div>
+            </div> */}
         </section>
     );
 };

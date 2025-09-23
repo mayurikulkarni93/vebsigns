@@ -25,11 +25,18 @@ const cards = [
 ];
 
 const DrivenByData = () => {
+    const downloadPDF = () => {
+        const link = document.createElement("a");
+        link.href = "/assets/Vebsigns Technologies Company Profile- 2025.pdf";
+        link.download = "Vebsigns Technologies Brochure.pdf"; // Name for downloaded file
+        link.click();
+    };
+
     return (
         <section className="relative py-16 bg-gradient-to-br from-purple-50 via-white to-orange-50">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
                 {/* Heading */}
-                <p className="text-sm font-semibold text-blue-600 tracking-widest uppercase">
+                <p className="text-xl font-semibold text-blue-600 tracking-widest uppercase">
                     Our values
 
                 </p>
@@ -72,7 +79,7 @@ const DrivenByData = () => {
                         </a>
                     ))}
                 </div>
-                <button className="mt-12 px-8 py-4 bg-blue-600 text-white font-light rounded-4xl hover:bg-blue-700 transition flex items-center gap-2 mx-auto">
+                <button onClick={downloadPDF} className="mt-12 px-8 py-4 bg-blue-600 text-white font-light rounded-4xl hover:bg-blue-700 transition flex items-center gap-2 mx-auto">
                     Download Company Brochure
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><title>file pdf</title><g stroke-linecap="square" transform="translate(0.5 0.5)" fill="#ffffff" stroke-linejoin="miter" class="nc-icon-wrapper" stroke-miterlimit="10"><path d="M4 9H11V2" stroke="#ffffff" stroke-width="1" data-cap="butt" fill="none" stroke-linecap="butt"></path><path d="M4 11V9.07843C4 8.54799 4.21071 8.03929 4.58579 7.66421L9.66421 2.58579C10.0393 2.21071 10.548 2 11.0784 2H18C19.1046 2 20 2.89543 20 4V11" stroke="#ffffff" stroke-width="1" fill="none"></path><path d="M2 22V15H4.5C5.88071 15 7 16.1193 7 17.5V17.5C7 18.8807 5.88071 20 4.5 20H2.5" stroke="#ffffff" stroke-width="1" data-color="color-2" fill="none"></path><path d="M10 15V22H11.5C13.433 22 15 20.433 15 18.5C15 16.567 13.433 15 11.5 15H10Z" stroke="#ffffff" stroke-width="1" data-color="color-2" fill="none"></path><path d="M18 22L18 15H22M21 18.5H18.5" stroke="#ffffff" stroke-width="1" data-color="color-2" fill="none"></path></g></svg>
                 </button>

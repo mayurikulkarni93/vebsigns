@@ -156,7 +156,7 @@ const BlogSingle = () => {
 
                 {/* Blog Content */}
                 <div
-                    className="blog-content max-w-4xl mx-auto px-6 py-10 text-gray-800 space-y-6"
+                    className="blog-content text-lg max-w-4xl mx-auto px-6 py-10 text-gray-800 space-y-6"
                     dangerouslySetInnerHTML={{ __html: post.content }}
                 />
             </section>

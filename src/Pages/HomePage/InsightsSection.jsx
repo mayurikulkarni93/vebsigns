@@ -1,5 +1,6 @@
 import React from "react";
 import BlogGrid from "../Blog/BlogGrid";
+import { Link } from "react-router-dom";
 
 const blogPosts = [
     {
@@ -53,7 +54,7 @@ const InsightsSection = () => {
             <div className="max-w-7xl mx-auto px-6">
                 {/* Heading */}
                 <div className="text-center mb-12">
-                    <p className="text-blue-500 uppercase tracking-wide font-semibold">
+                    <p className="text-blue-500 uppercase tracking-wide text-xl font-semibold">
                         Our Blog
                     </p>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900">
@@ -62,9 +63,9 @@ const InsightsSection = () => {
                     <p className="text-gray-600 mt-4 max-w-3xl mx-auto text-sm md:text-base">
                         We fuel you with our insights, corporate news, case studies, updates
                         on software, innovations, technologies, and business models.{" "}
-                        <a href="#" className="text-blue-500 underline">
-                            View all articles
-                        </a>
+                        <Link to="/blog" className="text-blue-500 underline">
+                            View all Blogs
+                        </Link>
                     </p>
                 </div>
 

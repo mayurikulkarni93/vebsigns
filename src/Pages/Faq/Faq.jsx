@@ -5,29 +5,29 @@ import { motion } from "framer-motion";
 
 const faqs = [
     {
-        question: "How does Vebsigns support my deal lifecycle?",
+        question: "What services does Vebsigns offer?",
         answer:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+            "We provide IT, IoT, AI solutions, and digital marketing services to transform businesses.",
     },
     {
-        question: "Do I need training to use Vebsigns?",
+        question: "Which industries do you serve?",
         answer:
-            "No, Vebsigns is built with simplicity in mind. However, we do provide tutorials and guides to help you get started quickly.",
+            "We work with retail, healthcare, finance, education, and other sectors.",
     },
     {
-        question: "What do I need to access Vebsigns?",
+        question: "How experienced is your team?",
         answer:
-            "You only need an internet connection and a modern web browser to access Vebsigns seamlessly.",
+            "Our team has delivered 80+ successful projects with 98% positive feedback.",
     },
     {
-        question: "How do I start a new Vebsigns project?",
+        question: "Do you provide custom AI solutions?",
         answer:
-            "Log in to your Vebsigns account, go to the projects section, and click on 'New Project'.",
+            "Yes, we develop AI applications tailored to your business needs.",
     },
     {
-        question: "How can I purchase Vebsigns's applications?",
+        question: "Can you help with digital marketing?",
         answer:
-            "You can purchase applications directly from our website or contact our sales team for bulk licensing.",
+            "Absolutely, we offer SEO, social media, and content strategies for growth.",
     },
 ];
 
@@ -161,15 +161,15 @@ export default function Faq() {
                 </div>
 
                 {/* Bottom CTA */}
-                <div className="mt-12 text-sm text-gray-500">
+                {/* <div className="mt-12 text-sm text-gray-500">
                     <p className="mt-12 text-base sm:text-lg text-gray-600">
                         Drive Your Business Strategy with{" "}
-                        <span className="text-indigo-600 font-semibold">AI</span>.{" "}
+                        <span className="text-indigo-600 font-semibold uppercase">vebsigns</span>.{" "}
                         <a href="#" className="text-blue-600 hover:underline">
-                            Get free consultation →
+                            Get free consultation
                         </a>
                     </p>
-                </div>
+                </div> */}
             </div>
         </section>
 
