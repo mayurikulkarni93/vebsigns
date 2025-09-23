@@ -86,10 +86,10 @@
 
 import { FaFacebookF, FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 import { Field, Input, Label, Button } from '@headlessui/react'
-import clsx from 'clsx'
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+    console.log("Footer component rendered");
     return (
         <footer className="relative bg-gradient-to-br from-[#0B0223] via-[#150544] to-[#0B0223] text-gray-300 px-6 md:px-16 py-12">
             {/* Newsletter Section */}
