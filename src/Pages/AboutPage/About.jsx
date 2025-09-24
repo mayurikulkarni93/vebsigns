@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import TimelineStepper from './TimelineStepper';
+import AnalyticsSlider from './AnalyticsPlatform';
 import LeadingCompanies from './LeadingCompanies';
 import DrivenByData from './DrivenByData';
 import Locations from './Locations';
@@ -52,6 +53,7 @@ const About = () => {
 
             {/* Timeline Stepper Component */}
             <TimelineStepper />
+            <AnalyticsSlider />
             <LeadingCompanies />
             <DrivenByData />
             <Team />

@@ -19,41 +19,40 @@ const benefits = [
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 64 64"><title>auto flash 2</title><g stroke-linecap="round" transform="translate(0.25 0.25)" fill="#1B4BF0" stroke-linejoin="round" class="nc-icon-wrapper"><polygon points="36 5 7 38 28 38 24 59 53 26 32 26 36 5" fill="none" stroke="#1B4BF0" stroke-width="1.5"></polygon><path data-color="color-2" data-stroke="none" d="M53.245,40.363h-3.3L43,59h3.2l1.816-5.154h7.1L56.965,59h3.224ZM48.9,51.23l1.676-4.836a28.213,28.213,0,0,0,1-3.415q.128.507.463,1.6t.527,1.6l1.74,5.052Z" fill="#F3F945" stroke="none"></path></g></svg>
     ),
-    title: "Increased Efficiency and Productivity",
-    description:
-      "Streamline operations and boost output with AI-driven automation.",
+    title: "Enhanced User Engagement",
+    description: "Designs that keep users connected."
   },
   {
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 64 64"><title>edit curves</title><g stroke-linecap="round" transform="translate(0.25 0.25)" fill="#1B4BF0" stroke-linejoin="round" class="nc-icon-wrapper"><path d="M9,50C43,50,27,8,61,8" fill="none" stroke="#F3F945" stroke-width="1.5" data-color="color-2"></path><polyline points="61 56 3 56 3 8" fill="none" stroke="#1B4BF0" stroke-width="1.5"></polyline></g></svg>
     ),
-    title: "Automated Improved Customer Service",
-    description:
-      "Deliver personalized and responsive customer experiences.",
+    title: "Improved Usability",
+    description: "Intuitive navigation and seamless workflows."
+
   },
   {
     icon: (<svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 64 64"><title>wallet 44</title><g stroke-linecap="round" transform="translate(0.25 0.25)" fill="#1B4BF0" stroke-linejoin="round" class="nc-icon-wrapper"><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="38" y1="22" x2="34" y2="22"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="26" y1="22" x2="22" y2="22"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="14" y1="22" x2="10" y2="22"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="38" y1="52" x2="34" y2="52"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="50" y1="22" x2="46" y2="22"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="50" y1="52" x2="46" y2="52"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="26" y1="52" x2="22" y2="52"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="14" y1="52" x2="10" y2="52"></line><circle data-stroke="none" fill="#1B4BF0" cx="48" cy="37" r="2" stroke-linejoin="miter" stroke="none"></circle><path fill="none" stroke="#1B4BF0" stroke-width="1.5" d="M7,15c-2.761,0-5-2.239-5-5 v0c0-2.761,2.239-5,5-5h40v4"></path><path fill="none" stroke="#1B4BF0" stroke-width="1.5" d="M58,31V15H7 c-2.761,0-5-2.239-5-5v41c0,4.418,3.582,8,8,8h48V43"></path><path data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" d="M62,43H48 c-3.314,0-6-2.686-6-6v0c0-3.314,2.686-6,6-6h14V43z"></path></g></svg>),
-    title: "Better Decision-Making and Higher Efficiency",
-    description:
-      "Infrastructure that easily integrates with emerging technologies like AI, IoT.",
+    title: "Faster Prototyping",
+    description: "Quick iterations to refine experiences."
+
   },
   {
     icon: (<svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 64 64"><title>timeline</title><g stroke-linecap="round" transform="translate(0.25 0.25)" fill="#1B4BF0" stroke-linejoin="round" class="nc-icon-wrapper"><line x1="32" y1="2" x2="32" y2="62" fill="none" stroke="#F3F945" stroke-width="1.5" data-color="color-2"></line><rect x="44" y="6" width="16" height="16" fill="none" stroke="#1B4BF0" stroke-width="1.5"></rect><line x1="38" y1="14" x2="32" y2="14" fill="none" stroke="#F3F945" stroke-width="1.5" data-color="color-2"></line><rect x="44" y="42" width="16" height="16" fill="none" stroke="#1B4BF0" stroke-width="1.5"></rect><line x1="38" y1="50" x2="32" y2="50" fill="none" stroke="#F3F945" stroke-width="1.5" data-color="color-2"></line><rect x="4" y="24" width="16" height="16" transform="translate(24 64) rotate(-180)" fill="none" stroke="#1B4BF0" stroke-width="1.5"></rect><line x1="26" y1="32" x2="32" y2="32" fill="none" stroke="#F3F945" stroke-width="1.5" data-color="color-2"></line></g></svg>),
-    title: "Enhanced Competitive Advantage",
-    description:
-      "Stay ahead of competitors through innovative AI solutions.",
+    title: "Consistency",
+    description: "Cohesive design systems across platforms."
+
   },
   {
     icon: (<svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 64 64"><title>wallet 44</title><g stroke-linecap="round" transform="translate(0.25 0.25)" fill="#1B4BF0" stroke-linejoin="round" class="nc-icon-wrapper"><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="38" y1="22" x2="34" y2="22"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="26" y1="22" x2="22" y2="22"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="14" y1="22" x2="10" y2="22"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="38" y1="52" x2="34" y2="52"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="50" y1="22" x2="46" y2="22"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="50" y1="52" x2="46" y2="52"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="26" y1="52" x2="22" y2="52"></line><line data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" x1="14" y1="52" x2="10" y2="52"></line><circle data-stroke="none" fill="#1B4BF0" cx="48" cy="37" r="2" stroke-linejoin="miter" stroke="none"></circle><path fill="none" stroke="#1B4BF0" stroke-width="1.5" d="M7,15c-2.761,0-5-2.239-5-5 v0c0-2.761,2.239-5,5-5h40v4"></path><path fill="none" stroke="#1B4BF0" stroke-width="1.5" d="M58,31V15H7 c-2.761,0-5-2.239-5-5v41c0,4.418,3.582,8,8,8h48V43"></path><path data-color="color-2" fill="none" stroke="#F3F945" stroke-width="1.5" d="M62,43H48 c-3.314,0-6-2.686-6-6v0c0-3.314,2.686-6,6-6h14V43z"></path></g></svg>),
-    title: "New Product and Service Development",
-    description:
-      "Drive innovation by creating new offerings with AI insights.",
+    title: "Higher Conversions",
+    description: "Optimized designs for business impact."
+
   },
   {
     icon: (<svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 64 64"><title>digital key</title><g stroke-linecap="round" transform="translate(0.25 0.25)" fill="#1B4BF0" stroke-linejoin="round" class="nc-icon-wrapper"><circle cx="16" cy="16" r="4" fill="none" stroke="#1B4BF0" stroke-width="1.5" data-cap="butt"></circle><circle cx="34" cy="57" r="4" fill="none" stroke="#1B4BF0" stroke-width="1.5" data-cap="butt"></circle><circle cx="52" cy="16" r="4" fill="none" stroke="#1B4BF0" stroke-width="1.5"></circle><polyline points="25 33 25 48 31.172 54.172" fill="none" stroke="#1B4BF0" stroke-width="1.5" data-cap="butt"></polyline><circle cx="56" cy="57" r="4" fill="none" stroke="#F3F945" stroke-width="1.5" data-color="color-2"></circle><path d="M42,45H37l-3-3V39H31L20.268,28.268a13.04,13.04,0,1,1,8-8L32,24H44l5.172-5.172" fill="none" stroke="#1B4BF0" stroke-width="1.5"></path><polyline points="56 53 56 48 45 37 42 37 42 34 37.064 29.064" fill="none" stroke="#F3F945" stroke-width="1.5" data-color="color-2"></polyline></g></svg>),
-    title: "Highly Regulated and Risk-Averse",
-    description:
-      "Make sure you choose a partner who has the required certifications.",
+    title: "Brand Value",
+    description: "Elevate digital identity with modern, user-first design."
+
   },
 ];
 const inquiries = [
@@ -108,11 +107,26 @@ const UIUXBenefitsSection = () => {
   const [success, setSuccess] = useState("");
 
   const faqs = [
-    "How does Vebsigns support my deal lifecycle?",
-    "Do I need training to use Vebsigns?",
-    "What do I need to access Vebsigns?",
-    "How do I start a new Vebsigns project?",
-    "How can I purchase Vebsigns’s applications?",
+    {
+      question: "What services does Vebsigns offer?",
+      answer: "We provide IT, IoT, AI solutions, and digital marketing services to transform businesses."
+    },
+    {
+      question: "Which industries do you serve?",
+      answer: "We work with retail, healthcare, finance, education, and other sectors."
+    },
+    {
+      question: "How experienced is your team?",
+      answer: "Our team has delivered 80+ successful projects with 98% positive feedback."
+    },
+    {
+      question: "Do you provide custom AI solutions?",
+      answer: "Yes, we develop AI applications tailored to your business needs."
+    },
+    {
+      question: "Can you help with digital marketing?",
+      answer: "Absolutely, we offer SEO, social media, and content strategies for growth."
+    }
   ];
   const filtered =
     query === ""
@@ -171,11 +185,10 @@ const UIUXBenefitsSection = () => {
               Key Benefits
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mt-2 uppercase">
-              6 Benefits of UI/UX
+              Deliver user-focused designs that combine creativity and functionality
             </h2>
             <p className="text-gray-300 mt-4 max-w-xl md:max-w-2xl mx-auto text-sm sm:text-base">
-              A well-executed AI strategy offers businesses numerous advantages,
-              including:
+              Create meaningful digital experiences that boost engagement and conversions.
             </p>
           </div>
 
@@ -422,7 +435,7 @@ const UIUXBenefitsSection = () => {
                       className="flex justify-between items-center w-full text-left text-gray-700 font-medium text-sm sm:text-base"
                       onClick={() => toggleFAQ(index)}
                     >
-                      {faq}
+                      {faq.question}
                       <span className="ml-2">
                         {openIndex === index ? (
                           <Minus className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500" />
@@ -443,7 +456,7 @@ const UIUXBenefitsSection = () => {
                           className="overflow-hidden"
                         >
                           <p className="mt-2 text-xs sm:text-sm text-gray-600">
-                            Placeholder answer for: {faq}
+                            {faq.answer}
                           </p>
                         </motion.div>
                       )}

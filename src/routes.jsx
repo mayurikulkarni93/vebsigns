@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import HireDev from "./Pages/Hire Developers/HireDevelopers";
 // import Loader from "./Components/Loader";
 
 // Lazy load pages
@@ -25,6 +24,7 @@ const ADADHome = lazy(() => import("./Pages/Solutions/IT Services/App Design & D
 const UIUXHome = lazy(() => import("./Pages/Solutions/IT Services/UIUX/UIUXHome"));
 const UseCase = lazy(() => import("./Pages/Use Cases/UseCase"));
 const UseCaseSingle = lazy(() => import("./Pages/Use Cases/UseCaseSingle"));
+const HireDev = lazy(() => import("./Pages/Hire Developers/HireDevelopers"));
 
 const AppRoutes = () => (
   //   <Suspense fallback={<Loader />}>

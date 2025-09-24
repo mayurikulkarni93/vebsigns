@@ -14,26 +14,18 @@ const CAIConsultingSection = () => {
         }}
       >
         <h2 className="text-[120px] sm:text-[160px] md:text-[192px] font-normal text-[#15042E] leading-none">
-          37<span className="text-[50px] sm:text-[65px] md:text-[80px] align-top">+</span>
+          5<span className="text-[50px] sm:text-[65px] md:text-[80px] align-top">+</span>
         </h2>
         <p className="mt-4 text-gray-900 text-base sm:text-lg md:text-lg max-w-md">
-          With 37+ years of experience, we realised the common concerns for our global customers when they started their journey.
+With 5+ years of expertise, we build comprehensive AI ecosystems that empower businesses to integrate, scale, and optimize intelligent solutions across every layer of their digital infrastructure.
         </p>
       </div>
 
       {/* Right Side */}
       <div className="flex flex-col justify-center p-8 sm:p-12 text-center md:text-left">
-        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-          Why is AI Ecosystem important?
-        </h3>
+        
         <p className="text-gray-800 leading-relaxed text-base sm:text-lg">
-          AI strategy consulting is vital for integrating artificial intelligence into business operations effectively. It ensures that AI initiatives align with business goals, enhancing operational efficiency and competitive edge. This consulting process includes.{" "}
-          <a
-            href="#"
-            className="text-gray-900 font-semibold underline hover:text-blue-700"
-          >
-            Find out more
-          </a>
+A comprehensive AI ecosystem brings together data, models, tools, and platforms into a unified framework. It enables organizations to streamline operations, accelerate innovation, and maximize ROI by leveraging AI across business functions. Our services cover strategy, architecture design, integration, and enterprise-wide deployment.          
         </p>
       </div>
     </div>

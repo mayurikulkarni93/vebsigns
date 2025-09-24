@@ -15,24 +15,17 @@ const DSDAConsultingOverview = () => {
 
                     {/* Title */}
                     <h2 className="text-4xl sm:text-5xl uppercase font-bold text-gray-900 mt-2 mb-6">
-                        What is Data Science and Data Analytics?
+                        Transforming Business Growth with Data Science & Analytics
                     </h2>
 
                     {/* Paragraph */}
                     <p className="text-gray-700 text-base leading-relaxed mb-4">
-                        AI strategy consulting is a specialized advisory service that guides
-                        organizations in integrating artificial intelligence into their operations
-                        to meet their strategic business goals.
+                        Data-driven strategies enable smarter, faster, and more accurate decision-making. By applying analytics and advanced algorithms, businesses can uncover hidden opportunities, minimize risks, and accelerate innovation.
+
                     </p>
                     <p className="text-gray-700 text-base leading-relaxed mb-8">
-                        It involves comprehensive planning and the application of AI to enhance
-                        operational efficiency and customer satisfaction. Consultants evaluate an
-                        organization’s readiness for AI, establish clear objectives, identify suitable
-                        AI applications, and create a strategic implementation plan. They also assist
-                        in establishing the infrastructure, suggest team composition, conduct
-                        architecture reviews, handle risks, and confirm that AI solutions are ethical
-                        and socially responsible. This strategic approach is vital for companies aiming
-                        to use AI for competitive advantage and growth.
+                        Our Data Science and Analytics solutions integrate seamlessly with existing IT systems, cloud platforms, and business applications. From predictive modeling and business intelligence dashboards to big data processing and real-time analytics, we help organizations improve performance and customer experiences. With 5+ years of expertise, we serve industries like finance, retail, healthcare, manufacturing, and education. Our approach ensures actionable insights, secure integrations, and scalable deployment, helping enterprises stay future-ready and competitive.
+
                     </p>
 
                     {/* Stats Section */}

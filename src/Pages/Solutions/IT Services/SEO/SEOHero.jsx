@@ -42,11 +42,11 @@ const SEOHero = () => {
                             our services
                         </p>
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold uppercase">
-                            Search engine optimization
+                            Search engine optimization (SEO)
                         </h1>
                         <p className="mt-6 text-gray-300 text-base sm:text-lg">
-                            We’ve built an AI-driven platform for launching <br /> business
-                            transformation.
+                            Boost your website’s visibility and drive organic traffic with our
+                            expert SEO strategies and optimization techniques.
                         </p>
                         <button
                             className="mt-8 inline-flex items-center justify-center text-[16px] font-semibold leading-[25px] 

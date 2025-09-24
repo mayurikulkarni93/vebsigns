@@ -14,26 +14,19 @@ const DSDAConsultingSection = () => {
         }}
       >
         <h2 className="text-[120px] sm:text-[160px] md:text-[192px] font-normal text-[#15042E] leading-none">
-          37<span className="text-[50px] sm:text-[65px] md:text-[80px] align-top">+</span>
+          5<span className="text-[50px] sm:text-[65px] md:text-[80px] align-top">+</span>
         </h2>
         <p className="mt-4 text-gray-900 text-base sm:text-lg md:text-lg max-w-md">
-          With 37+ years of experience, we realised the common concerns for our global customers when they started their journey.
+          Drawing from 5+ years of industry knowledge, we help global customers unlock the true value of their data and address the most common challenges faced during their transformation journey.
         </p>
       </div>
 
       {/* Right Side */}
       <div className="flex flex-col justify-center p-8 sm:p-12 text-center md:text-left">
-        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-          Why is Data Science / Analytics important?
-        </h3>
+        
         <p className="text-gray-800 leading-relaxed text-base sm:text-lg">
-          AI strategy consulting is vital for integrating artificial intelligence into business operations effectively. It ensures that AI initiatives align with business goals, enhancing operational efficiency and competitive edge. This consulting process includes.{" "}
-          <a
-            href="#"
-            className="text-gray-900 font-semibold underline hover:text-blue-700"
-          >
-            Find out more
-          </a>
+          Data Science and Analytics empower organizations to convert raw data into actionable intelligence. By analyzing historical and real-time datasets, businesses can uncover patterns, forecast outcomes, optimize resources, and automate decisions to achieve efficiency and growth. Our end-to-end services span data preparation, advanced analytics, model development, visualization, and deployment at scale.{" "}
+          
         </p>
       </div>
     </div>

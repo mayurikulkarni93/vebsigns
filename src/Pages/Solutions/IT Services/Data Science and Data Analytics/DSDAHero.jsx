@@ -45,8 +45,8 @@ const DSDAHero = () => {
                             Data Science and Data Analytics
                         </h1>
                         <p className="mt-6 text-gray-300 text-base sm:text-lg">
-                            We’ve built an AI-driven platform for launching <br /> business
-                            transformation.
+                            Unlock actionable insights and make data-driven decisions with our advanced
+                            data science and analytics solutions.
                         </p>
                         <button
                             className="mt-8 inline-flex items-center justify-center text-[16px] font-semibold leading-[25px] 

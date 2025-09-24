@@ -14,24 +14,15 @@ const AIConsultingOverview = () => {
 
                     {/* Title */}
                     <h2 className="text-4xl sm:text-5xl uppercase font-bold text-gray-900 mt-2 mb-6">
-                        What is AI Consulting?
+                        Accelerating Digital Transformation with AI/ML for IT & IoT
                     </h2>
 
                     {/* Paragraph */}
                     <p className="text-gray-700 text-base leading-relaxed mb-4">
-                        AI strategy consulting is a specialized advisory service that guides
-                        organizations in integrating artificial intelligence into their operations
-                        to meet their strategic business goals.
+                        Digital transformation is no longer optional—AI and ML are driving smarter, faster, and more efficient operations across IT and IoT landscapes. By leveraging intelligent analytics and automation, businesses can unlock insights and optimize processes in real time.
                     </p>
                     <p className="text-gray-700 text-base leading-relaxed mb-8">
-                        It involves comprehensive planning and the application of AI to enhance
-                        operational efficiency and customer satisfaction. Consultants evaluate an
-                        organization’s readiness for AI, establish clear objectives, identify suitable
-                        AI applications, and create a strategic implementation plan. They also assist
-                        in establishing the infrastructure, suggest team composition, conduct
-                        architecture reviews, handle risks, and confirm that AI solutions are ethical
-                        and socially responsible. This strategic approach is vital for companies aiming
-                        to use AI for competitive advantage and growth.
+                        Our AI/ML solutions integrate seamlessly with existing IT infrastructure and connected IoT devices to deliver end-to-end transformation. From predictive maintenance and task automation to computer vision and semantic search, we help organizations enhance operational efficiency, reduce costs, and improve reliability. With 5+ years of experience, we tailor solutions for industries like healthcare, retail, finance, and manufacturing. Our approach focuses on actionable insights, secure integrations, and scalable deployment, ensuring technology adoption aligns with business goals. By combining advanced algorithms with domain expertise, we empower enterprises to innovate faster, enhance customer experiences, and stay ahead in an increasingly competitive digital landscape.
                     </p>
 
                     {/* Stats Section */}

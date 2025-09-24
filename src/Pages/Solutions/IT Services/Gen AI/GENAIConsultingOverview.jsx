@@ -15,24 +15,17 @@ const GENAIConsultingOverview = () => {
 
                     {/* Title */}
                     <h2 className="text-4xl sm:text-5xl uppercase font-bold text-gray-900 mt-2 mb-6">
-                        What is Gen AI For Transformation?
+                        Redefining Business Innovation with Generative AI
                     </h2>
 
                     {/* Paragraph */}
                     <p className="text-gray-700 text-base leading-relaxed mb-4">
-                        AI strategy consulting is a specialized advisory service that guides
-                        organizations in integrating artificial intelligence into their operations
-                        to meet their strategic business goals.
+                       Generative AI empowers businesses to innovate faster, personalize experiences, and unlock new growth opportunities. By applying advanced AI models, organizations can streamline operations, enhance creativity, and deliver smarter outcomes.
+
                     </p>
                     <p className="text-gray-700 text-base leading-relaxed mb-8">
-                        It involves comprehensive planning and the application of AI to enhance
-                        operational efficiency and customer satisfaction. Consultants evaluate an
-                        organization’s readiness for AI, establish clear objectives, identify suitable
-                        AI applications, and create a strategic implementation plan. They also assist
-                        in establishing the infrastructure, suggest team composition, conduct
-                        architecture reviews, handle risks, and confirm that AI solutions are ethical
-                        and socially responsible. This strategic approach is vital for companies aiming
-                        to use AI for competitive advantage and growth.
+                        Our Generative AI solutions integrate seamlessly with IT systems, cloud platforms, and enterprise workflows. From AI copilots and intelligent chatbots to automated content creation and knowledge management, we deliver solutions that improve efficiency and customer engagement. With 5+ years of proven delivery, we provide tailored solutions for industries like finance, retail, healthcare, education, and manufacturing—ensuring secure, scalable, and business-aligned transformation.
+
                     </p>
 
                     {/* Stats Section */}

@@ -45,8 +45,8 @@ const GENAIHero = () => {
                             Gen AI For Transformation
                         </h1>
                         <p className="mt-6 text-gray-300 text-base sm:text-lg">
-                            We’ve built an AI-driven platform for launching <br /> business
-                            transformation.
+                            Harness the power of Generative AI to create content, automate tasks,
+                            and accelerate innovation across your business.
                         </p>
                         <button
                             className="mt-8 inline-flex items-center justify-center text-[16px] font-semibold leading-[25px] 

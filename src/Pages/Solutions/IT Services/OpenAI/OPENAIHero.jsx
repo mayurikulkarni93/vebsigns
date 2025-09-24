@@ -45,8 +45,8 @@ const OPENAIHero = () => {
                             Open AI Consulting.
                         </h1>
                         <p className="mt-6 text-gray-300 text-base sm:text-lg">
-                            We’ve built an AI-driven platform for launching <br /> business
-                            transformation.
+                            Leverage OpenAI’s advanced models to build intelligent applications,
+                            automate workflows, and unlock new opportunities for your business.
                         </p>
                         <button
                             className="mt-8 inline-flex items-center justify-center text-[16px] font-semibold leading-[25px] 

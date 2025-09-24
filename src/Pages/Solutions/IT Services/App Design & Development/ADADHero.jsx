@@ -45,8 +45,8 @@ const ADADHero = () => {
                             App Design & Development
                         </h1>
                         <p className="mt-6 text-gray-300 text-base sm:text-lg">
-                            We’ve built an AI-driven platform for launching <br /> business
-                            transformation.
+                            Build engaging, high-performance mobile applications with intuitive designs
+                            and seamless functionality across iOS and Android platforms.
                         </p>
                         <button
                             className="mt-8 inline-flex items-center justify-center text-[16px] font-semibold leading-[25px] 

@@ -45,8 +45,8 @@ const CAIHero = () => {
                             Comprehensive AI Ecosystem
                         </h1>
                         <p className="mt-6 text-gray-300 text-base sm:text-lg">
-                            We’ve built an AI-driven platform for launching <br /> business
-                            transformation.
+                            Explore a complete AI ecosystem that integrates intelligent tools,
+                            analytics, and automation to drive innovation and business growth.
                         </p>
                         <button
                             className="mt-8 inline-flex items-center justify-center text-[16px] font-semibold leading-[25px] 

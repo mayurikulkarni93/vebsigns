@@ -41,7 +41,7 @@ const AIMLHero = () => {
                             our services
                         </p>
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold uppercase">
-                            AI/ML Strategy and Consulting
+                            AI/ML Strategy for IT & IoT
                         </h1>
                         <p className="mt-6 text-gray-300 text-base sm:text-lg">
                             We’ve built an AI-driven platform for launching <br /> business
