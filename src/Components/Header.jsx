@@ -91,28 +91,52 @@ export default function Header() {
                                 </PopoverButton>
 
                                 {/* Dropdown Panel */}
-                                <PopoverPanel className="absolute z-50 mt-2 w-56 rounded-lg bg-white text-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                    <div className="p-3 divide-y divide-gray-200">
-                                        <Link to="/about" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
-                                            <Info className="w-4 h-4" />
-                                            About Us
+                                <PopoverPanel className="absolute z-50 mt-2 w-56 rounded-lg bg-[#6FE4FC] text-[#15042E] shadow-lg  ring-opacity-5">
+                                    <div className="p-3 text-sm space-y-1">
+                                        <Link
+                                            to="/about"
+                                            className="relative flex items-center gap-2 px-3 py-2 rounded overflow-hidden group"
+                                        >
+                                            <span className="relative z-10 flex items-center gap-2">
+                                                <Info className="w-4 h-4" />
+                                                About Us
+                                            </span>
+                                            <span className="absolute left-0 top-0 h-full w-0 bg-gray-100 transition-all duration-300 group-hover:w-full"></span>
                                         </Link>
-                                        <Link to="/hire-developers" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
-                                            <FileText className="w-4 h-4" />
-                                            Hire Deveopers
+
+                                        <Link
+                                            to="/hire-developers"
+                                            className="relative flex items-center gap-2 px-3 py-2 rounded overflow-hidden group"
+                                        >
+                                            <span className="relative z-10 flex items-center gap-2">
+                                                <FileText className="w-4 h-4" />
+                                                Hire Developers
+                                            </span>
+                                            <span className="absolute left-0 top-0 h-full w-0 bg-gray-100 transition-all duration-300 group-hover:w-full"></span>
                                         </Link>
-                                        <Link to="/blog" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
-                                            <DollarSign className="w-4 h-4" />
-                                            Blogs
+
+                                        <Link
+                                            to="/blog"
+                                            className="relative flex items-center gap-2 px-3 py-2 rounded overflow-hidden group"
+                                        >
+                                            <span className="relative z-10 flex items-center gap-2">
+                                                <DollarSign className="w-4 h-4" />
+                                                Blogs
+                                            </span>
+                                            <span className="absolute left-0 top-0 h-full w-0 bg-gray-100 transition-all duration-300 group-hover:w-full"></span>
                                         </Link>
-                                        {/* <Link to="/faq" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
-                                            <HelpCircle className="w-4 h-4" />
-                                            FAQ
-                                        </Link> */}
-                                        <Link to="/contact" className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100">
-                                            <Mail className="w-4 h-4" />
-                                            Contact
+
+                                        <Link
+                                            to="/contact"
+                                            className="relative flex items-center gap-2 px-3 py-2 rounded overflow-hidden group"
+                                        >
+                                            <span className="relative z-10 flex items-center gap-2">
+                                                <Mail className="w-4 h-4" />
+                                                Contact
+                                            </span>
+                                            <span className="absolute left-0 top-0 h-full w-0 bg-gray-100 transition-all duration-300 group-hover:w-full"></span>
                                         </Link>
+
                                     </div>
                                 </PopoverPanel>
 
@@ -153,122 +177,178 @@ export default function Header() {
                                 </PopoverButton>
 
                                 {/* Dropdown Panel */}
-                                <PopoverPanel className="absolute z-50 mt-2 w-[650px] rounded-lg bg-white text-black shadow-lg ring-1 ring-black ring-opacity-5">
-                                    <div className="flex px-6 py-5 gap-8">
+                                <PopoverPanel className="absolute z-50 mt-2 w-[650px] rounded-lg bg-[#6FE4FC] text-[#15042E] shadow-lg  ring-opacity-5">
+                                    <div className="flex px-3 py-5 gap-8">
                                         {/* IT Services Section */}
-                                        <div className="flex-1">
+                                        <div className="flex-1 pr-2 border-r border-gray-500">
                                             <div className="font-semibold mb-3">IT Services</div>
-                                            <div className="space-y-3 text-base">
+                                            <div className="space-y-3 text-sm">
                                                 <Link
                                                     to="/ai-ml-strategy"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <BrainCircuit size={24} />
-                                                    <span>AI/ML Strategy and Consulting</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <BrainCircuit size={24} />
+                                                        <span>AI/ML Strategy and Consulting</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
+
                                                 <Link
                                                     to="/data-science"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <BarChart3 size={24} />
-                                                    <span>Data Science and Data Analytics</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <BarChart3 size={24} />
+                                                        <span>Data Science and Data Analytics</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
+
                                                 <Link
                                                     to="/gen-ai"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <Sparkles size={24} />
-                                                    <span>Gen AI For Business Transformation</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <Sparkles size={24} />
+                                                        <span>Gen AI For Business Transformation</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
+
                                                 <Link
                                                     to="/openai-consulting"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <Bot size={24} />
-                                                    <span>OpenAI Consulting Services</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <Bot size={24} />
+                                                        <span>OpenAI Consulting Services</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
+
                                                 <Link
                                                     to="/seo-services"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <Search size={24} />
-                                                    <span>Search Engine Optimization Services</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <Search size={24} />
+                                                        <span>Search Engine Optimization Services</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
+
                                                 <Link
                                                     to="/comprehensive-ai"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <Layers size={24} />
-                                                    <span>The Comprehensive AI Ecosystem</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <Layers size={24} />
+                                                        <span>The Comprehensive AI Ecosystem</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
+
                                                 <Link
                                                     to="/website-design"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <Layers size={24} />
-                                                    <span>Website Design & Development</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <Layers size={24} />
+                                                        <span>Website Design & Development</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
+
                                                 <Link
                                                     to="/app-design"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <Layers size={24} />
-                                                    <span>App Design & Development</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <Layers size={24} />
+                                                        <span>App Design & Development</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
+
                                                 <Link
                                                     to="/uiux"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <Layers size={24} />
-                                                    <span>UI/UX</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <Layers size={24} />
+                                                        <span>UI/UX</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
+
                                             </div>
                                         </div>
 
                                         {/* IoT Services Section */}
                                         <div className="flex-1">
                                             <div className="font-semibold mb-3">IoT Services</div>
-                                            <div className="space-y-3 text-base">
+                                            <div className="space-y-3 text-sm">
                                                 <Link
                                                     to="/iot-product-development"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <UserCheck size={24} />
-                                                    <span>IoT Product Development</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <UserCheck size={24} />
+                                                        <span>IoT Product Development</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
+
                                                 <Link
                                                     to="/bulk-manufacturing"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <LineChart size={24} />
-                                                    <span>Bulk Manufacturing & Device Management</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <LineChart size={24} />
+                                                        <span>Bulk Manufacturing & Device Management</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
+
                                                 <Link
                                                     to="/implementation-system-integration"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <Smile size={24} />
-                                                    <span>Implementation & System Integration</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <Smile size={24} />
+                                                        <span>Implementation & System Integration</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
+
                                                 <Link
                                                     to="/strategic-advisory-services"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <Database size={24} />
-                                                    <span>Strategic & Advisory Services</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <Database size={24} />
+                                                        <span>Strategic & Advisory Services</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
+
                                                 <Link
                                                     to="/predictive-maintenance"
-                                                    className="flex items-center gap-2 hover:bg-blue-50 rounded px-2 py-1"
+                                                    className="relative flex items-center gap-2 rounded px-2 py-1 overflow-hidden group"
                                                 >
-                                                    <Utensils size={24} />
-                                                    <span> Predictive Maintenance & Analytics</span>
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        <Utensils size={24} />
+                                                        <span>Predictive Maintenance & Analytics</span>
+                                                    </span>
+                                                    <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
 
                                             </div>
                                         </div>
                                     </div>
                                 </PopoverPanel>
+
                             </div>
                         )}
                     </Popover>
