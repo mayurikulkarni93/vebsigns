@@ -25,6 +25,7 @@ const UIUXHome = lazy(() => import("./Pages/Solutions/IT Services/UIUX/UIUXHome"
 const UseCase = lazy(() => import("./Pages/Use Cases/UseCase"));
 const UseCaseSingle = lazy(() => import("./Pages/Use Cases/UseCaseSingle"));
 const HireDev = lazy(() => import("./Pages/Hire Developers/HireDevelopers"));
+const Careers = lazy(() => import("./Pages/Careers Page/Careers"));
 
 const AppRoutes = () => (
   //   <Suspense fallback={<Loader />}>
@@ -52,6 +53,7 @@ const AppRoutes = () => (
       <Route path="/use-cases" element={<UseCase />} />
       <Route path="/use-cases/:slug" element={<UseCaseSingle />} />
       <Route path="/hire-developers" element={<HireDev />} />
+      <Route path="/careers" element={<Careers />} />
 
       {/* Add more routes here */}
     </Routes>
