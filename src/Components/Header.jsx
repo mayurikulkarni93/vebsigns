@@ -277,7 +277,7 @@ export default function Header() {
                                                 >
                                                     <span className="relative z-10 flex items-center gap-2">
                                                         <Layers size={24} />
-                                                        <span>UI/UX</span>
+                                                        <span>UI/UX Design</span>
                                                     </span>
                                                     <span className="absolute left-0 top-0 h-full w-0 bg-blue-50 transition-all duration-300 group-hover:w-full"></span>
                                                 </Link>
@@ -478,7 +478,7 @@ export default function Header() {
                                                     App Design & Development
                                                 </Link>
                                                 <Link to="/uiux" className="block hover:text-blue-600" onClick={toggleDrawer}>
-                                                    UI/UX
+                                                    UI/UX Design
                                                 </Link>
                                             </div>
                                         </div>
