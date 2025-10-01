@@ -14,10 +14,10 @@ const UIUXConsultingSection = () => {
             }}
           >
             <h2 className="text-[120px] sm:text-[160px] md:text-[192px] font-normal text-[#15042E] leading-none">
-              5<span className="text-[50px] sm:text-[65px] md:text-[80px] align-top">+</span>
+              18<span className="text-[50px] sm:text-[65px] md:text-[80px] align-top">+</span>
             </h2>
             <p className="mt-4 text-gray-900 text-base sm:text-lg md:text-lg max-w-md">
-              With 5+ years of expertise, we create intuitive and engaging digital experiences that blend creativity with functionality, helping businesses build stronger connections with their users.
+              With 18+ years of business & product experience, we create intuitive and engaging digital experiences that blend strategy, design, and technology insight, helping businesses build stronger connections with their users.
             </p>
           </div>
 
@@ -25,7 +25,7 @@ const UIUXConsultingSection = () => {
           <div className="flex flex-col justify-center p-8 sm:p-12 text-center md:text-left">
 
             <p className="text-gray-800 leading-relaxed text-base sm:text-lg">
-              UI/UX design ensures digital products are visually appealing, easy to use, and aligned with user needs. Our services span wireframing, prototyping, interaction design, usability testing, and design system creation for consistent experiences.
+              We are a UX consulting partner helping businesses design user-centered digital products that not only look beautiful but also drive measurable results—higher engagement, improved retention, and increased revenue.
             </p>
           </div>
         </div>

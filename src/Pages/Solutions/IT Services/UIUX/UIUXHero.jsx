@@ -45,8 +45,9 @@ const UIUXHero = () => {
                             UI/UX Design
                         </h1>
                         <p className="mt-6 text-gray-300 text-base sm:text-lg">
-                            Craft intuitive and visually stunning interfaces that enhance user
-                            satisfaction and drive engagement across all digital platforms.
+
+                            Designing Digital Experiences That Convert, Delight, and Scale
+
 
                         </p>
                         <button
