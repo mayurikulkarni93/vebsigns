@@ -25,7 +25,7 @@ export default function UseCase() {
   return (
     <div>
       <Header />
-      <section className="bg-black text-white py-16">
+      <section className="bg-gradient-to-r from-[#122D4D] via-[#15042E] via-[#241032] to-[#15042E] text-white py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* Left Content */}

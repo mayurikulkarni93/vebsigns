@@ -18,7 +18,7 @@ const UseCaseGrid = () => {
     return blogPosts.filter((post) => post.category.includes(category));
   };
   return (
-    <section className="bg-black py-20">
+    <section className="bg-gradient-to-r from-[#122D4D] via-[#15042E] via-[#241032] to-[#15042E] py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Tabs Section */}
         <TabGroup>
