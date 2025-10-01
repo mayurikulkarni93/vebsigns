@@ -27,8 +27,8 @@ const AnimatedCounter = ({ value, duration = 2000 }) => {
 const useCaseData = [
     {
         id: 'technology',
-        title: 'Technology',
-        description: 'Big or small, we’ve got you',
+        title: 'IT Solutions',
+        description: 'Big or small, we’ve got you covered with cutting-edge IT solutions.',
         percentage: 85,
         normalImage: '/assets/HomePage/b5.jpg',
         hoverImage: '/assets/HomePage/open-ai-1.png',
@@ -38,72 +38,85 @@ const useCaseData = [
         ),
 
         content: {
-            link: "/case-studies/technology", // JSON link
+            link: "/use-cases", // JSON link
             hoverBgColor: "rgba(0,0,0,0.5)",
-            useCaseText: `Learn how we helped our clients to optimize their internal processes and prevent cost overruns.`,
-            percentageText: 'Reported that their online experience improved',
-            cardTitle: 'Face Recognition and Identification',
-            cardDescription: 'Pose tracking and error detection models for safe dumbbell workouts developed',
+            useCaseText: "Learn how we helped our clients to optimize their internal processes and prevent cost overruns.",
+            percentageText: "Reported that their online experience improved",
+            cardTitle: "IT Infrastructure & Security",
+            cardDescription: "Designed and implemented robust IT systems, ensuring secure, scalable, and efficient technology solutions for businesses."
         }
     },
     {
         id: 'finance',
-        title: 'Finance',
-        description: 'Big or small, we’ve got you',
+        title: 'IoT',
+        description: 'Connecting devices, collecting data, optimizing operations.',
         percentage: 75,
-        normalImage: '/assets/finance-normal.png',
-        hoverImage: '/assets/finance-hover.png',
+        normalImage: '/assets/HomePage/b5.jpg',
+        hoverImage: '/assets/HomePage/open-ai-1.png',
         icon: () => (
             <svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 64 64"><title>board 29</title><g stroke-linecap="round" transform="translate(0.5 0.5)" fill="#1B4BF0" stroke-linejoin="round" class="nc-icon-wrapper"><polyline data-cap="butt" data-color="color-2" fill="none" stroke="#f3f945" stroke-width="1" points="42,27 32,27 32,17 "></polyline><circle data-color="color-2" fill="none" stroke="#f3f945" stroke-width="1" cx="32" cy="27" r="10"></circle><line fill="none" stroke="#1B4BF0" stroke-width="1" x1="32" y1="48" x2="32" y2="60"></line><line data-cap="butt" fill="none" stroke="#1B4BF0" stroke-width="1" x1="26" y1="48" x2="14" y2="62"></line><line data-cap="butt" fill="none" stroke="#1B4BF0" stroke-width="1" x1="38" y1="48" x2="50" y2="62"></line><polyline fill="none" stroke="#1B4BF0" stroke-width="1" points="56,42 56,7 8,7 8,42 "></polyline><line fill="none" stroke="#1B4BF0" stroke-width="1" x1="62" y1="48" x2="2" y2="48"></line><line fill="none" stroke="#1B4BF0" stroke-width="1" x1="32" y1="7" x2="32" y2="2"></line></g></svg>
 
         ),
         content: {
-            link: "/case-studies/financial", // JSON link
+            link: "/use-cases", // JSON link
             hoverBgColor: "rgba(0,0,0,0.5)",
-            useCaseText: `Custom financial modeling to help optimize investment strategies.`,
-            percentageText: 'Reported better budget management',
-            cardTitle: 'Financial Forecasting',
-            cardDescription: 'AI-driven forecasting tools tailored for finance industries',
+            useCaseText: "Discover how we enabled clients to connect devices, collect real-time data, and optimize operations through IoT solutions.",
+            percentageText: "Reported improved operational efficiency",
+            cardTitle: "Smart IoT Solutions",
+            cardDescription: "Developed connected devices and systems that monitor, automate, and enhance business processes for smarter decision-making."
         }
+
     },
     {
-        id: 'digitalHealth',
-        title: 'Digital Health',
-        description: 'Big or small, we’ve got you',
+        title: 'AI/ML',
+        description: 'Intelligent solutions to transform your business.',
         percentage: 90,
-        normalImage: '/assets/health-normal.png',
-        hoverImage: '/assets/health-hover.png',
+        normalImage: '/assets/HomePage/b5.jpg',
+        hoverImage: '/assets/HomePage/open-ai-1.png',
         icon: () => (
-            <svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 64 64"><title>hospital 34</title><g stroke-linecap="round" transform="translate(0.5 0.5)" fill="#1B4BF0" stroke-linejoin="round" class="nc-icon-wrapper"><circle fill="none" stroke="#1B4BF0" stroke-width="1" cx="32" cy="32" r="30"></circle><polygon data-color="color-2" fill="none" stroke="#f3f945" stroke-width="1" points=" 48,26 38,26 38,16 26,16 26,26 16,26 16,38 26,38 26,48 38,48 38,38 48,38 "></polygon></g></svg>
-
+            <svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 64 64">
+                <title>hospital 34</title>
+                <g stroke-linecap="round" transform="translate(0.5 0.5)" fill="#1B4BF0" stroke-linejoin="round" class="nc-icon-wrapper">
+                    <circle fill="none" stroke="#1B4BF0" stroke-width="1" cx="32" cy="32" r="30"></circle>
+                    <polygon data-color="color-2" fill="none" stroke="#f3f945" stroke-width="1" points="48,26 38,26 38,16 26,16 26,26 16,26 16,38 26,38 26,48 38,48 38,38 48,38"></polygon>
+                </g>
+            </svg>
         ),
         content: {
-            link: "/case-studies/healthcare", // JSON link
+            link: "/use-cases", // JSON link
             hoverBgColor: "rgba(0,0,0,0.5)",
-            useCaseText: `Innovative health tech solutions to improve patient outcomes.`,
-            percentageText: 'Reported improved patient engagement',
-            cardTitle: 'Health Monitoring Systems',
-            cardDescription: 'Real-time data tracking for personalized healthcare',
+            useCaseText: "We leverage AI and ML to create intelligent systems that improve decision-making and operational efficiency.",
+            percentageText: "Reported improved business outcomes with AI solutions",
+            cardTitle: "AI & ML Solutions",
+            cardDescription: "Smart algorithms and predictive models to optimize processes and enhance data-driven decisions."
         }
     },
     {
-        id: 'ecommerce',
-        title: 'E-commerce',
-        description: 'Big or small, we’ve got you',
+        id: 'industry4.0',
+        title: 'Industry 4.0',
+        description: 'Smart manufacturing and connected systems for modern industries.',
         percentage: 82,
-        normalImage: '/assets/ecommerce-normal.png',
-        hoverImage: '/assets/ecommerce-hover.png',
+        normalImage: '/assets/HomePage/b5.jpg',
+        hoverImage: '/assets/HomePage/open-ai-1.png',
         icon: () => (
-            <svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 64 64"><title>visa</title><g stroke-linecap="round" transform="translate(0.5 0.5)" fill="#1B4BF0" stroke-linejoin="round" class="nc-icon-wrapper"><polygon data-color="color-2" data-stroke="none" fill="#f3f945" points="26.219,37.828 29.386,37.828 31.369,26.202 28.2,26.202 " stroke-linejoin="miter" stroke="none"></polygon><path data-color="color-2" data-stroke="none" fill="#f3f945" d="M37.758,30.87c-1.108-0.538-1.786-0.897-1.779-1.441c0-0.483,0.574-1,1.815-1 c1.015-0.016,1.833,0.191,2.656,0.58l0.43-2.52C40.251,26.253,39.267,26,38.039,26c-3.131,0-5.337,1.577-5.355,3.837 c-0.018,1.67,1.575,2.602,2.777,3.158c1.233,0.57,1.648,0.933,1.642,1.442c-0.008,0.779-0.985,1.135-1.896,1.135 c-1.406,0-2.115-0.217-3.391-0.795l-0.445,2.603c0.74,0.324,2.109,0.606,3.53,0.62c3.331,0,5.493-1.559,5.518-3.972 C40.43,32.706,39.586,31.699,37.758,30.87z" stroke-linejoin="miter" stroke="none"></path><path data-color="color-2" data-stroke="none" fill="#f3f945" d="M49.005,26.213h-2.449c-0.759,0-1.326,0.207-1.659,0.964l-4.706,10.654h3.327 c0,0,0.544-1.433,0.667-1.747c0.364,0,3.596,0.005,4.058,0.005c0.095,0.407,0.386,1.742,0.386,1.742h2.94L49.005,26.213z M45.097,33.706c0.131-0.335,1.425-3.656,1.683-4.359c0.428,2.004,0.011,0.06,0.948,4.359H45.097z" stroke-linejoin="miter" stroke="none"></path><path data-color="color-2" data-stroke="none" fill="#f3f945" d="M23.561,26.211l-3.102,7.928l-0.331-1.611l-1.111-5.342 c-0.192-0.736-0.748-0.956-1.436-0.981h-5.11l-0.04,0.242c1.243,0.301,2.354,0.735,3.328,1.275l2.817,10.097l3.353-0.004 l4.989-11.603H23.561z" stroke-linejoin="miter" stroke="none"></path><path fill="none" stroke="#1B4BF0" stroke-width="1" d="M2,50V14c0-2.2,1.8-4,4-4 h52c2.2,0,4,1.8,4,4v36c0,2.2-1.8,4-4,4H6C3.8,54,2,52.2,2,50z"></path></g></svg>
-
+            <svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 64 64">
+                <title>visa</title>
+                <g stroke-linecap="round" transform="translate(0.5 0.5)" fill="#1B4BF0" stroke-linejoin="round" class="nc-icon-wrapper">
+                    <polygon data-color="color-2" data-stroke="none" fill="#f3f945" points="26.219,37.828 29.386,37.828 31.369,26.202 28.2,26.202 " stroke-linejoin="miter" stroke="none"></polygon>
+                    <path data-color="color-2" data-stroke="none" fill="#f3f945" d="M37.758,30.87c-1.108-0.538-1.786-0.897-1.779-1.441c0-0.483,0.574-1,1.815-1 c1.015-0.016,1.833,0.191,2.656,0.58l0.43-2.52C40.251,26.253,39.267,26,38.039,26c-3.131,0-5.337,1.577-5.355,3.837 c-0.018,1.67,1.575,2.602,2.777,3.158c1.233,0.57,1.648,0.933,1.642,1.442c-0.008,0.779-0.985,1.135-1.896,1.135 c-1.406,0-2.115-0.217-3.391-0.795l-0.445,2.603c0.74,0.324,2.109,0.606,3.53,0.62c3.331,0,5.493-1.559,5.518-3.972 C40.43,32.706,39.586,31.699,37.758,30.87z" stroke-linejoin="miter" stroke="none"></path>
+                    <path data-color="color-2" data-stroke="none" fill="#f3f945" d="M49.005,26.213h-2.449c-0.759,0-1.326,0.207-1.659,0.964l-4.706,10.654h3.327 c0,0,0.544-1.433,0.667-1.747c0.364,0,3.596,0.005,4.058,0.005c0.095,0.407,0.386,1.742,0.386,1.742h2.94L49.005,26.213z M45.097,33.706c0.131-0.335,1.425-3.656,1.683-4.359c0.428,2.004,0.011,0.06,0.948,4.359H45.097z" stroke-linejoin="miter" stroke="none"></path>
+                    <path data-color="color-2" data-stroke="none" fill="#f3f945" d="M23.561,26.211l-3.102,7.928l-0.331-1.611l-1.111-5.342 c-0.192-0.736-0.748-0.956-1.436-0.981h-5.11l-0.04,0.242c1.243,0.301,2.354,0.735,3.328,1.275l2.817,10.097l3.353-0.004 l4.989-11.603H23.561z" stroke-linejoin="miter" stroke="none"></path>
+                    <path fill="none" stroke="#1B4BF0" stroke-width="1" d="M2,50V14c0-2.2,1.8-4,4-4 h52c2.2,0,4,1.8,4,4v36c0,2.2-1.8,4-4,4H6C3.8,54,2,52.2,2,50z"></path>
+                </g>
+            </svg>
         ),
         content: {
-            link: "/case-studies/ecommerce", // JSON link
+            link: "/use-cases", // JSON link
             hoverBgColor: "rgba(0,0,0,0.5)",
-            useCaseText: `Optimized customer journey analytics for increased sales.`,
-            percentageText: 'Reported higher conversion rates',
-            cardTitle: 'Customer Behavior Analysis',
-            cardDescription: 'AI-powered insights to boost e-commerce growth',
+            useCaseText: "Implemented smart manufacturing systems and IoT-driven analytics for better production efficiency.",
+            percentageText: "Reported higher operational productivity",
+            cardTitle: "Smart Manufacturing & Analytics",
+            cardDescription: "Connected systems and AI-powered insights to optimize industrial processes and decision-making."
         }
     }
 ];
@@ -114,99 +127,6 @@ export default function UseCases() {
     const activeContent = useCaseData.find(item => item.id === activeTab);
     const navigate = useNavigate();
     return (
-        // <section className="py-16 bg-white">
-        //     <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-        //         {/* Heading */}
-        //         <p className="text-xl font-semibold text-blue-600 tracking-widest uppercase">
-        //             Powerful Use Cases
-        //         </p>
-        //         <h2 className="mt-4 text-3xl md:text-5xl font-extrabold text-gray-900 uppercase">
-        //             In Your Industry
-        //         </h2>
-        //         <p className="mt-4 text-base text-gray-600 max-w-2xl mx-auto">
-        //             We’ve built an AI-driven platform for launching business transformation.
-        //             <br />Three ways to make your data do more. Ready for takeoff?
-        //         </p>
-        //     </div>
-
-        //     {/* Content */}
-        //     <div className="relative mt-12 max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-8">
-
-        //         {/* Left Panel */}
-        //         <div className="bg-[#0B0225] left-20 text-white rounded-l-3xl p-8 space-y-6 relative overflow-hidden z-0">
-        //             {useCaseData.map((item) => (
-        //                 <div
-        //                     key={item.id}
-        //                     onClick={() => setActiveTab(item.id)}
-        //                     className={`flex items-center space-x-4 w-[300px] p-4 rounded-xl cursor-pointer transition-colors duration-300 
-        //     ${activeTab === item.id ? 'bg-[#20103D] w-[300px]' : 'hover:bg-[#20103D]/50 hover:w-[300px]'}`}
-        //                 >
-        //                     <span className={`${activeTab === item.id ? 'text-blue-400' : 'text-gray-400'}`}>
-        //                         {/* SVG ICON */}
-
-        //                         {item.icon()}
-        //                     </span>
-        //                     <div>
-        //                         <h3 className="font-semibold">{item.title}</h3>
-        //                         <p className="text-sm text-gray-300">{item.description}</p>
-        //                     </div>
-        //                 </div>
-        //             ))}
-        //         </div>
-
-        //         {/* Right Panel */}
-        //         <div className="bg-[#F0FAFF] rounded-3xl right-45 p-8 w-[760px] flex flex-col md:flex-row justify-between items-center z-10 shadow-lg relative">
-        //             {/* Left Side */}
-        //             <div className="flex-1 md:pr-8 mb-6 md:mb-0" style={{ lineHeight: '40px' }}>
-        //                 <h4 className="font-semibold text-gray-800 mb-2">Use case:</h4>
-        //                 <p className="text-gray-600 mb-6">{activeContent.content.useCaseText}</p>
-        //                 <hr className="my-4 border-gray-300" />
-        //                 <AnimatedCounter value={activeContent.percentage} duration={1500} />
-        //                 <p className="text-gray-600 mb-6">{activeContent.content.percentageText}</p>
-        //                 <hr className="my-4 border-gray-300" />
-        //                 <p className="font-medium text-gray-800">Have a project idea and need Free Consultation</p>
-        //             </div>
-
-        //             {/* Right Side - Card */}
-        //             <div onClick={() => navigate(activeContent.content.link)} // JSON link
-        //                 className="w-[250px] group cursor-pointer flex-shrink-0">
-        //                 <div className="flex flex-col bg-white rounded-xl shadow-md h-full relative overflow-hidden transition-transform duration-300 ease-in-out hover:rotate-[3deg] hover:-translate-y-2 z-10">
-        //                     <div className="relative w-full h-48 group">
-        //                         {/* Normal Image */}
-        //                         <img
-        //                             src={activeContent.normalImage}
-        //                             alt={activeContent.content.cardTitle}
-        //                             className="w-full h-48 object-cover rounded-t-xl"
-        //                         />
-
-        //                         {/* Background color overlay from JSON */}
-        //                         <div
-        //                             className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-xl"
-        //                             style={{ backgroundColor: activeContent.content.hoverBgColor }}
-        //                         ></div>
-
-        //                         {/* Hover Image on top of color overlay */}
-        //                         <img
-        //                             src={activeContent.hoverImage}
-        //                             alt={`${activeContent.content.cardTitle} hover`}
-        //                             className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-xl"
-        //                         />
-        //                     </div>
-
-
-        //                     <div className="p-4 flex-1">
-        //                         <h5 className="font-semibold text-gray-900 mb-2">{activeContent.content.cardTitle}</h5>
-        //                         <p className="text-sm text-gray-600">{activeContent.content.cardDescription}</p>
-        //                     </div>
-        //                 </div>
-        //                 <div className="text-[14px] sm:text-[16px] text-center text-[#15042E] bg-[#F3F945] w-[180px] sm:w-[200px] h-[50px] sm:h-[60px] flex items-center justify-center cursor-pointer transition-transform duration-300 ease-in-out box-border rounded-b-[8px] mx-auto -mt-[50px] sm:-mt-[65px] group-hover:translate-y-[45px] z-0">
-        //                     <a>Read full case</a>
-        //                 </div>
-        //             </div>
-        //         </div>
-
-        //     </div>
-        // </section>
         <section className="py-16 bg-white">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
                 {/* Heading */}
