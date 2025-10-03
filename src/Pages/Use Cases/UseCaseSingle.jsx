@@ -1,6 +1,5 @@
 import React from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
-
 import { useParams } from "react-router-dom";
 import { blogPosts } from "./useCasePost"; // Import posts or use centralized store
 import Footer from "../../Components/Footer";
@@ -72,50 +71,51 @@ const UseCaseSingle = () => {
 
             <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 py-20 px-6">
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-stretch gap-10">
+                    <div className="flex flex-col md:flex-row items-center gap-10">
 
-                    {/* Left Content */}
-                    <div className="bg-blue-600 text-white rounded-2xl p-8 flex flex-col justify-between md:w-1/2">
-                        {/* Categories */}
-                        <div className="flex gap-3 mb-4">
-                            {post.category.map((cat, index) => (
-                                <span
-                                    key={index}
-                                    className="bg-white text-blue-600 text-xs font-semibold px-3 py-1 rounded-full mr-1"
-                                >
-                                    {cat}
-                                </span>
-                            ))}
+                        {/* Left Content */}
+                        <div className="bg-blue-600 text-white rounded-2xl p-8 flex flex-col justify-between md:w-1/2">
+                            {/* Categories */}
+                            <div className="flex gap-3 mb-4">
+                                {post.category.map((cat, index) => (
+                                    <span
+                                        key={index}
+                                        className="bg-white text-blue-600 text-xs font-semibold px-3 py-1 rounded-full mr-1"
+                                    >
+                                        {cat}
+                                    </span>
+                                ))}
 
-                        </div>
+                            </div>
 
-                        {/* Title */}
-                        <h2 className="text-3xl md:text-4xl font-bold leading-snug">
-                            {post.title}
-                        </h2>
+                            {/* Title */}
+                            <h2 className="text-3xl md:text-4xl font-bold leading-snug">
+                                {post.title}
+                            </h2>
 
-                        {/* Excerpt */}
-                        <p className="mt-4 text-sm opacity-90">
-                            {post.excerpt}
-                        </p>
-
-                        {/* Author & Date */}
-                        <div className="mt-6 flex items-center gap-2 text-sm">
-                            <img
-                                src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                                alt="Author"
-                                className="w-6 h-6 rounded-full"
-                            />
-                            <p>
-                                Posted by <span className="font-semibold">{post.author}</span> on{" "}
-                                <span className="opacity-80">{post.date}</span>
+                            {/* Excerpt */}
+                            <p className="mt-4 text-sm opacity-90">
+                                {post.excerpt}
                             </p>
+
+                            {/* Author & Date */}
+                            <div className="mt-6 flex items-center gap-2 text-sm">
+                                <img
+                                    src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                                    alt="Author"
+                                    className="w-6 h-6 rounded-full"
+                                />
+                                <p>
+                                    Posted by <span className="font-semibold">{post.author}</span> on{" "}
+                                    <span className="opacity-80">{post.date}</span>
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
-                    {/* Right Image */}
-                    <div className="relative md:w-1/2">
+                        {/* Right Image */}
+                        <div className="relative md:w-1/2">
 
-                        <svg
+                            {/* <svg
                             viewBox="0 0 350 180"
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-full h-auto"
@@ -149,9 +149,17 @@ const UseCaseSingle = () => {
                                 d="M350 15C350 6.71573 343.284 0 335 0H15C6.71573 0 0 6.71573 0 15V165C0 173.284 6.71573 180 15 180H275C283.284 180 290 173.284 290 165V135C290 126.716 296.716 120 305 120H335C343.284 120 350 113.284 350 105V15Z"
                                 fill="url(#imgPattern)"
                             />
-                        </svg>
+                        </svg> */}
+                            <img
+                                src={post.image}
+                                alt={post.title}
+                                className="w-full h-auto rounded-[15px] object-cover"
+                            />
 
+
+                        </div>
                     </div>
+
                 </div>
             </section>
             <section className="max-w-6xl mx-auto px-6 py-16 flex gap-12">

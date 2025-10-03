@@ -27,7 +27,7 @@ const analyticsData = [
         cta: {
             text: "Discover your personalized Ayurvedic wellness plan — visit ayurythm.com or download the app today.",
         },
-        image: { src: "/assets/HomePage/AP.png", alt: "Ayurythm App", width: 650 },
+        image: { src: "/assets/HomePage/ayurythm.png", alt: "Ayurythm App", width: 650 },
     },
     {
         title: "IIFL Finance – Diversified Financial Services",
@@ -41,7 +41,7 @@ const analyticsData = [
         cta: {
             text: "Explore IIFL's financial solutions — visit iifl.com/finance for loans, investments & more.",
         },
-        image: { src: "/assets/HomePage/AP.png", alt: "IIFL Finance", width: 650 },
+        image: { src: "/assets/HomePage/IIFL.svg", alt: "IIFL Finance", width: 650 },
     },
     {
         title: "Cheesiano – Delicious Food Delivered Fast",
@@ -55,11 +55,11 @@ const analyticsData = [
         cta: {
             text: "Order your favorite meals now — visit cheesiano.com for fast, delicious food delivered to your door.",
         },
-        image: { src: "/assets/HomePage/AP.png", alt: "Cheesiano Food Delivery", width: 650 },
+        image: { src: "/assets/HomePage/Pizza.svg", alt: "Cheesiano Food Delivery", width: 650 },
     },
     {
         title: "SWAAS – Seamless Online Shopping Experience",
-        path: "https://www.swaas.com",
+        path: "https://www.swaas.in",
         description:
             "E-commerce platform offering a wide range of products across categories with user-friendly navigation, secure payments, and fast delivery.",
         stats: [
@@ -69,7 +69,7 @@ const analyticsData = [
         cta: {
             text: "Shop now and enjoy hassle-free online shopping — visit swaas.com for great deals and convenience.",
         },
-        image: { src: "/assets/HomePage/AP.png", alt: "SWAAS Online Shopping", width: 650 },
+        image: { src: "/assets/HomePage/SWAAS.svg", alt: "SWAAS Online Shopping", width: 650 },
     },
     {
         title: "Thanatkorn – E-Order Platform for Retailers & Manufacturers",
@@ -83,7 +83,7 @@ const analyticsData = [
         cta: {
             text: "Start managing your products and stock seamlessly — visit thanatkorn.com for more details.",
         },
-        image: { src: "/assets/HomePage/AP.png", alt: "Thanatkorn E-Order Platform", width: 650 },
+        image: { src: "/assets/HomePage/thanatkorn.svg", alt: "Thanatkorn E-Order Platform", width: 650 },
     },
     {
         title: "CricMaths – Where Cricket Meets Maths",
@@ -97,11 +97,11 @@ const analyticsData = [
         cta: {
             text: "Join the fun and make maths exciting — visit cricmaths.com to explore games and learning modules.",
         },
-        image: { src: "/assets/HomePage/AP.png", alt: "CricMaths Educational Platform", width: 650 },
+        image: { src: "/assets/HomePage/Cricmaths.svg", alt: "CricMaths Educational Platform", width: 650 },
     },
     {
         title: "Jamaica Craft Café – Passion for Coffee",
-        path: "https://www.jamaicacraftcafe.com",
+        path: "https://thejamaicacraft.com/",
         description:
             "Coffee café founded by Mr. Thanat Thanaboriboon, offering expertly crafted coffee to energize your mornings and create a warm, inviting experience.",
         stats: [
@@ -111,7 +111,36 @@ const analyticsData = [
         cta: {
             text: "Start your day with the perfect cup — visit jamaicacraftcafe.com to explore our menu and locations.",
         },
-        image: { src: "/assets/HomePage/AP.png", alt: "Jamaica Craft Café", width: 650 },
+        image: { src: "/assets/HomePage/JamaicaWeb.svg", alt: "Jamaica Craft Café", width: 650 },
+    },
+    {
+        title: "India Craft Café – Mobile App",
+        path: "https://www.indiacraftcafe.com/app",
+        description:
+            "Mobile app for India Craft Café, offering easy access to café services, ordering, and a vibrant coffee experience anytime, anywhere across India.",
+        stats: [
+            { label: "Menu Items", value: "50+", description: "Variety of specialty coffee blends and beverages available via the app" },
+            { label: "Cities Covered", value: "15+", description: "Available in multiple cities across India" }
+        ],
+        cta: {
+            text: "Order your favorite coffee and explore café services — download the India Craft Café app today.",
+        },
+        image: { src: "/assets/HomePage/JamaicaApp.svg", alt: "India Craft Café Mobile App", width: 650 },
+    }
+    ,
+    {
+        title: "Jamaica Craft Café – POS System Thailand",
+        path: "https://www.jamaicacraftcafe.com/pos",
+        description:
+            "Point-of-Sale system for Jamaica Craft Café in Thailand, designed to streamline café operations, manage orders, and enhance customer experience efficiently.",
+        stats: [
+            { label: "Cafés Using POS", value: "3+", description: "Jamaica Craft Café locations in Thailand leveraging the system" },
+            { label: "Transactions Managed", value: "50K+/month", description: "Efficient order processing and sales tracking via POS" },
+        ],
+        cta: {
+            text: "Optimize your café operations with Jamaica POS — visit jamaicacraftcafe.com/pos to learn more.",
+        },
+        image: { src: "/assets/HomePage/Jamaica.svg", alt: "Jamaica Craft Café POS System", width: 650 },
     },
     {
         title: "Junkky – Smart Waste Collection",
@@ -140,7 +169,7 @@ const analyticsData = [
         cta: {
             text: "Optimize well operations with real-time insights — visit ongcsmartapp.com to learn more.",
         },
-        image: { src: "/assets/HomePage/AP.png", alt: "ONGC Smart Monitoring App", width: 650 },
+        image: { src: "/assets/HomePage/ONGC.svg", alt: "ONGC Smart Monitoring App", width: 650 },
     },
     {
         title: "The Actor's Truth – Acting Workshops & Training",
@@ -154,7 +183,7 @@ const analyticsData = [
         cta: {
             text: "Enhance your acting skills and join workshops — visit theactorstruth.com to enroll.",
         },
-        image: { src: "/assets/HomePage/AP.png", alt: "The Actor's Truth Acting Academy", width: 650 },
+        image: { src: "/assets/HomePage/TAT.png", alt: "The Actor's Truth Acting Academy", width: 650 },
     },
     {
         title: "Haigreve E-Order – Retailer & Manufacturer Platform",
@@ -169,7 +198,7 @@ const analyticsData = [
         cta: {
             text: "Manage your products and stock seamlessly — visit haigreve.com to get started.",
         },
-        image: { src: "/assets/HomePage/AP.png", alt: "Haigreve E-Order App", width: 650 },
+        image: { src: "/assets/HomePage/haigreve.svg", alt: "Haigreve E-Order App", width: 650 },
     },
     {
         title: "Good Good Piggy – Digital Piggy Bank for Kids",
@@ -183,11 +212,11 @@ const analyticsData = [
         cta: {
             text: "Empower your child with financial literacy — download the Good Good Piggy app today.",
         },
-        image: { src: "/assets/HomePage/AP.png", alt: "Good Good Piggy App", width: 650 },
+        image: { src: "/assets/HomePage/Goodpiggy.svg", alt: "Good Good Piggy App", width: 650 },
     },
     {
         title: "Jaguar Plumbing – Reliable Plumbing Solutions",
-        path: "https://www.jaguarplumbing.com",
+        path: "https://www.jaquar.com/en",
         description:
             "Professional plumbing services offering installation, repair, and maintenance for residential and commercial clients, ensuring fast, reliable, and efficient solutions.",
         stats: [
@@ -197,7 +226,55 @@ const analyticsData = [
         cta: {
             text: "Book expert plumbing services today — visit jaguarplumbing.com to schedule an appointment.",
         },
-        image: { src: "/assets/HomePage/AP.png", alt: "Jaguar Plumbing Services", width: 650 },
+        image: { src: "/assets/HomePage/Jaguar.svg", alt: "Jaguar Plumbing Services", width: 650 },
+    },
+    {
+        title: "Best Loans",
+        path: "https://bestloans.co.in/",
+        description:
+            "An Indian digital lending platform offering home loans and personal financing, focused on simplified processes and competitive interest rates.",
+        stats: [
+            {
+                label: "Customers Served",
+                value: "50K+",
+                description: "Individuals assisted in securing loans"
+            },
+            {
+                label: "Loan Disbursed",
+                value: "500 Cr+",
+                description: "Total value of loans facilitated"
+            },
+        ],
+        cta: {
+            text: "Compare and apply online – visit bestloans.co.in to find your ideal loan offer.",
+        },
+        image: { src: "/assets/HomePage/bestloan.svg", alt: "Best Loans Logo", width: 650 }
+    },
+    {
+        title: "SMC (SMC India / SMC Global)",
+        path: "https://www.smcindiaonline.com/",
+        description:
+            "A leading Indian financial services group offering broking, wealth management, financing, and gold & silver coin services under its brand.",
+        stats: [
+            {
+                label: "Branches",
+                value: "143+",
+                description: "Operational branches across India"
+            },
+            {
+                label: "Cities Covered",
+                value: "452+",
+                description: "Extensive presence across Indian cities"
+            },
+        ],
+        cta: {
+            text: "Explore SMC’s financial services and gold coin offerings — visit smcindiaonline.com.",
+        },
+        image: {
+            src: "/assets/HomePage/smc.svg",
+            alt: "SMC India / SMC Gold Coins",
+            width: 650
+        }
     },
 ];
 

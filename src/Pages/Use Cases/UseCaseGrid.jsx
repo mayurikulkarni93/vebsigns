@@ -11,7 +11,7 @@ function classNames(...classes) {
 }
 
 const UseCaseGrid = () => {
-  const categories = ["Show All", "Data and AI", "Generative AI", "IoT", "Automation", "Cloud"];
+const categories = ["Show All", "HealthTech", "Wellness & AI", "FinTech", "FoodTech", "E-commerce"];
 
   const filteredPosts = (category) => {
     if (category === "Show All") return blogPosts;
@@ -103,7 +103,7 @@ const UseCaseGrid = () => {
                             to={`/use-cases/${post.slug}`}
                             className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium px-4 sm:px-5 py-2 rounded-lg shadow-md hover:opacity-90 transition"
                           >
-                            Watch Video Now
+                            Read More <Plus className="inline-block ml-1" />
                           </Link>
                         </div>
                       </div>
