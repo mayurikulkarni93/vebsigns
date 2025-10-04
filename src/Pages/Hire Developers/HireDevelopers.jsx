@@ -172,7 +172,10 @@ export default function HireDev() {
                                             <p className="text-base sm:text-lg text-gray-300 mt-4 sm:mt-6">
                                                 {tab.description}
                                             </p>
-                                            <button className="mt-6 sm:mt-8 px-5 sm:px-6 py-2.5 sm:py-3 rounded-md bg-gradient-to-r from-teal-400 to-sky-400 text-black font-semibold shadow-lg hover:opacity-90 transition">
+                                            <button onClick={() => {
+                                                document.getElementById("hire-form")?.scrollIntoView({ behavior: "smooth" });
+                                            }}
+                                                className="mt-6 sm:mt-8 px-5 sm:px-6 py-2.5 sm:py-3 rounded-md bg-gradient-to-r from-teal-400 to-sky-400 text-black font-semibold shadow-lg hover:opacity-90 transition">
                                                 Get Started
                                             </button>
                                         </div>
@@ -250,7 +253,7 @@ export default function HireDev() {
 
 
                     {/* Card Container */}
-                    <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
+                    <div id="hire-form" className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
                         {/* Left: Form */}
                         <div className="p-6 sm:p-8">
                             <form className="space-y-6 w-full max-w-xl mx-auto" onSubmit={handleSubmit}>

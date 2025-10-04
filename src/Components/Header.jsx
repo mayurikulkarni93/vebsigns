@@ -582,7 +582,7 @@ export default function Header() {
                         </a>
 
                         <button
-                            className=" px-5 sm:px-6 py-2 sm:py-2 rounded-md bg-gradient-to-r from-teal-400 to-sky-400 text-black font-semibold shadow-lg hover:opacity-90 transition"
+                            className=" px-2 sm:px-2 py-2 sm:py-2 rounded-md bg-gradient-to-r from-teal-400 to-sky-400 text-black font-semibold shadow-lg hover:opacity-90 transition"
                             onClick={() => window.open("https://calendly.com/vebsigns/30min", "_blank")}
                         >
                             <span>Book Meeting</span>
