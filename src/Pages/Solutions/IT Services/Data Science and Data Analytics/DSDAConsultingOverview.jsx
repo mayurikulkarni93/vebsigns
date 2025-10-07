@@ -32,16 +32,16 @@ const DSDAConsultingOverview = () => {
                     <div className="grid grid-cols-2 gap-8 mt-8">
                         {/* Stat 1 */}
                         <div className="border-t border-gray-300 pt-4">
-                            <p className="text-gray-500 text-sm">Data and AI Projects</p>
-                            <h3 className="text-5xl sm:text-7xl font-normal text-blue-600">28+</h3>
-                            <p className="text-gray-600 mt-2">Successfully Realized</p>
+                            <p className="text-gray-500 text-sm">Serving the industry for</p>
+                            <h3 className="text-5xl sm:text-7xl font-normal text-blue-600">6+</h3>
+                            <p className="text-gray-600 mt-2">Years of Excellence</p>
                         </div>
 
                         {/* Stat 2 */}
                         <div className="border-t border-gray-300 pt-4">
-                            <p className="text-gray-500 text-sm">Experts</p>
+                            <p className="text-gray-500 text-sm">Projects Successfully Completed</p>
                             <h3 className="text-5xl sm:text-7xl font-normal text-blue-600">85+</h3>
-                            <p className="text-gray-600 mt-2">From 17 fields of study</p>
+                            <p className="text-gray-600 mt-2">Delivering Quality Solutions</p>
                         </div>
                     </div>
                 </div>
