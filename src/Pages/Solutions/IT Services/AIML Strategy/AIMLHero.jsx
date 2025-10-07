@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AIMLHero = () => {
 
@@ -47,13 +48,14 @@ const AIMLHero = () => {
                             We’ve built an AI-driven platform for launching <br /> business
                             transformation.
                         </p>
-                        <button
+                        <Link
+                            to="/contact"
                             className="mt-8 inline-flex items-center justify-center text-[16px] font-semibold leading-[25px] 
               text-white bg-[#1B4BF0] py-[15px] px-[40px] sm:px-[60px] rounded-[40px] 
               transition duration-300 shadow-none hover:bg-yellow-300 hover:text-black"
                         >
                             Let's Talk About Your Project
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

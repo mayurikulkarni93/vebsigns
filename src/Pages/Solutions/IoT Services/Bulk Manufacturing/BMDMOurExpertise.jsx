@@ -212,7 +212,7 @@ const BMDMOurExpertise = () => {
 
                         {/* Free Consultation Link */}
                         <div
-                            onClick={() => navigate("/free-consultation")}
+                            onClick={() => navigate("/contact")}
                             className="mt-6 flex items-center justify-center sm:justify-start gap-2 cursor-pointer"
                         >
                             <p className="text-sm sm:text-base md:text-lg text-[#15042E] hover:text-blue-500 hover:underline">

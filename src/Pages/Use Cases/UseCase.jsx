@@ -11,9 +11,8 @@ export default function UseCase() {
     "/assets/HomePage/cricmath.svg",
     "/assets/HomePage/ONGCLogo.svg",
     "/assets/HomePage/goodgoodpiggy Logo.svg",
-    // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpdLIBjB-Wct_rNfeblvhbfsknbh75-hWoZg&s",
-    // "https://img.freepik.com/free-vector/people-silhouette-logo_361591-2448.jpg?semt=ais_hybrid&w=740&q=80",
-    // "https://img.freepik.com/free-vector/logo-tie-design-template_474888-1906.jpg?semt=ais_hybrid&w=740&q=80",
+    "/assets/HomePage/jaguar (2).svg",
+    "/assets/HomePage/TAT.svg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
