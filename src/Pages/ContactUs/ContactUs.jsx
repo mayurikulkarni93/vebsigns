@@ -15,6 +15,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
 import { sendContactLeads } from "../../api/api"; // Make sure your API method is correctly imported
 import toast from "react-hot-toast";
+import SEO from "../../Components/SEO";
 
 
 
@@ -129,6 +130,13 @@ const ContactSection = () => {
 
     return (
         <div>
+            <SEO
+                title="Contact Vebsigns Technologies | Get in Touch with Our IT Experts"
+                description="Reach out to Vebsigns Technologies for inquiries, project discussions, or support. Connect with our team of experts in web development, mobile apps, AI, IoT, and automation."
+                keywords="Contact Vebsigns, Vebsigns Technologies contact, IT support India, web development inquiries, mobile app consultation, AI solutions contact, IoT services contact, automation support"
+                canonical="https://vebsigns.com/contact"
+            />
+
             <Header />
 
             <section

@@ -18,6 +18,7 @@ import { CheckIcon, ChevronDownIcon } from "@heroicons/react/20/solid"
 import clsx from "clsx"
 import { sendContactLeads } from "../../api/api"; // Make sure your API method is correctly imported
 import toast from "react-hot-toast";
+import SEO from "../../Components/SEO";
 
 
 function classNames(...classes) {
@@ -134,6 +135,13 @@ export default function HireDev() {
 
     return (
         <div>
+            <SEO
+                title="Hire Expert Developers | Vebsigns Technologies"
+                description="Hire skilled developers from Vebsigns Technologies for web development, mobile apps, AI, IoT, and automation projects. Get dedicated, experienced professionals to accelerate your business."
+                keywords="Hire developers, Vebsigns developers, web development team, mobile app developers, AI developers, IoT developers, automation experts, software development outsourcing"
+                canonical="https://vebsigns.com/hire-developers"
+            />
+
             <Header />
             <section className="bg-[#0A0025] text-white py-20 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">

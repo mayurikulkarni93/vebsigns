@@ -6,6 +6,7 @@ import Footer from "../../Components/Footer";
 import Header from "../../Components/Header";
 import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaLink } from "react-icons/fa6";
 import { getBlogBySlug } from "../../api/api"; // Adjust the import path as necessary
+import SEO from "../../Components/SEO";
 
 
 
@@ -49,6 +50,12 @@ const BlogSingle = () => {
     if (!post) return <div>Blog post not found.</div>;
     return (
         <div>
+            <SEO
+                title="Vebsigns Blog | Insights on Web Development, AI, and Technology Trends"
+                description="Explore the Vebsigns Blog for expert insights on web development, mobile apps, AI, IoT, automation, and the latest technology innovations shaping the digital world."
+                keywords="Vebsigns blog, technology blog, web development tips, AI trends, IoT insights, automation articles, software development, tech news, Vebsigns Technologies"
+                canonical="https://vebsigns.com/blog"
+            />
             <Header />
 
             <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 py-20 px-6">

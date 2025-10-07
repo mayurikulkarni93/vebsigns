@@ -7,10 +7,18 @@ import LeadingCompanies from './LeadingCompanies';
 import DrivenByData from './DrivenByData';
 import Locations from './Locations';
 import Team from '../HomePage/Team';
+import SEO from '../../Components/SEO';
 
 const About = () => {
     return (
         <div>
+            <SEO
+                title="About Vebsigns Technologies | Innovative IT Solutions Company"
+                description="Vebsigns Technologies is a leading IT solutions company offering web development, mobile apps, AI, IoT, and automation services. Learn more about our mission, vision, and team."
+                keywords="Vebsigns Technologies, about Vebsigns, IT company India, web development, mobile app development, AI solutions, IoT services, automation, software company"
+                canonical="https://vebsigns.com/about"
+            />
+
             <Header />
             <section className="relative bg-gradient-to-b from-[#0a0220] to-[#120536] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
                 {/* Background Image (above gradient but below content) */}

@@ -18,6 +18,7 @@ import { CheckIcon, ChevronDownIcon } from "@heroicons/react/20/solid"
 import clsx from "clsx"
 import { sendCareersData } from "../../api/api"; // Make sure your API method is correctly imported
 import toast from "react-hot-toast";
+import SEO from "../../Components/SEO";
 
 
 function classNames(...classes) {
@@ -113,6 +114,14 @@ export default function Careers() {
 
     return (
         <div>
+            <SEO
+                title="Careers at Vebsigns Technologies | Join Our Innovative IT Team"
+                description="Explore career opportunities at Vebsigns Technologies. Join our team of talented developers, designers, and IT professionals shaping the future of web development, AI, IoT, and automation."
+                keywords="Vebsigns Careers, jobs at Vebsigns, IT jobs India, web development careers, AI jobs, IoT careers, software development jobs, automation careers"
+                canonical="https://vebsigns.com/careers"
+            />
+
+
             <Header />
             <section className="bg-[#0A0025] text-white py-20 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">

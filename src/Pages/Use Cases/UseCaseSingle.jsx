@@ -6,6 +6,7 @@ import Footer from "../../Components/Footer";
 import Header from "../../Components/Header";
 import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaLink } from "react-icons/fa6";
 import RelatedPost from "./RelatedPost";
+import SEO from "../../Components/SEO";
 
 
 
@@ -64,9 +65,15 @@ const UseCaseSingle = () => {
     };
 
 
-    if (!post) return <div>Blog post not found.</div>;
+    if (!post) return <div>Use case not found.</div>;
     return (
         <div>
+            <SEO
+                title="IT, IoT, AI & Automation Use Cases | Vebsigns Technologies"
+                description="Explore real-world applications of IT, IoT, AI, and automation technologies across various industries. Discover how Vebsigns Technologies drives innovation, efficiency, and digital transformation through tailored solutions."
+                keywords="IT use cases, IoT use cases, AI use cases, automation solutions, Vebsigns Technologies, industry applications, smart manufacturing, predictive maintenance, digital transformation"
+                canonical="https://vebsigns.com/use-cases"
+            />
             <Header />
 
             <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 py-20 px-6">

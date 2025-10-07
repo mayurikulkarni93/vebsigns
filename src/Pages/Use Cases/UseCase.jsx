@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Footer from "../../Components/Footer";
 import Header from "../../Components/Header";
 import UseCaseGrid from "./UseCaseGrid";
+import SEO from "../../Components/SEO";
 
 export default function UseCase() {
   const images = [
@@ -27,6 +28,13 @@ export default function UseCase() {
 
   return (
     <div>
+      <SEO
+        title="IT, IoT, AI & Automation Use Cases | Vebsigns Technologies"
+        description="Explore real-world applications of IT, IoT, AI, and automation technologies across various industries. Discover how Vebsigns Technologies drives innovation, efficiency, and digital transformation through tailored solutions."
+        keywords="IT use cases, IoT use cases, AI use cases, automation solutions, Vebsigns Technologies, industry applications, smart manufacturing, predictive maintenance, digital transformation"
+        canonical="https://vebsigns.com/use-cases"
+      />
+
       <Header />
       <section className="bg-gradient-to-r from-[#122D4D] via-[#15042E] via-[#241032] to-[#15042E] text-white py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
