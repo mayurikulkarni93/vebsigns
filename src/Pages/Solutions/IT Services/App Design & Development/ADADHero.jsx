@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ADADHero = () => {
 
     return (
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden mt-24">
             <div className="relative w-full min-h-[70vh] flex items-center justify-center">
 
                 {/* Background Video */}

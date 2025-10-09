@@ -17,7 +17,7 @@ const Blog = () => {
 
       <Header />
 
-      <section className="relative bg-gradient-to-r from-[#0b0225] via-[#1a0f3f] to-[#0b0225] text-white py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-r from-[#0b0225] via-[#1a0f3f] to-[#0b0225] text-white py-32 overflow-hidden mt-24">
         <div className="max-w-5xl mx-auto px-6 text-center">
           {/* Small Heading */}
           <p className="text-blue-400 uppercase tracking-wide font-semibold text-3xl">

@@ -20,7 +20,7 @@ const About = () => {
             />
 
             <Header />
-            <section className="relative bg-gradient-to-b from-[#0a0220] to-[#120536] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
+            <section className="relative bg-gradient-to-b from-[#0a0220] to-[#120536] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden mt-24">
                 {/* Background Image (above gradient but below content) */}
                 <div
                     className="absolute inset-0 bg-[url('/assets/HomePage/bg-ab.png')] bg-cover bg-center bg-no-repeat opacity-40"

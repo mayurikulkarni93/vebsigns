@@ -123,7 +123,7 @@ export default function Careers() {
 
 
             <Header />
-            <section className="bg-[#0A0025] text-white py-20 px-4 sm:px-6">
+            <section className="bg-[#0A0025] text-white py-20 px-4 sm:px-6 mt-24">
                 <div className="max-w-7xl mx-auto">
                     <TabGroup selectedIndex={activeTab} onChange={setActiveTab}>
                         {/* Tabs */}

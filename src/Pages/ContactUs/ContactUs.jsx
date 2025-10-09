@@ -141,7 +141,7 @@ const ContactSection = () => {
 
             <section
                 style={{ backgroundImage: "url('/assets/HomePage/bg1.png')", opacity: 10 }}
-                className="bg-[#0B0225] py-12 sm:py-16 md:py-20 px-4 sm:px-6"
+                className="bg-[#0B0225] py-12 sm:py-16 md:py-20 px-4 sm:px-6 mt-24"
             >
                 {/* Heading */}
                 <div className="max-w-6xl mx-auto text-center mb-8 sm:mb-12">
