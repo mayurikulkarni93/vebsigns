@@ -19,7 +19,7 @@ import {
     ShoppingBag, Menu, X,
     Phone
 } from "lucide-react";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
     let closeTimeout;
@@ -29,7 +29,29 @@ export default function Header() {
     const [solutionsOpen, setSolutionsOpen] = useState(false);
     const [servicesOpen, setServicesOpen] = useState(false);
     const [industriesOpen, setIndustriesOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            // Only trigger when user scrolls more than 5px
+            if (currentScrollY - lastScrollY > 5) {
+                // Scrolling down → hide header
+                setIsVisible(false);
+            } else if (lastScrollY - currentScrollY > 5) {
+                // Scrolling up → show header
+                setIsVisible(true);
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [lastScrollY]);
 
 
     const toggleDrawer = () => {
@@ -38,7 +60,16 @@ export default function Header() {
 
     return (
         // <header className="bg-[#1849FF] text-white px-6 py-5">
-        <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#0a0220] to-[#120536] text-white px-6 py-5 shadow-lg">
+        // <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#0a0220] to-[#120536] text-white px-6 py-5 shadow-lg">
+        // Find the header element and modify its className:
+
+        <header className={`
+  fixed top-0 left-0 w-full z-50 
+  bg-gradient-to-b from-[#0a0220] to-[#120536] 
+  text-white px-6 py-5 shadow-lg
+  transform transition-transform duration-300 ease-in-out
+  ${isVisible ? 'translate-y-0' : '-translate-y-full'}
+`}>
 
             <div className="max-w-7xl mx-auto flex items-center justify-between h-14">
 
@@ -381,13 +412,24 @@ export default function Header() {
                 </nav>
 
                 {/* Mobile Drawer */}
-                <div className={`
+                {/* <div className={`
                 fixed top-0 right-0 h-full w-[280px] bg-white text-black z-50 
                 transform transition-transform duration-300 ease-in-out
                 ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'}
                 md:hidden
             `}>
-                    <div className="p-6">
+                    <div className="p-6"> */}
+                <div className={`
+    fixed top-0 right-0 h-screen w-[280px]
+    bg-white text-black z-50 
+    transform transition-transform duration-300 ease-in-out
+    ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'}
+    md:hidden
+    overflow-y-auto
+`}
+                    style={{ height: '100vh', backgroundColor: 'white' }}
+                >
+                    <div className="p-6 min-h-full bg-white">
                         <div className="flex justify-between items-center mb-6">
                             <img src="/assets/Header/logo_fav.png" alt="Logo" className="h-8" />
                             <button onClick={toggleDrawer}>
@@ -664,7 +706,7 @@ export default function Header() {
                 {/* Overlay */}
                 {isDrawerOpen && (
                     <div
-                        className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+                        className="fixed inset-0 bg-black/50 bg-opacity-50 z-40 md:hidden h-[100vh]"
                         onClick={toggleDrawer}
                     ></div>
                 )}
