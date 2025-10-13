@@ -5,8 +5,8 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  // server: {
-  //   port: 5180, // set the dev server port
-  //   strictPort: true, // fail if port is already in use
-  // },
+  server: {
+    port: 5180, // set the dev server port
+    strictPort: true, // fail if port is already in use
+  },
 });

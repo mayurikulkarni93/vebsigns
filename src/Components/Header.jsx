@@ -63,6 +63,13 @@ export default function Header() {
         // <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#0a0220] to-[#120536] text-white px-6 py-5 shadow-lg">
         // Find the header element and modify its className:
 
+        //         <header className={`
+        //   fixed top-0 left-0 w-full z-50 
+        //   bg-[#15042E]
+        //   text-white px-6 py-5 
+        //   transform transition-transform duration-300 ease-in-out
+        //   ${isVisible ? 'translate-y-0' : '-translate-y-full'}
+        // `}>
         <header className={`
   fixed top-0 left-0 w-full z-50 
   bg-gradient-to-b from-[#0a0220] to-[#120536] 

@@ -64,7 +64,7 @@ const UIUXOurExpertise = () => {
                                 <button className="w-full sm:w-auto group px-3 py-2 rounded-full bg-white text-blue-700 flex items-center gap-2 text-sm md:text-base transition-colors duration-300 ease-in-out">
                                     {/* SVG background wrapper */}
                                     <div className="bg-[#6FE4FC] group-hover:bg-[#F3F945] transition-colors duration-300 ease-in-out h-10 w-10 rounded-full flex items-center justify-center">
-                                        <svg
+                                        {/* <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             height="24"
                                             width="24"
@@ -94,7 +94,8 @@ const UIUXOurExpertise = () => {
                                                     data-color="color-2"
                                                 ></circle>
                                             </g>
-                                        </svg>
+                                        </svg> */}
+                                        <img className="w-[24px]" src="/assets/UIUX/page 9-02.svg" alt="" />
                                     </div>
 
                                     {/* Text that changes color */}
@@ -109,7 +110,7 @@ const UIUXOurExpertise = () => {
                                 <button className="w-full sm:w-auto group px-3 py-2 rounded-full bg-white text-blue-700 flex items-center gap-2 text-sm md:text-base transition-colors duration-300 ease-in-out">
                                     {/* SVG wrapper */}
                                     <div className="bg-[#6FE4FC] group-hover:bg-[#F3F945] transition-colors duration-300 ease-in-out h-10 w-10 rounded-full flex items-center justify-center">
-                                        <svg
+                                        {/* <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             height="24"
                                             width="24"
@@ -167,7 +168,8 @@ const UIUXOurExpertise = () => {
                                                     strokeLinecap="butt"
                                                 ></path>
                                             </g>
-                                        </svg>
+                                        </svg> */}
+                                        <img className="w-[24px]" src="/assets/UIUX/page 9-05.svg" alt="" />
                                     </div>
 
                                     {/* Text with hover color */}
@@ -181,7 +183,8 @@ const UIUXOurExpertise = () => {
                                 <button className="w-full sm:w-auto group px-3 py-2 rounded-full bg-white text-blue-700 flex items-center gap-2 text-sm md:text-base transition-colors duration-300 ease-in-out">
                                     {/* SVG wrapper */}
                                     <div className="bg-[#6FE4FC] group-hover:bg-[#F3F945] transition-colors duration-300 ease-in-out h-10 w-10 rounded-full flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><title>content delivery</title><g stroke-linecap="square" transform="translate(0.5 0.5)" fill="#15042E" stroke-linejoin="miter" class="nc-icon-wrapper" stroke-miterlimit="10"><line x1="7.891" y1="4.664" x2="4.109" y2="10.336" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="19.154" y1="7.231" x2="10.847" y2="3.769" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="19.527" y1="9.35" x2="10.473" y2="17.65" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="20.696" y1="9.975" x2="19.304" y2="19.026" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="5" y1="11.556" x2="19" y2="8.444" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><circle cx="3" cy="12" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="21" cy="8" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="9" cy="3" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="9" cy="19" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="19" cy="21" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle></g></svg>
+                                        {/* <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><title>content delivery</title><g stroke-linecap="square" transform="translate(0.5 0.5)" fill="#15042E" stroke-linejoin="miter" class="nc-icon-wrapper" stroke-miterlimit="10"><line x1="7.891" y1="4.664" x2="4.109" y2="10.336" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="19.154" y1="7.231" x2="10.847" y2="3.769" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="19.527" y1="9.35" x2="10.473" y2="17.65" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="20.696" y1="9.975" x2="19.304" y2="19.026" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="5" y1="11.556" x2="19" y2="8.444" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><circle cx="3" cy="12" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="21" cy="8" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="9" cy="3" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="9" cy="19" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="19" cy="21" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle></g></svg> */}
+                                        <img className="w-[24px]" src="/assets/UIUX/page 9-08.svg" alt="" />
                                     </div>
 
                                     {/* Text with hover color */}
@@ -194,7 +197,8 @@ const UIUXOurExpertise = () => {
                                 <button className="w-full sm:w-auto group px-3 py-2 rounded-full bg-white text-blue-700 flex items-center gap-2 text-sm md:text-base transition-colors duration-300 ease-in-out">
                                     {/* SVG wrapper */}
                                     <div className="bg-[#6FE4FC] group-hover:bg-[#F3F945] transition-colors duration-300 ease-in-out h-10 w-10 rounded-full flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><title>menu dots</title><g stroke-linecap="square" transform="translate(0.5 0.5)" fill="#15042E" stroke-linejoin="miter" class="nc-icon-wrapper" stroke-miterlimit="10"><circle data-color="color-2" fill="none" stroke="#15042E" stroke-width="1" cx="12" cy="12" r="2"></circle><circle fill="none" stroke="#15042E" stroke-width="1" cx="3" cy="12" r="2"></circle><circle fill="none" stroke="#15042E" stroke-width="1" cx="21" cy="12" r="2"></circle></g></svg>
+                                        {/* <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><title>menu dots</title><g stroke-linecap="square" transform="translate(0.5 0.5)" fill="#15042E" stroke-linejoin="miter" class="nc-icon-wrapper" stroke-miterlimit="10"><circle data-color="color-2" fill="none" stroke="#15042E" stroke-width="1" cx="12" cy="12" r="2"></circle><circle fill="none" stroke="#15042E" stroke-width="1" cx="3" cy="12" r="2"></circle><circle fill="none" stroke="#15042E" stroke-width="1" cx="21" cy="12" r="2"></circle></g></svg> */}
+                                        <img className="w-[24px]" src="/assets/UIUX/page 9-01.svg" alt="" />
                                     </div>
 
                                     {/* Text with hover color */}
@@ -207,7 +211,8 @@ const UIUXOurExpertise = () => {
                                 <button className="w-full sm:w-auto group px-3 py-2 rounded-full bg-white text-blue-700 flex items-center gap-2 text-sm md:text-base transition-colors duration-300 ease-in-out">
                                     {/* SVG wrapper */}
                                     <div className="bg-[#6FE4FC] group-hover:bg-[#F3F945] transition-colors duration-300 ease-in-out h-10 w-10 rounded-full flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 64 64"><title>binary code</title><g stroke-linecap="round" transform="translate(0.5 0.5)" fill="#15042E" stroke-linejoin="round" class="nc-icon-wrapper"><path d="M54,7h2.5c1.381,0,2.5,1.119,2.5,2.5V27.789c0,.79,.234,1.562,.672,2.219l1.328,1.992-1.328,1.992c-.438,.657-.672,1.429-.672,2.219v18.289c0,1.381-1.119,2.5-2.5,2.5h-2.405" fill="none" stroke="#15042E" stroke-width="1"></path><path d="M10,7h-2.5c-1.381,0-2.5,1.119-2.5,2.5V27.789c0,.79-.234,1.562-.672,2.219l-1.328,1.992,1.328,1.992c.438,.657,.672,1.429,.672,2.219v18.289c0,1.381,1.119,2.5,2.5,2.5h2.405" fill="none" stroke="#15042E" stroke-width="1"></path><polyline points="19 7 21 7 21 19" fill="none" stroke="#15042E" stroke-width="1"></polyline><polyline points="42 7 44 7 44 19" fill="none" stroke="#15042E" stroke-width="1"></polyline><rect x="28" y="7" width="8" height="12" rx="2.5" ry="2.5" fill="none" stroke="#15042E" stroke-width="1" data-color="color-2"></rect><polyline points="19 45 21 45 21 57" fill="none" stroke="#15042E" stroke-width="1"></polyline><polyline points="42 45 44 45 44 57" fill="none" stroke="#15042E" stroke-width="1"></polyline><rect x="28" y="45" width="8" height="12" rx="2.5" ry="2.5" fill="none" stroke="#15042E" stroke-width="1" data-color="color-2"></rect><polyline points="31 26 33 26 33 38" fill="none" stroke="#15042E" stroke-width="1"></polyline><rect x="17" y="26" width="8" height="12" rx="2.5" ry="2.5" fill="none" stroke="#15042E" stroke-width="1" data-color="color-2"></rect><rect x="40" y="26" width="8" height="12" rx="2.5" ry="2.5" fill="none" stroke="#15042E" stroke-width="1" data-color="color-2"></rect></g></svg>
+                                        {/* <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 64 64"><title>binary code</title><g stroke-linecap="round" transform="translate(0.5 0.5)" fill="#15042E" stroke-linejoin="round" class="nc-icon-wrapper"><path d="M54,7h2.5c1.381,0,2.5,1.119,2.5,2.5V27.789c0,.79,.234,1.562,.672,2.219l1.328,1.992-1.328,1.992c-.438,.657-.672,1.429-.672,2.219v18.289c0,1.381-1.119,2.5-2.5,2.5h-2.405" fill="none" stroke="#15042E" stroke-width="1"></path><path d="M10,7h-2.5c-1.381,0-2.5,1.119-2.5,2.5V27.789c0,.79-.234,1.562-.672,2.219l-1.328,1.992,1.328,1.992c.438,.657,.672,1.429,.672,2.219v18.289c0,1.381,1.119,2.5,2.5,2.5h2.405" fill="none" stroke="#15042E" stroke-width="1"></path><polyline points="19 7 21 7 21 19" fill="none" stroke="#15042E" stroke-width="1"></polyline><polyline points="42 7 44 7 44 19" fill="none" stroke="#15042E" stroke-width="1"></polyline><rect x="28" y="7" width="8" height="12" rx="2.5" ry="2.5" fill="none" stroke="#15042E" stroke-width="1" data-color="color-2"></rect><polyline points="19 45 21 45 21 57" fill="none" stroke="#15042E" stroke-width="1"></polyline><polyline points="42 45 44 45 44 57" fill="none" stroke="#15042E" stroke-width="1"></polyline><rect x="28" y="45" width="8" height="12" rx="2.5" ry="2.5" fill="none" stroke="#15042E" stroke-width="1" data-color="color-2"></rect><polyline points="31 26 33 26 33 38" fill="none" stroke="#15042E" stroke-width="1"></polyline><rect x="17" y="26" width="8" height="12" rx="2.5" ry="2.5" fill="none" stroke="#15042E" stroke-width="1" data-color="color-2"></rect><rect x="40" y="26" width="8" height="12" rx="2.5" ry="2.5" fill="none" stroke="#15042E" stroke-width="1" data-color="color-2"></rect></g></svg> */}
+                                        <img className="w-[24px]" src="/assets/UIUX/page 9-03.svg" alt="" />
                                     </div>
 
                                     {/* Text with hover color */}

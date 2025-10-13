@@ -65,7 +65,7 @@ const AIGOurExpertise = () => {
                                 <button className="w-full sm:w-auto group px-3 py-2 rounded-full bg-white text-blue-700 flex items-center gap-2 text-sm md:text-base transition-colors duration-300 ease-in-out">
                                     {/* SVG background wrapper */}
                                     <div className="bg-[#6FE4FC] group-hover:bg-[#F3F945] transition-colors duration-300 ease-in-out h-10 w-10 rounded-full flex items-center justify-center">
-                                        <svg
+                                        {/* <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             height="24"
                                             width="24"
@@ -95,7 +95,8 @@ const AIGOurExpertise = () => {
                                                     data-color="color-2"
                                                 ></circle>
                                             </g>
-                                        </svg>
+                                        </svg> */}
+                                        <img className="w-[24px]" src="/assets/IOT/page 10-06.svg" alt="" />
                                     </div>
 
                                     {/* Text that changes color */}
@@ -110,7 +111,7 @@ const AIGOurExpertise = () => {
                                 <button className="w-full sm:w-auto group px-3 py-2 rounded-full bg-white text-blue-700 flex items-center gap-2 text-sm md:text-base transition-colors duration-300 ease-in-out">
                                     {/* SVG wrapper */}
                                     <div className="bg-[#6FE4FC] group-hover:bg-[#F3F945] transition-colors duration-300 ease-in-out h-10 w-10 rounded-full flex items-center justify-center">
-                                        <svg
+                                        {/* <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             height="24"
                                             width="24"
@@ -168,7 +169,8 @@ const AIGOurExpertise = () => {
                                                     strokeLinecap="butt"
                                                 ></path>
                                             </g>
-                                        </svg>
+                                        </svg> */}
+                                        <img className="w-[24px]" src="/assets/IOT/page 10-10.svg" alt="" />
                                     </div>
 
                                     {/* Text with hover color */}
@@ -182,7 +184,8 @@ const AIGOurExpertise = () => {
                                 <button className="w-full sm:w-auto group px-3 py-2 rounded-full bg-white text-blue-700 flex items-center gap-2 text-sm md:text-base transition-colors duration-300 ease-in-out">
                                     {/* SVG wrapper */}
                                     <div className="bg-[#6FE4FC] group-hover:bg-[#F3F945] transition-colors duration-300 ease-in-out h-10 w-10 rounded-full flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><title>content delivery</title><g stroke-linecap="square" transform="translate(0.5 0.5)" fill="#15042E" stroke-linejoin="miter" class="nc-icon-wrapper" stroke-miterlimit="10"><line x1="7.891" y1="4.664" x2="4.109" y2="10.336" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="19.154" y1="7.231" x2="10.847" y2="3.769" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="19.527" y1="9.35" x2="10.473" y2="17.65" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="20.696" y1="9.975" x2="19.304" y2="19.026" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="5" y1="11.556" x2="19" y2="8.444" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><circle cx="3" cy="12" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="21" cy="8" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="9" cy="3" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="9" cy="19" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="19" cy="21" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle></g></svg>
+                                        {/* <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><title>content delivery</title><g stroke-linecap="square" transform="translate(0.5 0.5)" fill="#15042E" stroke-linejoin="miter" class="nc-icon-wrapper" stroke-miterlimit="10"><line x1="7.891" y1="4.664" x2="4.109" y2="10.336" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="19.154" y1="7.231" x2="10.847" y2="3.769" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="19.527" y1="9.35" x2="10.473" y2="17.65" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="20.696" y1="9.975" x2="19.304" y2="19.026" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><line x1="5" y1="11.556" x2="19" y2="8.444" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" data-color="color-2" stroke-linecap="butt"></line><circle cx="3" cy="12" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="21" cy="8" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="9" cy="3" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="9" cy="19" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle><circle cx="19" cy="21" r="2" fill="none" stroke="#15042E" stroke-width="1" data-cap="butt" stroke-linecap="butt"></circle></g></svg> */}
+                                        <img className="w-[24px]" src="/assets/IOT/page 10-02.svg" alt="" />
                                     </div>
 
                                     {/* Text with hover color */}
@@ -195,7 +198,8 @@ const AIGOurExpertise = () => {
                                 <button className="w-full sm:w-auto group px-3 py-2 rounded-full bg-white text-blue-700 flex items-center gap-2 text-sm md:text-base transition-colors duration-300 ease-in-out">
                                     {/* SVG wrapper */}
                                     <div className="bg-[#6FE4FC] group-hover:bg-[#F3F945] transition-colors duration-300 ease-in-out h-10 w-10 rounded-full flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><title>menu dots</title><g stroke-linecap="square" transform="translate(0.5 0.5)" fill="#15042E" stroke-linejoin="miter" class="nc-icon-wrapper" stroke-miterlimit="10"><circle data-color="color-2" fill="none" stroke="#15042E" stroke-width="1" cx="12" cy="12" r="2"></circle><circle fill="none" stroke="#15042E" stroke-width="1" cx="3" cy="12" r="2"></circle><circle fill="none" stroke="#15042E" stroke-width="1" cx="21" cy="12" r="2"></circle></g></svg>
+                                        {/* <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><title>menu dots</title><g stroke-linecap="square" transform="translate(0.5 0.5)" fill="#15042E" stroke-linejoin="miter" class="nc-icon-wrapper" stroke-miterlimit="10"><circle data-color="color-2" fill="none" stroke="#15042E" stroke-width="1" cx="12" cy="12" r="2"></circle><circle fill="none" stroke="#15042E" stroke-width="1" cx="3" cy="12" r="2"></circle><circle fill="none" stroke="#15042E" stroke-width="1" cx="21" cy="12" r="2"></circle></g></svg> */}
+                                        <img className="w-[24px]" src="/assets/IOT/page 10-03.svg" alt="" />
                                     </div>
 
                                     {/* Text with hover color */}
