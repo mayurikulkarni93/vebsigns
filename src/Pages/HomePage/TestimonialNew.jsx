@@ -44,7 +44,7 @@ export default function TestimonialNew() {
             {/* Quotation Icon */}
             <div className="flex justify-center mb-6">
                 {/* <span className="text-6xl text-cyan-400">"</span> */}
-                <img loading="lazy" decoding="async" width="50" height="50" src="https://live.21lab.co/hanotek/wp-content/uploads/2024/11/quote.svg" class="attachment-large size-large wp-image-554 entered lazyloaded" alt="" data-lazy-src="https://live.21lab.co/hanotek/wp-content/uploads/2024/11/quote.svg" data-ll-status="loaded"></img>
+                {/* <img loading="lazy" decoding="async" width="50" height="50" src="https://live.21lab.co/hanotek/wp-content/uploads/2024/11/quote.svg" class="attachment-large size-large wp-image-554 entered lazyloaded" alt="" data-lazy-src="https://live.21lab.co/hanotek/wp-content/uploads/2024/11/quote.svg" data-ll-status="loaded"></img> */}
             </div>
 
             {/* Section Title */}
