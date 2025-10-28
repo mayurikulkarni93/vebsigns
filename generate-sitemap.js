@@ -8,7 +8,7 @@ const links = [
   { url: "/contact", changefreq: "monthly", priority: 0.8 },
 ];
 
-const sitemap = new SitemapStream({ hostname: "https://vebsigns.com" });
+const sitemap = new SitemapStream({ hostname: "https://vebsigns.vercel.app" });
 
 streamToPromise(
   links.reduce((sm, link) => {
