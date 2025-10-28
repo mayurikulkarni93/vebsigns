@@ -329,7 +329,7 @@ const DSDABenefitsSection = () => {
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
                     type="text"
-                    placeholder="Eg: Envato"
+                    placeholder="Eg: Vebsigns"
                     className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                   />
                 </Field>
