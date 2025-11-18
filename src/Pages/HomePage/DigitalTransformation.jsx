@@ -41,7 +41,7 @@ const DigitalTransformation = () => {
         },
         {
             id: 4,
-            image: "/assets/HomePage/Digital transformation-08.svg",
+            image: "/assets/HomePage/Cover image 4th.svg",
             number: "4.",
             description: "Digital Marketing & Scalable Growth Strategies",
             buttonText: "Go to About Page",
