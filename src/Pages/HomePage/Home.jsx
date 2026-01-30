@@ -45,7 +45,7 @@ const Home = () => {
       <DrivenByData />
       <WhyChooseUs />
       <TestimonialNew />
-      <Team />
+      {/* <Team /> */}
       <InsightsSection />
       <Faq />
       <HomeCTA />

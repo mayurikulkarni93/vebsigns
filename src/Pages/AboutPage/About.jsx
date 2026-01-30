@@ -64,7 +64,7 @@ const About = () => {
             <AnalyticsSlider />
             {/* <LeadingCompanies /> */}
             <DrivenByData />
-            {/* <Team /> */}
+            <Team />
             <Locations />
             <Footer />
         </div>

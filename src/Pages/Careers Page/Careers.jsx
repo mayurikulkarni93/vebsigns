@@ -43,12 +43,28 @@ const inquiries = [
   { id: 10, name: "AngularJS Developer" },
   { id: 11, name: "QA Engineer" },
   { id: 12, name: "UI/UX Designer" },
+  { id: 13, name: "Business Development Executives" },
+  { id: 14, name: "CMO" },
+  { id: 15, name: "Business Development Manager" },
+];
+
+const experience = [
+  { id: 1, name: "Fresher" },
+  { id: 2, name: "1+ year" },
+  { id: 3, name: "2+ years" },
+  { id: 4, name: "3+ years" },
+  { id: 5, name: "4+ years" },
+  { id: 6, name: "5+ years" },
+  { id: 7, name: "6 - 10+ years" },
+  { id: 8, name: "11 - 20+ years" },
 ];
 
 export default function Careers() {
   const [activeTab, setActiveTab] = useState(0);
   const [fileName, setFileName] = useState("No file chosen");
   const [selected, setSelected] = useState(inquiries[0]);
+  const [selectedExp, setSelectedExp] = useState(experience[0]);
+  const [expQuery, setExpQuery] = useState("");
   const [query, setQuery] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -59,7 +75,14 @@ export default function Careers() {
     query === ""
       ? inquiries
       : inquiries.filter((item) =>
-          item.name.toLowerCase().includes(query.toLowerCase())
+          item.name.toLowerCase().includes(query.toLowerCase()),
+        );
+
+  const filteredExperience =
+    expQuery === ""
+      ? experience
+      : experience.filter((item) =>
+          item.name.toLowerCase().includes(expQuery.toLowerCase()),
         );
 
   // File change handler
@@ -77,7 +100,14 @@ export default function Careers() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!name || !email || !phone || !selected?.name || !resumeFile) {
+    if (
+      !name ||
+      !email ||
+      !phone ||
+      !selected?.name ||
+      !selectedExp?.name ||
+      !resumeFile
+    ) {
       toast.error("Please fill all fields and upload a resume.");
       return;
     }
@@ -87,6 +117,7 @@ export default function Careers() {
     formData.append("email_id", email);
     formData.append("phone_number", phone);
     formData.append("applying_for_role", selected.name);
+    formData.append("experience", selectedExp.name);
     formData.append("resume", resumeFile);
 
     const loadingToast = toast.loading("Submitting your application...");
@@ -108,7 +139,7 @@ export default function Careers() {
       console.error("Error submitting career form:", error);
       toast.error(
         error?.response?.data?.message || "Failed to submit application",
-        { id: loadingToast }
+        { id: loadingToast },
       );
     }
   };
@@ -173,7 +204,7 @@ export default function Careers() {
                               "px-3 sm:px-6 py-2 text-sm sm:text-base font-medium rounded-full transition-all duration-300",
                               selected
                                 ? "bg-teal-500 text-white shadow-md"
-                                : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                                : "bg-gray-800 text-gray-300 hover:bg-gray-700",
                             )}
                           >
                             {tab.name}
@@ -290,7 +321,7 @@ export default function Careers() {
                   <ComboboxInput
                     className={clsx(
                       "w-full rounded-lg  bg-white/20  placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 px-4 py-2 text-sm sm:text-base text-gray-300",
-                      "focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      "focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500",
                     )}
                     displayValue={(item) => item?.name}
                     onChange={(event) => setQuery(event.target.value)}
@@ -306,10 +337,75 @@ export default function Careers() {
                   transition
                   className={clsx(
                     "w-(--input-width) rounded-lg border border-gray-200 bg-white shadow-lg mt-2 p-1",
-                    "transition duration-100 ease-in data-leave:data-closed:opacity-0 empty:invisible"
+                    "transition duration-100 ease-in data-leave:data-closed:opacity-0 empty:invisible",
                   )}
                 >
                   {filtered.map((item) => (
+                    <ComboboxOption
+                      key={item.id}
+                      value={item}
+                      className={({ active }) =>
+                        `cursor-pointer select-none relative py-2 pl-10 pr-4 ${
+                          active ? "bg-blue-100 text-blue-900" : "text-gray-900"
+                        }`
+                      }
+                    >
+                      {({ selected }) => (
+                        <>
+                          <span
+                            className={`block truncate ${
+                              selected ? "font-medium" : "font-normal"
+                            }`}
+                          >
+                            {item.name}
+                          </span>
+                          {selected && (
+                            <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-blue-600">
+                              <CheckIcon className="h-5 w-5" />
+                            </span>
+                          )}
+                        </>
+                      )}
+                    </ComboboxOption>
+                  ))}
+                </ComboboxOptions>
+              </Combobox>
+            </Field>
+
+            <Field className="w-full">
+              <Label className="block text-sm sm:text-base font-medium text-white mb-1">
+                Previous work experience
+              </Label>
+
+              <Combobox
+                value={selectedExp}
+                onChange={setSelectedExp}
+                onClose={() => setExpQuery("")}
+              >
+                <div className="relative">
+                  <ComboboxInput
+                    className={clsx(
+                      "w-full rounded-lg  bg-white/20  placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 px-4 py-2 text-sm sm:text-base text-gray-300",
+                      "focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500",
+                    )}
+                    displayValue={(item) => item?.name}
+                    onChange={(event) => setExpQuery(event.target.value)}
+                    placeholder="Please select"
+                  />
+                  <ComboboxButton className="group absolute inset-y-0 right-0 px-3 flex items-center">
+                    <ChevronDownIcon className="h-5 w-5 text-white group-data-hover:text-gray-700" />
+                  </ComboboxButton>
+                </div>
+
+                <ComboboxOptions
+                  anchor="bottom"
+                  transition
+                  className={clsx(
+                    "w-(--input-width) rounded-lg border border-gray-200 bg-white shadow-lg mt-2 p-1",
+                    "transition duration-100 ease-in data-leave:data-closed:opacity-0 empty:invisible",
+                  )}
+                >
+                  {filteredExperience.map((item) => (
                     <ComboboxOption
                       key={item.id}
                       value={item}
