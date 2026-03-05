@@ -45,7 +45,7 @@ const About = () => {
                             <p className="text-gray-300 text-xs sm:text-sm mt-1">Years on the market</p>
                         </div>
                         <div>
-                            <p className="text-2xl sm:text-3xl md:text-4xl font-bold">2</p>
+                            <p className="text-2xl sm:text-3xl md:text-4xl font-bold">3</p>
                             <p className="text-gray-300 text-xs sm:text-sm mt-1">
                                 Offices in India, Canada
                             </p>

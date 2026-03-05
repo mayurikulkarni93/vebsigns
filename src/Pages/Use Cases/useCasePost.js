@@ -486,7 +486,7 @@ export const blogPosts = [
     slug: "learn-acting-from-saurav-sachdeva-the-actors-truth-app",
     excerpt:
       "The Actors Truth, founded by Bollywood actor and acting coach Saurav Sachdeva, is a professional acting academy offering structured training, mentorship, and casting guidance. We developed their scalable web platform along with iOS and Android mobile apps to deliver premium acting education digitally.",
-    image: "/assets/HomePage/TAT1.png",
+    image: "/assets/HomePage/TAT.png",
     author: "The Actors Truth Team",
     date: "October 10, 2025",
     points: [
@@ -494,7 +494,7 @@ export const blogPosts = [
       "Structured acting courses with real-world industry exposure",
       "Live workshops, mentorship & audition guidance",
       "Digital learning access via Web, iOS & Android apps",
-      "Community-driven platform for aspiring actors",
+      // "Community-driven platform for aspiring actors",
       "Integrated casting insights & performance tracking system",
     ],
     solutions:
