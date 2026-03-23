@@ -140,6 +140,58 @@ const Team = () => {
             <div>
               <img
                 className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 "
+                src="/assets/HomePage/Yuvraj.jpg"
+                alt=""
+              />
+              <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
+                Yuvraj Shete
+              </p>
+              <p className="mt-2 text-base font-normal text-gray-600 font-pj">
+                MERN Stack Developer
+              </p>
+            </div>
+            <div>
+              <img
+                className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 "
+                src="/assets/HomePage/Mayuri.jpg"
+                alt=""
+              />
+              <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
+                Mayuri Kulkarni
+              </p>
+              <p className="mt-2 text-base font-normal text-gray-600 font-pj">
+                MERN Stack Developer
+              </p>
+            </div>
+            <div>
+              <img
+                className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 "
+                src="/assets/HomePage/Mangesh.jpg"
+                alt=""
+              />
+              <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
+                Mangesh Gupta
+              </p>
+              <p className="mt-2 text-base font-normal text-gray-600 font-pj">
+                Software Developer
+              </p>
+            </div>
+            <div>
+              <img
+                className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 "
+                src="/assets/HomePage/Anushka.jpeg"
+                alt=""
+              />
+              <p className="mt-5 text-lg font-bold text-gray-900 sm:text-xl sm:mt-8 font-pj">
+                Anushka Singh
+              </p>
+              <p className="mt-2 text-base font-normal text-gray-600 font-pj">
+                Digital Marketing Executive
+              </p>
+            </div>
+            <div>
+              <img
+                className="object-cover w-32 h-32 mx-auto rounded-full lg:w-44 lg:h-44 "
                 src="/assets/HomePage/Manish.PNG"
                 alt=""
               />
