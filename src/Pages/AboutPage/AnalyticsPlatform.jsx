@@ -115,7 +115,7 @@ const analyticsData = [
     },
     {
         title: "India Craft Café – Mobile App",
-        path: "https://www.indiacraftcafe.com/app",
+        // path: "https://www.indiacraftcafe.com/app",
         description:
             "Mobile app for India Craft Café, offering easy access to café services, ordering, and a vibrant coffee experience anytime, anywhere across India.",
         stats: [
@@ -130,7 +130,7 @@ const analyticsData = [
     ,
     {
         title: "Jamaica Craft Café – POS System Thailand",
-        path: "https://www.jamaicacraftcafe.com/pos",
+        path: "https://thejamaicacraft.com/",
         description:
             "Point-of-Sale system for Jamaica Craft Café in Thailand, designed to streamline café operations, manage orders, and enhance customer experience efficiently.",
         stats: [
@@ -159,7 +159,7 @@ const analyticsData = [
     },
     {
         title: "ONGC – Smart Monitoring App",
-        path: "https://www.ongcsmartapp.com",
+        // path: "https://www.ongcsmartapp.com",
         description:
             "IoT-based monitoring app providing real-time data on well performance, intuitive charts, and comprehensive oversight for efficient operations management.",
         stats: [
@@ -276,6 +276,58 @@ const analyticsData = [
             width: 650
         }
     },
+    {
+        title: "Loan Sarovar",
+        path: "https://loansarovar.com/",
+        description:
+            "Loan Sarovar is a financial services platform offering a wide range of loan solutions including personal loans, business loans, home loans, and financial advisory services tailored to individual and business needs.",
+        stats: [
+            {
+                label: "Loan Services",
+                value: "4+",
+                description: "Personal, business, home, and other loan options available"
+            },
+            {
+                label: "Customer Support",
+                value: "24/7",
+                description: "Dedicated assistance for loan queries and processing"
+            },
+        ],
+        cta: {
+            text: "Explore Loan Sarovar’s loan solutions and financial services — visit loansarovar.com.",
+        },
+        image: {
+            src: "/assets/HomePage/loansarovar.png",
+            alt: "Loan Sarovar Financial Services",
+            width: 700
+        }
+    },
+    {
+        title: "Groupify AI",
+        path: "https://groupify.ai/",
+        description:
+            "Groupify AI is a comprehensive platform for discovering, comparing, and learning AI tools and courses. It offers a curated directory of thousands of AI applications across categories like productivity, text, image, video, and code generation, helping users boost efficiency and innovation.",
+        stats: [
+            {
+                label: "AI Tools Listed",
+                value: "10,000+",
+                description: "Extensive directory of AI tools across multiple categories"
+            },
+            {
+                label: "Active Users",
+                value: "300+",
+                description: "Growing community discovering AI tools and courses"
+            },
+        ],
+        cta: {
+            text: "Explore top AI tools, courses, and comparisons — visit groupify.ai.",
+        },
+        image: {
+            src: "/assets/HomePage/groupify.png",
+            alt: "Groupify AI Tools Directory Platform",
+            width: 600, height: 250
+        }
+    }
 ];
 
 const AnalyticsSlider = () => {

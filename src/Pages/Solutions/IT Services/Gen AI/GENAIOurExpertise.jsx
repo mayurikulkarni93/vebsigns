@@ -13,7 +13,7 @@ const GENAIOurExpertise = () => {
                     {/* Left Side: Image with Chat Bubbles */}
                     <div className="relative flex justify-center md:justify-start mt-8 md:mt-12">
                         <img
-                            src="/assets/HomePage/home page tablet-01.svg"
+                            src="/assets/HomePage/home page tablet-01.png"
                             alt="Tablet with hands"
                             className="object-contain w-full max-w-[400px] md:max-w-[650px] h-auto md:h-[590px]"
                         />
