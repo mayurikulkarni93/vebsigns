@@ -37,7 +37,7 @@ const WDADOurExpertise = () => {
                             />
 
                         </div>
-                        <div className="absolute left-89/120 top-10 rotate-[10deg] ">
+                        <div className="absolute left-100/120 top-10 rotate-[10deg] ">
                             <img
                                 src="/assets/HomePage/icons8-canva-app-100.png"
                                 alt="Canva Icon"
