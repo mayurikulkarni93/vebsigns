@@ -28,6 +28,7 @@ const UseCase = lazy(() => import("./Pages/Use Cases/UseCase"));
 const UseCaseSingle = lazy(() => import("./Pages/Use Cases/UseCaseSingle"));
 const HireDev = lazy(() => import("./Pages/Hire Developers/HireDevelopers"));
 const Careers = lazy(() => import("./Pages/Careers Page/Careers"));
+const Kalash = lazy(() => import("./Pages/Kalash/Kalash"));
 
 const AppRoutes = () => (
   <Suspense fallback={<Loader />}>
@@ -58,6 +59,7 @@ const AppRoutes = () => (
       <Route path="/use-cases/:slug" element={<UseCaseSingle />} />
       <Route path="/hire-developers" element={<HireDev />} />
       <Route path="/careers" element={<Careers />} />
+      <Route path="/kalash/countries.json" element={<Kalash />} />
 
       {/* Add more routes here */}
     </Routes>
